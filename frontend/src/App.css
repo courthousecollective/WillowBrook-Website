@@ -119,6 +119,14 @@ nav {
   }
 }
 
+/* Logo styling */
+img[alt*="WillowBrook Real Estate Group Logo"] {
+  object-fit: contain;
+  object-position: center;
+  max-width: none;
+  aspect-ratio: auto;
+}
+
 /* Blog content styling */
 .blog-content {
   line-height: 1.8;
