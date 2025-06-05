@@ -20,12 +20,9 @@ export const Navigation = ({ currentPage, setCurrentPage }) => {
           <div className="flex items-center">
             <img 
               src="/willowbrook-logo.svg" 
-              alt="WillowBrook Real Estate Group"
-              className="h-10 w-auto mr-3"
+              alt="WillowBrook Real Estate Group Logo"
+              className="h-12 w-auto"
             />
-            <div className="text-xl font-bold text-gray-900">
-              WillowBrook Real Estate Group
-            </div>
           </div>
           
           {/* Desktop Menu */}
