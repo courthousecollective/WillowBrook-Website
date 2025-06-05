@@ -333,7 +333,7 @@ export const Footer = () => {
           <div className="md:col-span-2">
             <div className="flex items-center mb-4">
               <img 
-                src="https://i.imgur.com/ZQY8yGZ.png" 
+                src="/willowbrook-logo.svg" 
                 alt="WillowBrook Real Estate Group"
                 className="h-8 w-auto mr-3"
               />
