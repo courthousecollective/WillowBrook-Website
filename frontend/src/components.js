@@ -344,7 +344,8 @@ export const Footer = () => {
             <div className="space-y-2 text-gray-300">
               <p>📧 contact@willowbrookgroup.com</p>
               <p>📞 (317) 555-0199</p>
-              <p>📍 Indianapolis, Indiana</p>
+              <p>📍 Serving Greater Indianapolis</p>
+              <p className="text-sm text-gray-400">Mobile service - We come to you!</p>
             </div>
           </div>
           
