@@ -122,7 +122,10 @@ export const HeroSection = () => {
         <p className="text-xl sm:text-2xl mb-4 text-gray-200">
           No Repairs. No Fees. Close in 7 Days.
         </p>
-        <button className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-xl">
+        <button 
+          onClick={() => document.getElementById('sell-form')?.scrollIntoView({ behavior: 'smooth' })}
+          className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-xl"
+        >
           Get a Cash Offer
         </button>
 
