@@ -147,7 +147,7 @@ const SellYourHomePage = () => {
 const ForBuyersPage = () => {
   const handleBuyerForm = (formData) => {
     console.log('Buyer form submitted:', formData);
-    alert('Welcome to our buyer list! You\'ll receive emails as soon as new deals are available.');
+    // Form now handled by Formspree
   };
 
   return (
