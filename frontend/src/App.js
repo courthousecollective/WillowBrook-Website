@@ -13,7 +13,7 @@ import {
 const Homepage = () => {
   const handleHeroForm = (formData) => {
     console.log('Hero form submitted:', formData);
-    alert('Thank you! We will contact you within 24 hours with a cash offer.');
+    // Form now handled by Formspree
   };
 
   return (
