@@ -220,25 +220,36 @@ export const ServicesSection = () => {
   );
 };
 
-// Trust Badges Component
+// Trust Badges Component - Updated
 export const TrustBadges = () => {
   return (
     <div className="bg-gray-50 py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h3 className="text-2xl font-bold text-gray-900 mb-8">Trusted by Indianapolis Homeowners</h3>
-          <div className="flex flex-wrap justify-center items-center gap-8">
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <div className="text-blue-600 font-bold text-lg">BBB Accredited</div>
-              <div className="text-gray-600">A+ Rating</div>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <div className="text-green-600 font-bold text-lg">Licensed & Insured</div>
-              <div className="text-gray-600">Indiana Licensed</div>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <div className="text-orange-600 font-bold text-lg">5-Star Reviews</div>
-              <div className="text-gray-600">Google & Facebook</div>
+          <h3 className="text-3xl font-bold text-gray-900 mb-8">Why Choose WillowBrook?</h3>
+          <div className="max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="bg-white p-8 rounded-lg shadow-md">
+                <div className="text-4xl mb-4">🏠</div>
+                <h4 className="text-lg font-bold text-gray-900 mb-3">Local Indianapolis Focus</h4>
+                <p className="text-gray-600">
+                  WillowBrook Real Estate Group is proudly based in Indianapolis. We're committed to building strong relationships here — one homeowner at a time.
+                </p>
+              </div>
+              <div className="bg-white p-8 rounded-lg shadow-md">
+                <div className="text-4xl mb-4">🤝</div>
+                <h4 className="text-lg font-bold text-gray-900 mb-3">Transparent & Fair</h4>
+                <p className="text-gray-600">
+                  No pressure. No hidden fees. Just honest, fair cash offers you can feel good about.
+                </p>
+              </div>
+              <div className="bg-white p-8 rounded-lg shadow-md">
+                <div className="text-4xl mb-4">📊</div>
+                <h4 className="text-lg font-bold text-gray-900 mb-3">Proven Strategies</h4>
+                <p className="text-gray-600">
+                  We use proven real estate investment strategies tailored for the Indianapolis market — and we're here to guide you every step of the way.
+                </p>
+              </div>
             </div>
           </div>
         </div>
