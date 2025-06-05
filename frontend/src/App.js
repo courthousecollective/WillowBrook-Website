@@ -554,6 +554,313 @@ const ContactPage = () => {
   );
 };
 
+// Calculators Page
+const CalculatorsPage = () => {
+  const [arvData, setArvData] = useState({
+    compsPrice: '',
+    propertySize: '',
+    arvResult: 0
+  });
+
+  const [roiData, setRoiData] = useState({
+    purchasePrice: '',
+    repairCosts: '',
+    salePrice: '',
+    roiResult: 0
+  });
+
+  const calculateARV = () => {
+    const comps = parseFloat(arvData.compsPrice) || 0;
+    const size = parseFloat(arvData.propertySize) || 0;
+    const result = comps * size;
+    setArvData({ ...arvData, arvResult: result });
+  };
+
+  const calculateROI = () => {
+    const purchase = parseFloat(roiData.purchasePrice) || 0;
+    const repairs = parseFloat(roiData.repairCosts) || 0;
+    const sale = parseFloat(roiData.salePrice) || 0;
+    const totalInvestment = purchase + repairs;
+    const profit = sale - totalInvestment;
+    const roi = totalInvestment > 0 ? ((profit / totalInvestment) * 100) : 0;
+    setRoiData({ ...roiData, roiResult: roi });
+  };
+
+  return (
+    <div className="pt-16">
+      {/* Header */}
+      <div className="bg-slate-900 text-white py-20">
+        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+          <h1 className="text-5xl font-bold mb-6">Investment Calculators</h1>
+          <p className="text-xl text-gray-300">Tools to help you make informed real estate decisions</p>
+        </div>
+      </div>
+
+      {/* Calculators Section */}
+      <div className="py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            
+            {/* ARV Calculator */}
+            <div className="bg-gray-50 rounded-lg p-8">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">ARV Calculator</h2>
+              <p className="text-gray-600 mb-6">
+                Calculate the After Repair Value of your property based on comparable sales.
+              </p>
+              
+              <div className="space-y-4">
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Comparable Price per Sq Ft ($)
+                  </label>
+                  <input
+                    type="number"
+                    value={arvData.compsPrice}
+                    onChange={(e) => setArvData({ ...arvData, compsPrice: e.target.value })}
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
+                    placeholder="e.g., 150"
+                  />
+                </div>
+                
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Property Size (Sq Ft)
+                  </label>
+                  <input
+                    type="number"
+                    value={arvData.propertySize}
+                    onChange={(e) => setArvData({ ...arvData, propertySize: e.target.value })}
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
+                    placeholder="e.g., 1500"
+                  />
+                </div>
+                
+                <button
+                  onClick={calculateARV}
+                  className="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300"
+                >
+                  Calculate ARV
+                </button>
+                
+                {arvData.arvResult > 0 && (
+                  <div className="mt-6 p-4 bg-green-100 border border-green-300 rounded-lg">
+                    <h3 className="text-lg font-bold text-green-800">Estimated ARV</h3>
+                    <p className="text-2xl font-bold text-green-600">
+                      ${arvData.arvResult.toLocaleString()}
+                    </p>
+                  </div>
+                )}
+              </div>
+            </div>
+
+            {/* ROI Calculator */}
+            <div className="bg-gray-50 rounded-lg p-8">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">ROI Calculator</h2>
+              <p className="text-gray-600 mb-6">
+                Calculate your Return on Investment for real estate deals.
+              </p>
+              
+              <div className="space-y-4">
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Purchase Price ($)
+                  </label>
+                  <input
+                    type="number"
+                    value={roiData.purchasePrice}
+                    onChange={(e) => setRoiData({ ...roiData, purchasePrice: e.target.value })}
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
+                    placeholder="e.g., 120000"
+                  />
+                </div>
+                
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Repair Costs ($)
+                  </label>
+                  <input
+                    type="number"
+                    value={roiData.repairCosts}
+                    onChange={(e) => setRoiData({ ...roiData, repairCosts: e.target.value })}
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
+                    placeholder="e.g., 30000"
+                  />
+                </div>
+                
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Sale Price / ARV ($)
+                  </label>
+                  <input
+                    type="number"
+                    value={roiData.salePrice}
+                    onChange={(e) => setRoiData({ ...roiData, salePrice: e.target.value })}
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
+                    placeholder="e.g., 180000"
+                  />
+                </div>
+                
+                <button
+                  onClick={calculateROI}
+                  className="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300"
+                >
+                  Calculate ROI
+                </button>
+                
+                {roiData.roiResult !== 0 && (
+                  <div className="mt-6 p-4 bg-blue-100 border border-blue-300 rounded-lg">
+                    <h3 className="text-lg font-bold text-blue-800">Estimated ROI</h3>
+                    <p className="text-2xl font-bold text-blue-600">
+                      {roiData.roiResult.toFixed(2)}%
+                    </p>
+                    <p className="text-sm text-blue-600 mt-2">
+                      Profit: ${((parseFloat(roiData.salePrice) || 0) - (parseFloat(roiData.purchasePrice) || 0) - (parseFloat(roiData.repairCosts) || 0)).toLocaleString()}
+                    </p>
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+
+          {/* Disclaimer */}
+          <div className="mt-12 bg-yellow-50 border border-yellow-200 rounded-lg p-6">
+            <h3 className="text-lg font-bold text-yellow-800 mb-2">⚠️ Disclaimer</h3>
+            <p className="text-yellow-700">
+              These calculators provide estimates only and should not be considered as professional financial advice. 
+              Always consult with qualified professionals before making investment decisions.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+// Blog Page
+const BlogPage = () => {
+  const blogPosts = [
+    {
+      id: 1,
+      title: "How to Sell Your House Fast in Indianapolis",
+      excerpt: "Learn the proven strategies Indianapolis homeowners are using to sell their properties quickly without the hassle of traditional real estate.",
+      date: "January 15, 2025",
+      tags: ["Sell Fast", "Local Market"],
+      slug: "sell-house-fast-indianapolis"
+    },
+    {
+      id: 2,
+      title: "Indianapolis Real Estate Market Trends 2025",
+      excerpt: "Stay updated on the latest market trends, property values, and investment opportunities in the Indianapolis metropolitan area.",
+      date: "January 10, 2025",
+      tags: ["Local Market", "Market Analysis"],
+      slug: "indianapolis-market-trends-2025"
+    },
+    {
+      id: 3,
+      title: "5 Benefits of Selling to Cash Buyers",
+      excerpt: "Discover why more Indianapolis homeowners are choosing cash buyers over traditional real estate agents for their property sales.",
+      date: "January 5, 2025",
+      tags: ["Cash Buyers", "Sell Fast"],
+      slug: "benefits-cash-buyers-indianapolis"
+    },
+    {
+      id: 4,
+      title: "Real Estate Investment Tips for Beginners",
+      excerpt: "New to real estate investing? Learn the fundamentals of property investment in the Indianapolis market.",
+      date: "December 28, 2024",
+      tags: ["Investor Tips", "Beginner Guide"],
+      slug: "real-estate-investment-tips-beginners"
+    },
+    {
+      id: 5,
+      title: "What to Expect When Selling As-Is",
+      excerpt: "Understanding the as-is selling process and what Indianapolis homeowners need to know before choosing this option.",
+      date: "December 20, 2024",
+      tags: ["Sell Fast", "As-Is Sales"],
+      slug: "selling-as-is-indianapolis"
+    },
+    {
+      id: 6,
+      title: "Indianapolis Neighborhood Investment Guide",
+      excerpt: "A comprehensive look at the best Indianapolis neighborhoods for real estate investment in 2025.",
+      date: "December 15, 2024",
+      tags: ["Local Market", "Investor Tips"],
+      slug: "indianapolis-neighborhood-investment-guide"
+    }
+  ];
+
+  return (
+    <div className="pt-16">
+      {/* Header */}
+      <div className="bg-slate-900 text-white py-20">
+        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+          <h1 className="text-5xl font-bold mb-6">Real Estate Blog</h1>
+          <p className="text-xl text-gray-300">
+            Expert insights on Indianapolis real estate, investing, and home selling
+          </p>
+        </div>
+      </div>
+
+      {/* Blog Posts */}
+      <div className="py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {blogPosts.map((post) => (
+              <article key={post.id} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <div className="p-6">
+                  <div className="flex flex-wrap gap-2 mb-3">
+                    {post.tags.map((tag) => (
+                      <span 
+                        key={tag}
+                        className="px-3 py-1 bg-orange-100 text-orange-600 text-xs font-medium rounded-full"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                  
+                  <h2 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
+                    {post.title}
+                  </h2>
+                  
+                  <p className="text-gray-600 mb-4 line-clamp-3">
+                    {post.excerpt}
+                  </p>
+                  
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm text-gray-500">{post.date}</span>
+                    <button className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors duration-300">
+                      Read More
+                    </button>
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
+
+          {/* Newsletter Signup */}
+          <div className="mt-16 bg-slate-900 rounded-lg p-8 text-center text-white">
+            <h3 className="text-2xl font-bold mb-4">Stay Updated</h3>
+            <p className="text-gray-300 mb-6">
+              Get the latest Indianapolis real estate insights delivered to your inbox
+            </p>
+            <div className="max-w-md mx-auto flex gap-4">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="flex-1 px-4 py-2 rounded-md text-gray-900"
+              />
+              <button className="bg-orange-500 hover:bg-orange-600 px-6 py-2 rounded-md font-medium transition-colors duration-300">
+                Subscribe
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 // Main App Component
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
