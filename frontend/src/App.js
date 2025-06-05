@@ -322,7 +322,10 @@ const AboutUsPage = () => {
                 WillowBrook Real Estate Group is a local team of real estate professionals helping Indianapolis homeowners sell quickly and investors find discounted properties.
               </p>
               <p className="text-lg text-gray-600 mb-6">
-                Based in the heart of Indianapolis, we pride ourselves on transparent, fast, and fair transactions. We understand the local market and are committed to providing exceptional service to both homeowners and investors.
+                Based in the heart of Indianapolis, we pride ourselves on transparent, fast, and fair transactions. We understand the local market and are committed to providing exceptional service to both homeowners and investors throughout the greater Indianapolis area.
+              </p>
+              <p className="text-lg text-gray-600 mb-6">
+                <strong>Mobile Service:</strong> We come directly to you for property evaluations, consultations, and closings. No need to visit an office - we bring our expertise to your location for your convenience.
               </p>
             </div>
             <div>
