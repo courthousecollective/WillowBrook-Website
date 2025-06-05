@@ -323,7 +323,14 @@ export const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-2">
-            <h3 className="text-2xl font-bold mb-4">WillowBrook Real Estate Group</h3>
+            <div className="flex items-center mb-4">
+              <img 
+                src="https://i.imgur.com/ZQY8yGZ.png" 
+                alt="WillowBrook Real Estate Group"
+                className="h-8 w-auto mr-3"
+              />
+              <h3 className="text-2xl font-bold">WillowBrook Real Estate Group</h3>
+            </div>
             <p className="text-gray-300 mb-4">
               Professional home buyers and investors helping Indianapolis homeowners sell quickly and investors find discounted properties.
             </p>
