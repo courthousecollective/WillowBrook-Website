@@ -465,12 +465,16 @@ const ContactPage = () => {
                 </div>
               </div>
 
-              {/* Map placeholder */}
-              <div className="mt-8 bg-gray-200 rounded-lg h-64 flex items-center justify-center">
-                <div className="text-gray-500 text-center">
-                  <div className="text-4xl mb-2">🗺️</div>
-                  <p>Interactive Map Coming Soon</p>
-                  <p className="text-sm">Indianapolis, Indiana Location</p>
+              {/* Service Area Info */}
+              <div className="mt-8 bg-green-50 border border-green-200 rounded-lg p-6">
+                <div className="text-center">
+                  <div className="text-4xl mb-3">🚗</div>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">Mobile Service</h3>
+                  <p className="text-gray-600 mb-2">We come directly to you for property evaluations</p>
+                  <p className="text-sm text-gray-500">
+                    Serving: Indianapolis, Carmel, Fishers, Westfield, Noblesville, 
+                    Greenwood, Avon, Plainfield, and surrounding areas
+                  </p>
                 </div>
               </div>
             </div>
