@@ -1,62 +1,65 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 700" style="background-color: white;">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" style="background: transparent;">
+  <!-- Tree on left -->
+  <g fill="#2d5f41">
+    <!-- Tree trunk -->
+    <rect x="180" y="380" width="15" height="60"/>
+    <!-- Tree layers (evergreen) -->
+    <polygon points="187.5,380 165,350 210,350"/>
+    <polygon points="187.5,365 170,340 205,340"/>
+    <polygon points="187.5,350 175,330 200,330"/>
+    <polygon points="187.5,335 180,320 195,320"/>
+  </g>
+  
   <!-- House structure -->
-  <g fill="#2d4a3d" stroke="#2d4a3d" stroke-width="2">
+  <g fill="#2d5f41" stroke="#2d5f41" stroke-width="2">
     <!-- Main house body -->
-    <rect x="250" y="350" width="200" height="150" fill="white" stroke="#2d4a3d" stroke-width="3"/>
+    <rect x="250" y="320" width="180" height="120" fill="white" stroke="#2d5f41" stroke-width="3"/>
     
     <!-- Roof -->
-    <polygon points="240,350 350,250 460,350" fill="#2d4a3d"/>
+    <polygon points="240,320 340,240 440,320" fill="#2d5f41"/>
     
-    <!-- Roof details -->
-    <rect x="330" y="260" width="40" height="60" fill="#2d4a3d"/>
-    <rect x="335" y="255" width="30" height="10" fill="#2d4a3d"/>
+    <!-- Chimney -->
+    <rect x="310" y="250" width="25" height="50" fill="#2d5f41"/>
+    
+    <!-- Front porch roof -->
+    <polygon points="270,320 300,300 350,300 380,320" fill="#2d5f41"/>
+    
+    <!-- Porch columns -->
+    <rect x="290" y="300" width="8" height="20" fill="#2d5f41"/>
+    <rect x="350" y="300" width="8" height="20" fill="#2d5f41"/>
     
     <!-- Windows -->
-    <rect x="270" y="380" width="30" height="40" fill="white" stroke="#2d4a3d" stroke-width="2"/>
-    <line x1="285" y1="380" x2="285" y2="420" stroke="#2d4a3d" stroke-width="1"/>
-    <line x1="270" y1="400" x2="300" y2="400" stroke="#2d4a3d" stroke-width="1"/>
+    <rect x="270" y="340" width="25" height="30" fill="white" stroke="#2d5f41" stroke-width="2"/>
+    <line x1="282.5" y1="340" x2="282.5" y2="370" stroke="#2d5f41" stroke-width="1"/>
+    <line x1="270" y1="355" x2="295" y2="355" stroke="#2d5f41" stroke-width="1"/>
     
-    <rect x="400" y="380" width="30" height="40" fill="white" stroke="#2d4a3d" stroke-width="2"/>
-    <line x1="415" y1="380" x2="415" y2="420" stroke="#2d4a3d" stroke-width="1"/>
-    <line x1="400" y1="400" x2="430" y2="400" stroke="#2d4a3d" stroke-width="1"/>
+    <rect x="385" y="340" width="25" height="30" fill="white" stroke="#2d5f41" stroke-width="2"/>
+    <line x1="397.5" y1="340" x2="397.5" y2="370" stroke="#2d5f41" stroke-width="1"/>
+    <line x1="385" y1="355" x2="410" y2="355" stroke="#2d5f41" stroke-width="1"/>
     
     <!-- Upper windows -->
-    <rect x="280" y="300" width="25" height="30" fill="white" stroke="#2d4a3d" stroke-width="2"/>
-    <rect x="395" y="300" width="25" height="30" fill="white" stroke="#2d4a3d" stroke-width="2"/>
+    <rect x="285" y="280" width="20" height="25" fill="white" stroke="#2d5f41" stroke-width="2"/>
+    <rect x="375" y="280" width="20" height="25" fill="white" stroke="#2d5f41" stroke-width="2"/>
     
     <!-- Door -->
-    <rect x="325" y="420" width="50" height="80" fill="#2d4a3d"/>
-    <circle cx="365" cy="460" r="3" fill="white"/>
+    <rect x="315" y="380" width="40" height="60" fill="#2d5f41"/>
+    <circle cx="345" cy="410" r="2" fill="white"/>
     
-    <!-- Door steps -->
-    <rect x="320" y="500" width="60" height="8" fill="#2d4a3d"/>
-    <rect x="315" y="508" width="70" height="6" fill="#2d4a3d"/>
+    <!-- Front porch -->
+    <rect x="280" y="320" width="100" height="60" fill="none" stroke="#2d5f41" stroke-width="2"/>
   </g>
   
-  <!-- Large tree on left -->
-  <g fill="#2d4a3d">
-    <!-- Tree trunk -->
-    <rect x="180" y="420" width="20" height="80" fill="#2d4a3d"/>
-    
-    <!-- Tree layers -->
-    <polygon points="190,420 160,380 220,380" fill="#2d4a3d"/>
-    <polygon points="190,400 165,365 215,365" fill="#2d4a3d"/>
-    <polygon points="190,380 170,350 210,350" fill="#2d4a3d"/>
-    <polygon points="190,360 175,335 205,335" fill="#2d4a3d"/>
-    <polygon points="190,340 180,320 200,320" fill="#2d4a3d"/>
+  <!-- Bushes/landscaping on right -->
+  <g fill="#2d5f41">
+    <circle cx="470" cy="400" r="30"/>
+    <circle cx="485" cy="385" r="22"/>
+    <circle cx="455" cy="415" r="18"/>
   </g>
   
-  <!-- Bushes/trees on right -->
-  <g fill="#2d4a3d">
-    <circle cx="500" cy="450" r="40" fill="#2d4a3d"/>
-    <circle cx="520" cy="430" r="30" fill="#2d4a3d"/>
-    <circle cx="480" cy="470" r="25" fill="#2d4a3d"/>
-  </g>
-  
-  <!-- Ground/landscaping -->
-  <ellipse cx="350" cy="520" rx="180" ry="30" fill="#2d4a3d" opacity="0.3"/>
+  <!-- Ground landscaping -->
+  <ellipse cx="340" cy="460" rx="140" ry="20" fill="#2d5f41" opacity="0.3"/>
   
   <!-- Company name -->
-  <text x="350" y="580" text-anchor="middle" font-family="serif" font-size="48" font-weight="bold" fill="#2d4a3d">WILLOWBROOK</text>
-  <text x="350" y="620" text-anchor="middle" font-family="sans-serif" font-size="24" font-weight="normal" fill="#2d4a3d" letter-spacing="4px">REAL ESTATE GROUP</text>
+  <text x="300" y="520" text-anchor="middle" font-family="serif" font-size="36" font-weight="bold" fill="#2d5f41">WILLOWBROOK</text>
+  <text x="300" y="550" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="normal" fill="#2d5f41" letter-spacing="3px">REAL ESTATE GROUP</text>
 </svg>
