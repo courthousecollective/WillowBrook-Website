@@ -24,6 +24,7 @@ export const Navigation = ({ currentPage, setCurrentPage }) => {
               src="https://i.postimg.cc/bYWV5WkW/Chat-GPT-Image-Jun-5-2025-12-34-45-AM-1.png" 
               alt="WillowBrook Real Estate Group Logo"
               className="h-20 w-auto"
+              style={{ objectFit: 'contain', aspectRatio: 'auto' }}
             />
           </div>
           
