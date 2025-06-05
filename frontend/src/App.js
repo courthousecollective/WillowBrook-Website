@@ -21,19 +21,21 @@ const Homepage = () => {
       <HeroSection />
       <ServicesSection />
       <TrustBadges />
-      <LeadForm
-        title="Get Your Cash Offer Today"
-        subtitle="Fill out the form below and we'll contact you within 24 hours"
-        fields={[
-          { name: 'fullName', label: 'Full Name', type: 'text', placeholder: 'Enter your full name' },
-          { name: 'phone', label: 'Phone Number', type: 'tel', placeholder: '(317) 555-0000' },
-          { name: 'email', label: 'Email Address', type: 'email', placeholder: 'your@email.com' },
-          { name: 'address', label: 'Property Address', type: 'text', placeholder: 'Enter your property address', fullWidth: true },
-          { name: 'condition', label: 'Property Condition', type: 'textarea', placeholder: 'Describe the condition of your property...', fullWidth: true }
-        ]}
-        buttonText="Get My Cash Offer"
-        onSubmit={handleHeroForm}
-      />
+      <div id="sell-form">
+        <LeadForm
+          title="Get Your Cash Offer Today"
+          subtitle="Fill out the form below and we'll contact you within 24 hours"
+          fields={[
+            { name: 'fullName', label: 'Full Name', type: 'text', placeholder: 'Enter your full name' },
+            { name: 'phone', label: 'Phone Number', type: 'tel', placeholder: '(317) 555-0000' },
+            { name: 'email', label: 'Email Address', type: 'email', placeholder: 'your@email.com' },
+            { name: 'address', label: 'Property Address', type: 'text', placeholder: 'Enter your property address', fullWidth: true },
+            { name: 'condition', label: 'Property Condition', type: 'textarea', placeholder: 'Describe the condition of your property...', fullWidth: true }
+          ]}
+          buttonText="Get My Cash Offer"
+          onSubmit={handleHeroForm}
+        />
+      </div>
     </div>
   );
 };
