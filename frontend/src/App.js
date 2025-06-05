@@ -34,6 +34,7 @@ const Homepage = () => {
           ]}
           buttonText="Get My Cash Offer"
           onSubmit={handleHeroForm}
+          formType="homepage-seller"
         />
       </div>
     </div>
