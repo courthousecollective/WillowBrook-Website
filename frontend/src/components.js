@@ -68,7 +68,8 @@ export const Navigation = ({ currentPage, setCurrentPage }) => {
                 <img 
                   src="https://i.postimg.cc/bYWV5WkW/Chat-GPT-Image-Jun-5-2025-12-34-45-AM-1.png" 
                   alt="WillowBrook Real Estate Group Logo"
-                  className="h-10 w-auto mr-2"
+                  className="h-10 w-auto"
+                  style={{ objectFit: 'contain', aspectRatio: 'auto' }}
                 />
                 <span className="text-sm font-semibold text-gray-700">WillowBrook</span>
               </div>
