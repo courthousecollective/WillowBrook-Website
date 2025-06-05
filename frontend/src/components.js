@@ -21,7 +21,7 @@ export const Navigation = ({ currentPage, setCurrentPage }) => {
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
             <img 
-              src="https://i.imgur.com/rxGIknn.png" 
+              src="/willowbrook-logo.svg" 
               alt="WillowBrook Real Estate Group Logo"
               className="h-16 w-auto"
             />
