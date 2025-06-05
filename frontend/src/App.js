@@ -531,12 +531,7 @@ const ContactPage = () => {
               <h2 className="text-3xl font-bold text-gray-900 mb-8">Send Us a Message</h2>
               
               <div className="bg-gray-50 rounded-lg p-8">
-                <form onSubmit={(e) => {
-                  e.preventDefault();
-                  const formData = new FormData(e.target);
-                  const data = Object.fromEntries(formData.entries());
-                  handleContactForm(data);
-                }} className="space-y-6">
+                <form onSubmit={handleContactForm} className="space-y-6">
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">Name</label>
                     <input
@@ -582,10 +577,28 @@ const ContactPage = () => {
                   
                   <button
                     type="submit"
-                    className="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105"
+                    disabled={isSubmitting}
+                    className={`w-full font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 ${
+                      isSubmitting 
+                        ? 'bg-gray-400 cursor-not-allowed text-white' 
+                        : 'bg-orange-500 hover:bg-orange-600 text-white'
+                    }`}
                   >
-                    Send Message
+                    {isSubmitting ? 'Sending...' : 'Send Message'}
                   </button>
+
+                  {/* Status Messages */}
+                  {submitStatus === 'success' && (
+                    <div className="mt-4 p-4 bg-green-100 border border-green-300 rounded-lg text-center">
+                      <p className="text-green-800 font-semibold">✅ Message sent! We'll get back to you soon.</p>
+                    </div>
+                  )}
+                  
+                  {submitStatus === 'error' && (
+                    <div className="mt-4 p-4 bg-red-100 border border-red-300 rounded-lg text-center">
+                      <p className="text-red-800 font-semibold">❌ Failed to send. Please call us at (317) 555-0199.</p>
+                    </div>
+                  )}
                 </form>
               </div>
             </div>
