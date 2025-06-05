@@ -415,9 +415,47 @@ const AboutUsPage = () => {
 
 // Contact Page
 const ContactPage = () => {
-  const handleContactForm = (formData) => {
-    console.log('Contact form submitted:', formData);
-    alert('Thank you for your message! We will get back to you soon.');
+  const [contactForm, setContactForm] = useState({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null);
+
+  const handleContactForm = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+
+    try {
+      const formData = new FormData(e.target);
+      const data = Object.fromEntries(formData.entries());
+      
+      // Add contact form identifier
+      const submissionData = {
+        ...data,
+        formType: 'contact-page',
+        submissionDate: new Date().toLocaleString(),
+        website: 'WillowBrook Real Estate Group'
+      };
+
+      const response = await fetch('https://formspree.io/f/xldekwko', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(submissionData),
+      });
+
+      if (response.ok) {
+        setSubmitStatus('success');
+        e.target.reset();
+      } else {
+        setSubmitStatus('error');
+      }
+    } catch (error) {
+      console.error('Contact form submission error:', error);
+      setSubmitStatus('error');
+    }
+
+    setIsSubmitting(false);
   };
 
   return (
