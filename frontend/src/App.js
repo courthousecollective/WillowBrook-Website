@@ -449,8 +449,9 @@ const ContactPage = () => {
                 <div className="flex items-center">
                   <div className="text-2xl mr-4">📍</div>
                   <div>
-                    <h3 className="font-semibold text-gray-900">Location</h3>
-                    <p className="text-gray-600">Indianapolis, Indiana</p>
+                    <h3 className="font-semibold text-gray-900">Service Area</h3>
+                    <p className="text-gray-600">Serving Greater Indianapolis & Surrounding Areas</p>
+                    <p className="text-sm text-gray-500">We come to you!</p>
                   </div>
                 </div>
                 
