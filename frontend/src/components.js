@@ -9,6 +9,8 @@ export const Navigation = ({ currentPage, setCurrentPage }) => {
     { id: 'sell', label: 'Sell Your Home' },
     { id: 'buyers', label: 'For Buyers' },
     { id: 'properties', label: 'Properties' },
+    { id: 'calculators', label: 'Calculators' },
+    { id: 'blog', label: 'Blog' },
     { id: 'about', label: 'About' },
     { id: 'contact', label: 'Contact' }
   ];
