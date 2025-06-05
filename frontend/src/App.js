@@ -245,7 +245,7 @@ const ForBuyersPage = () => {
 const CurrentPropertiesPage = () => {
   const handleSubscribe = (formData) => {
     console.log('Subscribe form submitted:', formData);
-    alert('Thank you! You\'ll be the first to know when new deals are posted.');
+    // Form now handled by Formspree
   };
 
   return (
