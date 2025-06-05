@@ -137,6 +137,7 @@ const SellYourHomePage = () => {
         ]}
         buttonText="Get My Cash Offer Now"
         onSubmit={handleSellForm}
+        formType="sell-page"
       />
     </div>
   );
