@@ -405,9 +405,9 @@ export const Footer = () => {
           <div className="md:col-span-2">
             <div className="flex items-center mb-4">
               <img 
-                src="/willowbrook-logo.svg" 
-                alt="WillowBrook Real Estate Group"
-                className="h-8 w-auto mr-3"
+                src="https://i.imgur.com/ZQY8yGZ.png" 
+                alt="WillowBrook Real Estate Group Logo"
+                className="h-10 w-auto mr-3"
               />
               <h3 className="text-2xl font-bold">WillowBrook Real Estate Group</h3>
             </div>
