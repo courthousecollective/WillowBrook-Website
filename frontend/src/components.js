@@ -65,7 +65,7 @@ export const Navigation = ({ currentPage, setCurrentPage }) => {
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
               <div className="flex items-center px-3 py-2 mb-2 border-b border-gray-200">
                 <img 
-                  src="https://i.imgur.com/rxGIknn.png" 
+                  src="/willowbrook-logo.svg" 
                   alt="WillowBrook Real Estate Group Logo"
                   className="h-8 w-auto mr-2"
                 />
