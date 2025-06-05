@@ -796,6 +796,7 @@ const BlogPage = () => {
   const [newsletterEmail, setNewsletterEmail] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
+  const [selectedPost, setSelectedPost] = useState(null);
 
   const handleNewsletterSubmit = async (e) => {
     e.preventDefault();
