@@ -937,16 +937,39 @@ const BlogPage = () => {
             <p className="text-gray-300 mb-6">
               Get the latest Indianapolis real estate insights delivered to your inbox
             </p>
-            <div className="max-w-md mx-auto flex gap-4">
+            <form onSubmit={handleNewsletterSubmit} className="max-w-md mx-auto flex gap-4">
               <input
                 type="email"
+                value={newsletterEmail}
+                onChange={(e) => setNewsletterEmail(e.target.value)}
                 placeholder="Enter your email"
                 className="flex-1 px-4 py-2 rounded-md text-gray-900"
+                required
               />
-              <button className="bg-orange-500 hover:bg-orange-600 px-6 py-2 rounded-md font-medium transition-colors duration-300">
-                Subscribe
+              <button 
+                type="submit"
+                disabled={isSubmitting}
+                className={`px-6 py-2 rounded-md font-medium transition-colors duration-300 ${
+                  isSubmitting 
+                    ? 'bg-gray-400 cursor-not-allowed' 
+                    : 'bg-orange-500 hover:bg-orange-600'
+                }`}
+              >
+                {isSubmitting ? 'Subscribing...' : 'Subscribe'}
               </button>
-            </div>
+            </form>
+            
+            {submitStatus === 'success' && (
+              <div className="mt-4 p-3 bg-green-100 text-green-800 rounded-md">
+                ✅ Successfully subscribed! Check your email.
+              </div>
+            )}
+            
+            {submitStatus === 'error' && (
+              <div className="mt-4 p-3 bg-red-100 text-red-800 rounded-md">
+                ❌ Failed to subscribe. Please try again.
+              </div>
+            )}
           </div>
         </div>
       </div>
