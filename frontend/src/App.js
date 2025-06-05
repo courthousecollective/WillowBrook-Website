@@ -1496,7 +1496,10 @@ const BlogPage = () => {
                   
                   <div className="flex items-center justify-between">
                     <span className="text-sm text-gray-500">{post.date}</span>
-                    <button className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors duration-300">
+                    <button 
+                      onClick={() => setSelectedPost(post.id)}
+                      className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors duration-300"
+                    >
                       Read More
                     </button>
                   </div>
