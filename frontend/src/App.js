@@ -793,6 +793,44 @@ const CalculatorsPage = () => {
 
 // Blog Page
 const BlogPage = () => {
+  const [newsletterEmail, setNewsletterEmail] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null);
+
+  const handleNewsletterSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+
+    try {
+      const submissionData = {
+        email: newsletterEmail,
+        formType: 'newsletter-signup',
+        submissionDate: new Date().toLocaleString(),
+        website: 'WillowBrook Real Estate Group'
+      };
+
+      const response = await fetch('https://formspree.io/f/xldekwko', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(submissionData),
+      });
+
+      if (response.ok) {
+        setSubmitStatus('success');
+        setNewsletterEmail('');
+      } else {
+        setSubmitStatus('error');
+      }
+    } catch (error) {
+      console.error('Newsletter submission error:', error);
+      setSubmitStatus('error');
+    }
+
+    setIsSubmitting(false);
+  };
   const blogPosts = [
     {
       id: 1,
