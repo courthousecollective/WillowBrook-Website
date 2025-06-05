@@ -572,6 +572,10 @@ function App() {
         return <AboutUsPage />;
       case 'contact':
         return <ContactPage />;
+      case 'calculators':
+          return <CalculatorsPage />;
+        case 'blog':
+          return <BlogPage />;
       default:
         return <Homepage />;
     }
