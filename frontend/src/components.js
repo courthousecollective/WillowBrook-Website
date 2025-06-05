@@ -258,9 +258,11 @@ export const TrustBadges = () => {
   );
 };
 
-// Lead Form Component
-export const LeadForm = ({ title, subtitle, fields, buttonText, onSubmit }) => {
+// Lead Form Component - Updated with functional email
+export const LeadForm = ({ title, subtitle, fields, buttonText, onSubmit, formType = "general" }) => {
   const [formData, setFormData] = useState({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null);
 
   const handleChange = (e) => {
     setFormData({
@@ -269,9 +271,42 @@ export const LeadForm = ({ title, subtitle, fields, buttonText, onSubmit }) => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    onSubmit(formData);
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+
+    try {
+      // Add form type to the data
+      const submissionData = {
+        ...formData,
+        formType: formType,
+        submissionDate: new Date().toLocaleString(),
+        website: 'WillowBrook Real Estate Group'
+      };
+
+      // Use Formspree for form handling
+      const response = await fetch('https://formspree.io/f/xldekwko', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(submissionData),
+      });
+
+      if (response.ok) {
+        setSubmitStatus('success');
+        setFormData({});
+        if (onSubmit) onSubmit(submissionData);
+      } else {
+        setSubmitStatus('error');
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      setSubmitStatus('error');
+    }
+
+    setIsSubmitting(false);
   };
 
   return (
@@ -295,14 +330,18 @@ export const LeadForm = ({ title, subtitle, fields, buttonText, onSubmit }) => {
                       name={field.name}
                       placeholder={field.placeholder}
                       rows={4}
+                      value={formData[field.name] || ''}
                       className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
                       onChange={handleChange}
+                      required
                     />
                   ) : field.type === 'select' ? (
                     <select
                       name={field.name}
+                      value={formData[field.name] || ''}
                       className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
                       onChange={handleChange}
+                      required
                     >
                       <option value="">Select...</option>
                       {field.options.map((option) => (
@@ -314,8 +353,10 @@ export const LeadForm = ({ title, subtitle, fields, buttonText, onSubmit }) => {
                       type={field.type}
                       name={field.name}
                       placeholder={field.placeholder}
+                      value={formData[field.name] || ''}
                       className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
                       onChange={handleChange}
+                      required
                     />
                   )}
                 </div>
@@ -325,11 +366,29 @@ export const LeadForm = ({ title, subtitle, fields, buttonText, onSubmit }) => {
             <div className="text-center">
               <button
                 type="submit"
-                className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105"
+                disabled={isSubmitting}
+                className={`font-bold py-3 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 ${
+                  isSubmitting 
+                    ? 'bg-gray-400 cursor-not-allowed' 
+                    : 'bg-orange-500 hover:bg-orange-600 text-white'
+                }`}
               >
-                {buttonText}
+                {isSubmitting ? 'Submitting...' : buttonText}
               </button>
             </div>
+
+            {/* Status Messages */}
+            {submitStatus === 'success' && (
+              <div className="mt-4 p-4 bg-green-100 border border-green-300 rounded-lg text-center">
+                <p className="text-green-800 font-semibold">✅ Thank you! We'll contact you within 24 hours.</p>
+              </div>
+            )}
+            
+            {submitStatus === 'error' && (
+              <div className="mt-4 p-4 bg-red-100 border border-red-300 rounded-lg text-center">
+                <p className="text-red-800 font-semibold">❌ Something went wrong. Please try again or call us at (317) 555-0199.</p>
+              </div>
+            )}
           </form>
         </div>
       </div>
