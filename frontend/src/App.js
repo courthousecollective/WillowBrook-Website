@@ -298,6 +298,7 @@ const CurrentPropertiesPage = () => {
             ]}
             buttonText="Subscribe for Updates"
             onSubmit={handleSubscribe}
+            formType="property-updates"
           />
         </div>
       </div>
