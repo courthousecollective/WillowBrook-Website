@@ -410,6 +410,7 @@ export const Footer = () => {
                 src="https://i.postimg.cc/bYWV5WkW/Chat-GPT-Image-Jun-5-2025-12-34-45-AM-1.png" 
                 alt="WillowBrook Real Estate Group Logo"
                 className="h-12 w-auto mr-3"
+                style={{ objectFit: 'contain', aspectRatio: 'auto' }}
               />
               <h3 className="text-2xl font-bold">WillowBrook Real Estate Group</h3>
             </div>
