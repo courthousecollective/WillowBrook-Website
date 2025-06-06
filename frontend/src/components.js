@@ -407,7 +407,7 @@ export const Footer = () => {
           <div className="md:col-span-2">
             <div className="flex items-center mb-4">
               <img 
-                src="https://i.postimg.cc/bYWV5WkW/Chat-GPT-Image-Jun-5-2025-12-34-45-AM-1.png" 
+                src="https://i.postimg.cc/SnKZ5X4Y/Adobe-Express-file.png" 
                 alt="WillowBrook Real Estate Group Logo"
                 className="h-12 w-auto mr-3"
                 style={{ objectFit: 'contain', aspectRatio: 'auto' }}
