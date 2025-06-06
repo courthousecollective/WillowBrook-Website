@@ -23,7 +23,7 @@ export const Navigation = ({ currentPage, setCurrentPage }) => {
             <img 
               src="https://i.postimg.cc/SnKZ5X4Y/Adobe-Express-file.png" 
               alt="WillowBrook Real Estate Group Logo"
-              className="h-12 w-auto"
+              className="h-16 w-auto"
               style={{ objectFit: 'contain', aspectRatio: 'auto' }}
             />
           </div>
