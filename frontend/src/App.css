@@ -2,6 +2,63 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+/* Premium Typography System */
+@layer base {
+  :root {
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Inter', sans-serif;
+  }
+  
+  body {
+    font-family: var(--font-body);
+    font-optical-sizing: auto;
+    font-style: normal;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+  }
+  
+  h1 {
+    font-size: clamp(2.5rem, 8vw, 4.5rem);
+    font-weight: 800;
+  }
+  
+  h2 {
+    font-size: clamp(2rem, 6vw, 3.5rem);
+    font-weight: 700;
+  }
+  
+  h3 {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    font-weight: 600;
+  }
+  
+  p, span, div {
+    font-family: var(--font-body);
+    line-height: 1.6;
+  }
+  
+  .text-premium-large {
+    font-family: var(--font-heading);
+    font-size: clamp(3rem, 10vw, 6rem);
+    font-weight: 900;
+    letter-spacing: -0.03em;
+    line-height: 0.95;
+  }
+  
+  .text-premium-subtitle {
+    font-family: var(--font-body);
+    font-size: clamp(1.125rem, 3vw, 1.5rem);
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    line-height: 1.5;
+  }
+}
+
 /* Custom animations and styles */
 @keyframes slow-float {
   0%, 100% {
@@ -62,6 +119,58 @@
   }
 }
 
+/* Logo styling */
+img[alt*="WillowBrook Real Estate Group Logo"] {
+  object-fit: contain;
+  object-position: center;
+  max-width: none;
+  aspect-ratio: auto;
+}
+
+/* Blog content styling */
+.blog-content {
+  line-height: 1.8;
+  font-size: 18px;
+}
+
+.blog-content h2 {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 2rem 0 1rem 0;
+  color: #1f2937;
+}
+
+.blog-content h3 {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 1.5rem 0 0.75rem 0;
+  color: #374151;
+}
+
+.blog-content p {
+  margin: 1rem 0;
+  color: #4b5563;
+  font-family: var(--font-body);
+}
+
+.blog-content ul, .blog-content ol {
+  margin: 1rem 0;
+  padding-left: 2rem;
+}
+
+.blog-content li {
+  margin: 0.5rem 0;
+  color: #4b5563;
+  font-family: var(--font-body);
+}
+
+.blog-content strong {
+  font-weight: 600;
+  color: #1f2937;
+}
+
 /* Smooth scroll behavior */
 html {
   scroll-behavior: smooth;
@@ -82,6 +191,8 @@ select:focus {
 /* Button hover effects */
 button {
   transition: all 0.3s ease;
+  font-family: var(--font-body);
+  font-weight: 600;
 }
 
 button:hover {
@@ -117,54 +228,6 @@ nav {
   .hero-background::before {
     animation: none;
   }
-}
-
-/* Logo styling */
-img[alt*="WillowBrook Real Estate Group Logo"] {
-  object-fit: contain;
-  object-position: center;
-  max-width: none;
-  aspect-ratio: auto;
-}
-
-/* Blog content styling */
-.blog-content {
-  line-height: 1.8;
-  font-size: 18px;
-}
-
-.blog-content h2 {
-  font-size: 2rem;
-  font-weight: bold;
-  margin: 2rem 0 1rem 0;
-  color: #1f2937;
-}
-
-.blog-content h3 {
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin: 1.5rem 0 0.75rem 0;
-  color: #374151;
-}
-
-.blog-content p {
-  margin: 1rem 0;
-  color: #4b5563;
-}
-
-.blog-content ul, .blog-content ol {
-  margin: 1rem 0;
-  padding-left: 2rem;
-}
-
-.blog-content li {
-  margin: 0.5rem 0;
-  color: #4b5563;
-}
-
-.blog-content strong {
-  font-weight: 600;
-  color: #1f2937;
 }
 
 /* Print styles */
