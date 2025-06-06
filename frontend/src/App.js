@@ -188,6 +188,14 @@ const ForBuyersPage = () => {
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h1 className="text-5xl font-bold mb-6">Join Our Cash Buyer List</h1>
           <p className="text-xl text-gray-300 mb-8">Get access to off-market properties before anyone else.</p>
+          
+          {/* CTA Button to Buyer Form */}
+          <button 
+            onClick={() => document.getElementById('buyer-signup-form')?.scrollIntoView({ behavior: 'smooth' })}
+            className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-4 px-8 rounded-lg text-xl transition-all duration-300 transform hover:scale-105 shadow-xl"
+          >
+            Join Buyer List Now
+          </button>
         </div>
       </div>
 
