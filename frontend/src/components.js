@@ -66,7 +66,7 @@ export const Navigation = ({ currentPage, setCurrentPage }) => {
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
               <div className="flex items-center px-3 py-2 mb-2 border-b border-gray-200">
                 <img 
-                  src="https://i.postimg.cc/bYWV5WkW/Chat-GPT-Image-Jun-5-2025-12-34-45-AM-1.png" 
+                  src="https://i.postimg.cc/SnKZ5X4Y/Adobe-Express-file.png" 
                   alt="WillowBrook Real Estate Group Logo"
                   className="h-10 w-auto"
                   style={{ objectFit: 'contain', aspectRatio: 'auto' }}
