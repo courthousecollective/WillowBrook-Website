@@ -255,8 +255,151 @@ const ForBuyersPage = () => {
         </div>
       </div>
 
+      {/* Investment Calculators Section */}
+      <div className="py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Investment Calculators</h2>
+            <p className="text-xl text-gray-600">Tools to help you analyze potential investments</p>
+          </div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            
+            {/* ARV Calculator */}
+            <div className="bg-gray-50 rounded-lg p-8">
+              <h3 className="text-3xl font-bold text-gray-900 mb-6">ARV Calculator</h3>
+              <p className="text-gray-600 mb-6">
+                Calculate the After Repair Value of your property based on comparable sales.
+              </p>
+              
+              <div className="space-y-4">
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Comparable Price per Sq Ft ($)
+                  </label>
+                  <input
+                    type="number"
+                    value={arvData.compsPrice}
+                    onChange={(e) => setArvData({ ...arvData, compsPrice: e.target.value })}
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
+                    placeholder="e.g., 150"
+                  />
+                </div>
+                
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Property Size (Sq Ft)
+                  </label>
+                  <input
+                    type="number"
+                    value={arvData.propertySize}
+                    onChange={(e) => setArvData({ ...arvData, propertySize: e.target.value })}
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
+                    placeholder="e.g., 1500"
+                  />
+                </div>
+                
+                <button
+                  onClick={calculateARV}
+                  className="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300"
+                >
+                  Calculate ARV
+                </button>
+                
+                {arvData.arvResult > 0 && (
+                  <div className="mt-6 p-4 bg-green-100 border border-green-300 rounded-lg">
+                    <h4 className="text-lg font-bold text-green-800">Estimated ARV</h4>
+                    <p className="text-2xl font-bold text-green-600">
+                      ${arvData.arvResult.toLocaleString()}
+                    </p>
+                  </div>
+                )}
+              </div>
+            </div>
+
+            {/* ROI Calculator */}
+            <div className="bg-gray-50 rounded-lg p-8">
+              <h3 className="text-3xl font-bold text-gray-900 mb-6">ROI Calculator</h3>
+              <p className="text-gray-600 mb-6">
+                Calculate your Return on Investment for real estate deals.
+              </p>
+              
+              <div className="space-y-4">
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Purchase Price ($)
+                  </label>
+                  <input
+                    type="number"
+                    value={roiData.purchasePrice}
+                    onChange={(e) => setRoiData({ ...roiData, purchasePrice: e.target.value })}
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
+                    placeholder="e.g., 120000"
+                  />
+                </div>
+                
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Repair Costs ($)
+                  </label>
+                  <input
+                    type="number"
+                    value={roiData.repairCosts}
+                    onChange={(e) => setRoiData({ ...roiData, repairCosts: e.target.value })}
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
+                    placeholder="e.g., 30000"
+                  />
+                </div>
+                
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Sale Price / ARV ($)
+                  </label>
+                  <input
+                    type="number"
+                    value={roiData.salePrice}
+                    onChange={(e) => setRoiData({ ...roiData, salePrice: e.target.value })}
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
+                    placeholder="e.g., 180000"
+                  />
+                </div>
+                
+                <button
+                  onClick={calculateROI}
+                  className="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300"
+                >
+                  Calculate ROI
+                </button>
+                
+                {roiData.roiResult !== 0 && (
+                  <div className="mt-6 p-4 bg-blue-100 border border-blue-300 rounded-lg">
+                    <h4 className="text-lg font-bold text-blue-800">Estimated ROI</h4>
+                    <p className="text-2xl font-bold text-blue-600">
+                      {roiData.roiResult.toFixed(2)}%
+                    </p>
+                    <p className="text-sm text-blue-600 mt-2">
+                      Profit: ${((parseFloat(roiData.salePrice) || 0) - (parseFloat(roiData.purchasePrice) || 0) - (parseFloat(roiData.repairCosts) || 0)).toLocaleString()}
+                    </p>
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+
+          {/* Calculator Disclaimer */}
+          <div className="mt-12 bg-yellow-50 border border-yellow-200 rounded-lg p-6">
+            <h4 className="text-lg font-bold text-yellow-800 mb-2">⚠️ Disclaimer</h4>
+            <p className="text-yellow-700">
+              These calculators provide estimates only and should not be considered as professional financial advice. 
+              Always consult with qualified professionals before making investment decisions.
+            </p>
+          </div>
+        </div>
+      </div>
+
       {/* Buyer Form */}
-      <LeadForm
+      <div id="buyer-signup-form">
+        <LeadForm
         title="Join the Buyer List Today"
         subtitle="Start receiving exclusive Indianapolis investment opportunities"
         fields={[
