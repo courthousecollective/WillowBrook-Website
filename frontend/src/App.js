@@ -418,7 +418,8 @@ const ForBuyersPage = () => {
         buttonText="Join Buyer List Now"
         onSubmit={handleBuyerForm}
         formType="buyer-signup"
-      />
+        />
+      </div>
     </div>
   );
 };
