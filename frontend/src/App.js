@@ -150,6 +150,37 @@ const ForBuyersPage = () => {
     // Form now handled by Formspree
   };
 
+  // Calculator states
+  const [arvData, setArvData] = useState({
+    compsPrice: '',
+    propertySize: '',
+    arvResult: 0
+  });
+
+  const [roiData, setRoiData] = useState({
+    purchasePrice: '',
+    repairCosts: '',
+    salePrice: '',
+    roiResult: 0
+  });
+
+  const calculateARV = () => {
+    const comps = parseFloat(arvData.compsPrice) || 0;
+    const size = parseFloat(arvData.propertySize) || 0;
+    const result = comps * size;
+    setArvData({ ...arvData, arvResult: result });
+  };
+
+  const calculateROI = () => {
+    const purchase = parseFloat(roiData.purchasePrice) || 0;
+    const repairs = parseFloat(roiData.repairCosts) || 0;
+    const sale = parseFloat(roiData.salePrice) || 0;
+    const totalInvestment = purchase + repairs;
+    const profit = sale - totalInvestment;
+    const roi = totalInvestment > 0 ? ((profit / totalInvestment) * 100) : 0;
+    setRoiData({ ...roiData, roiResult: roi });
+  };
+
   return (
     <div className="pt-16">
       {/* Header Section */}
