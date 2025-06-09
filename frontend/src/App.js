@@ -46,34 +46,6 @@ const Homepage = () => {
             </p>
           </div>
 
-          {/* Benefit Icons */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-            <div className="flex flex-col items-center">
-              <div className="bg-orange-500 rounded-full p-4 mb-3">
-                <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-semibold">Free Local Move Benefit</h3>
-            </div>
-            <div className="flex flex-col items-center">
-              <div className="bg-orange-500 rounded-full p-4 mb-3">
-                <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-semibold">Cash Advance Benefit</h3>
-            </div>
-            <div className="flex flex-col items-center">
-              <div className="bg-orange-500 rounded-full p-4 mb-3">
-                <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zm0 4a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1V8zm8 0a1 1 0 011-1h4a1 1 0 011 1v2a1 1 0 01-1 1h-4a1 1 0 01-1-1V8z" clipRule="evenodd" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-semibold">Stay Through Closing</h3>
-            </div>
-          </div>
-
           {/* CTA Section */}
           <div className="text-center">
             <p className="text-2xl font-bold mb-4">We're Ready to Talk!</p>
