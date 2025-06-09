@@ -187,7 +187,7 @@ const Homepage = () => {
               alt="Local Market Specialist"
               className="w-24 h-24 rounded-full mx-auto mb-4 object-cover"
             />
-            <h3 className="text-xl font-bold mb-2">Sarah Johnson</h3>
+            <h3 className="text-xl font-bold mb-2">Matthew Chitel</h3>
             <p className="text-gray-600 mb-4">Local Market Specialist</p>
             <div className="text-center">
               <h4 className="font-bold mb-2">Get a No-Obligation Cash Offer Today</h4>
