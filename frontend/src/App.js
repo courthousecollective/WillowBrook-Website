@@ -145,7 +145,7 @@ const Homepage = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="bg-orange-500 text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mx-auto mb-6">1</div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">⇒ Step 1: Get In Touch</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Step 1: Get In Touch</h3>
               <p className="text-gray-600">Our specialist will give you a <strong>free, no-obligation property evaluation</strong> at your convenience.</p>
             </div>
             <div className="text-center">
