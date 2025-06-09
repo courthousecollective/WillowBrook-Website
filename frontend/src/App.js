@@ -836,6 +836,96 @@ const BlogPage = () => {
   const blogPosts = [
     {
       id: 1,
+      title: "How to Sell My House Fast in Indianapolis, IN",
+      excerpt: "Selling a house in Indianapolis typically takes 65 to 70 days from listing to closing. But if you're facing foreclosure, relocating quickly, or dealing with a distressed property, you may not have that kind of time.",
+      content: `
+        <div class="blog-author">
+          <p><strong>By Matthew Chitel</strong> – Updated June 2025</p>
+        </div>
+        
+        <p>Selling a house in Indianapolis typically takes 65 to 70 days from listing to closing. But if you're facing foreclosure, relocating quickly, or dealing with a distressed property, you may not have that kind of time.</p>
+        
+        <p><strong>Fortunately, there are faster options.</strong></p>
+        
+        <h2>1. Sell to a Cash Home Buyer</h2>
+        
+        <p>Cash buyers can make offers within 24 to 48 hours and close in as little as 7 to 14 days. You skip repairs, showings, and the uncertainty of waiting for a buyer.</p>
+        
+        <div style="background: #f8f9fa; padding: 20px; border-left: 4px solid #ff5722; margin: 20px 0;">
+          <ul style="margin: 0;">
+            <li><strong>Median home value in Indianapolis:</strong> $239,000</li>
+            <li><strong>Typical cash offer (approximately 70% of market value):</strong> $167,000</li>
+            <li><strong>Estimated repair deductions (if selling as-is):</strong> $7,500–$12,000</li>
+            <li><strong>Estimated time to close:</strong> 7 to 14 days</li>
+          </ul>
+        </div>
+        
+        <p><strong>This is a strong option if you're dealing with:</strong></p>
+        <ul>
+          <li>Inherited or vacant property</li>
+          <li>Financial hardship or pre-foreclosure</li>
+          <li>Homes in need of significant repairs</li>
+        </ul>
+        
+        <h2>2. Sell with a Real Estate Agent</h2>
+        
+        <p>If you want to maximize your sale price and can afford to wait a bit longer, working with a top-performing Indianapolis agent is a solid path. A good agent can help price your home right, stage it effectively, and market it to serious buyers.</p>
+        
+        <ul>
+          <li><strong>Potential to get full market value</strong></li>
+          <li><strong>Typical time to close:</strong> 45 to 70 days</li>
+          <li><strong>Standard listing agent commission:</strong> 5–6% of the sale price</li>
+        </ul>
+        
+        <h2>3. Compare Instant Offers with a Hybrid Approach</h2>
+        
+        <p>New programs in Indianapolis let you compare multiple offers from vetted investors while still having the option to list on the open market. This hybrid model offers flexibility:</p>
+        
+        <ul>
+          <li>Review multiple cash offers with no obligation</li>
+          <li>Choose a 7-day market program if you want to test the market</li>
+          <li>Possibility of getting close to full market value</li>
+        </ul>
+        
+        <h2>Summary</h2>
+        
+        <p>If you're looking to sell your house fast in Indianapolis, here's what to consider:</p>
+        
+        <div style="background: #fff3e0; padding: 20px; border-radius: 8px; margin: 20px 0;">
+          <table style="width: 100%; border-collapse: collapse;">
+            <thead>
+              <tr style="background: #ff5722; color: white;">
+                <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Your Priority</th>
+                <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Best Option</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="padding: 12px; border: 1px solid #ddd;"><strong>Speed</strong></td>
+                <td style="padding: 12px; border: 1px solid #ddd;">Cash Buyer or iBuyer</td>
+              </tr>
+              <tr>
+                <td style="padding: 12px; border: 1px solid #ddd;"><strong>Highest Sale Price</strong></td>
+                <td style="padding: 12px; border: 1px solid #ddd;">Real Estate Agent</td>
+              </tr>
+              <tr>
+                <td style="padding: 12px; border: 1px solid #ddd;"><strong>Flexibility</strong></td>
+                <td style="padding: 12px; border: 1px solid #ddd;">Instant Offer Comparison Programs</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        
+        <p><strong>The right option depends on your timeline, financial goals, and the condition of your property.</strong></p>
+        
+        <p>Need help getting a cash offer or connecting with a trusted local agent? Reach out and we'll point you in the right direction.</p>
+      `,
+      date: "June 15, 2025",
+      tags: ["Sell Fast", "Local Market", "Cash Buyers"],
+      slug: "sell-house-fast-indianapolis-in"
+    },
+    {
+      id: 1,
       title: "How to Sell Your House Fast in Indianapolis",
       excerpt: "Learn the proven strategies Indianapolis homeowners are using to sell their properties quickly without the hassle of traditional real estate.",
       content: `
