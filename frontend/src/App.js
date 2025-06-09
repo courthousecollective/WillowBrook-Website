@@ -61,28 +61,10 @@ const Homepage = () => {
         </div>
       </div>
 
-      {/* Trust Badges Section */}
-      <div className="bg-gray-50 py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="flex flex-wrap justify-center items-center gap-8 mb-6">
-            <div className="bg-white p-4 rounded-lg shadow-md">
-              <div className="text-blue-600 font-bold text-lg">BBB A+ Rating</div>
-            </div>
-            <div className="bg-white p-4 rounded-lg shadow-md">
-              <div className="text-green-600 font-bold text-lg">5.0 Star Reviews</div>
-            </div>
-            <div className="bg-white p-4 rounded-lg shadow-md">
-              <div className="text-orange-600 font-bold text-lg">Recent Media</div>
-            </div>
-          </div>
-          <p className="text-xl font-bold text-gray-900">Trusted Indianapolis Home Buyers Since 2015</p>
-        </div>
-      </div>
-
       {/* Why Choose Us Section */}
       <div className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div>
               <h2 className="text-4xl font-bold text-gray-900 mb-6">Why Choose Us?</h2>
               <p className="text-lg text-gray-600 mb-6">
@@ -94,39 +76,54 @@ const Homepage = () => {
               <p className="text-lg text-gray-600 mb-8">
                 Above all, we are <strong>real estate problem solvers</strong>, and we make sure <strong>every transaction is a win-win</strong>.
               </p>
-            </div>
-            <div>
               <img 
                 src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914"
                 alt="We Buy Houses Indianapolis"
                 className="w-full rounded-lg shadow-lg"
               />
             </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Benefits Grid */}
-      <div className="py-20 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              "NO Closing Costs",
-              "NO Agent Fees", 
-              "Close on Your Schedule",
-              "Choose Your Move Out Day",
-              "Offer in Person or by Phone",
-              "No Inspections, No Appraisals",
-              "No Showings or Open Houses",
-              "No Repairs or Fixes (As-Is)",
-              "No Hassles (Our Guarantee!)"
-            ].map((benefit, index) => (
-              <div key={index} className="bg-white p-6 rounded-lg shadow-md text-center">
-                <div className="text-green-500 text-xl mb-2">✓</div>
-                <h3 className="text-lg font-semibold text-gray-900">{benefit}</h3>
+            
+            {/* All 9 Benefits with Icons */}
+            <div className="space-y-4">
+              <div className="flex items-center space-x-4 p-4 bg-gray-50 rounded-lg">
+                <div className="text-green-500 text-2xl">💰</div>
+                <span className="text-lg font-semibold text-gray-900">NO Closing Costs</span>
               </div>
-            ))}
+              <div className="flex items-center space-x-4 p-4 bg-gray-50 rounded-lg">
+                <div className="text-green-500 text-2xl">🏠</div>
+                <span className="text-lg font-semibold text-gray-900">NO Agent Fees</span>
+              </div>
+              <div className="flex items-center space-x-4 p-4 bg-gray-50 rounded-lg">
+                <div className="text-green-500 text-2xl">📅</div>
+                <span className="text-lg font-semibold text-gray-900">Close on Your Schedule</span>
+              </div>
+              <div className="flex items-center space-x-4 p-4 bg-gray-50 rounded-lg">
+                <div className="text-green-500 text-2xl">📦</div>
+                <span className="text-lg font-semibold text-gray-900">Choose Your Move Out Day</span>
+              </div>
+              <div className="flex items-center space-x-4 p-4 bg-gray-50 rounded-lg">
+                <div className="text-green-500 text-2xl">📞</div>
+                <span className="text-lg font-semibold text-gray-900">Offer in Person or by Phone</span>
+              </div>
+              <div className="flex items-center space-x-4 p-4 bg-gray-50 rounded-lg">
+                <div className="text-green-500 text-2xl">🔍</div>
+                <span className="text-lg font-semibold text-gray-900">No Inspections, No Appraisals</span>
+              </div>
+              <div className="flex items-center space-x-4 p-4 bg-gray-50 rounded-lg">
+                <div className="text-green-500 text-2xl">👥</div>
+                <span className="text-lg font-semibold text-gray-900">No Showings or Open Houses</span>
+              </div>
+              <div className="flex items-center space-x-4 p-4 bg-gray-50 rounded-lg">
+                <div className="text-green-500 text-2xl">🔧</div>
+                <span className="text-lg font-semibold text-gray-900">No Repairs or Fixes (As-Is)</span>
+              </div>
+              <div className="flex items-center space-x-4 p-4 bg-gray-50 rounded-lg">
+                <div className="text-green-500 text-2xl">✅</div>
+                <span className="text-lg font-semibold text-gray-900">No Hassles (Our Guarantee!)</span>
+              </div>
+            </div>
           </div>
+          
           <div className="text-center mt-12">
             <button 
               onClick={() => document.getElementById('sell-form')?.scrollIntoView({ behavior: 'smooth' })}
