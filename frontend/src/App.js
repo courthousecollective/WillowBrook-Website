@@ -150,7 +150,7 @@ const Homepage = () => {
             </div>
             <div className="text-center">
               <div className="bg-orange-500 text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mx-auto mb-6">2</div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">⇒ Step 2: Cash Offer</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Step 2: Cash Offer</h3>
               <p className="text-gray-600">Within <strong>just 1 hour</strong>, we'll have a <strong>guaranteed all-cash offer</strong> ready for your home.</p>
             </div>
             <div className="text-center">
