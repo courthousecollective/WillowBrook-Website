@@ -174,14 +174,10 @@ const Homepage = () => {
           </p>
           
           {/* Stats */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 max-w-lg mx-auto">
             <div className="text-center">
               <div className="text-4xl font-bold text-orange-400 mb-2">500+</div>
               <div className="text-lg text-gray-300">Happy Customers</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-orange-400 mb-2">150+</div>
-              <div className="text-lg text-gray-300">Homes Bought in 2024</div>
             </div>
             <div className="text-center">
               <div className="text-4xl font-bold text-orange-400 mb-2">5</div>
