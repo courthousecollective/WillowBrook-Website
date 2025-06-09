@@ -155,7 +155,7 @@ const Homepage = () => {
             </div>
             <div className="text-center">
               <div className="bg-orange-500 text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mx-auto mb-6">3</div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">⇒ Step 3: Closing Day</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Step 3: Closing Day</h3>
               <p className="text-gray-600"><strong>You choose the closing date</strong> (as fast as <strong>7 days</strong>), and the easiest moving day for you.</p>
             </div>
           </div>
