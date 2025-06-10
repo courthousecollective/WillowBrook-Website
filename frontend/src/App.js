@@ -26,7 +26,7 @@ const Homepage = ({ setCurrentPage }) => {
         subtitle="Fill out the form below and we'll contact you within 24 hours"
         fields={[
           { name: 'fullName', label: 'Full Name', type: 'text', placeholder: 'Enter your full name' },
-          { name: 'phone', label: 'Phone Number', type: 'tel', placeholder: '(317) 555-0000' },
+          { name: 'phone', label: 'Phone Number', type: 'tel', placeholder: 'Enter your phone number' },
           { name: 'email', label: 'Email Address', type: 'email', placeholder: 'your@email.com' },
           { name: 'address', label: 'Property Address', type: 'text', placeholder: 'Enter your property address', fullWidth: true },
           { name: 'condition', label: 'Property Condition', type: 'textarea', placeholder: 'Describe the condition of your property...', fullWidth: true }
@@ -79,7 +79,6 @@ const SellYourHomePage = () => {
           {/* CTA Section */}
           <div className="text-center">
             <p className="text-2xl font-bold mb-4">We're Ready to Talk!</p>
-            <p className="text-3xl font-bold text-orange-400 mb-6">(317) 555-0199</p>
             <button 
               onClick={() => document.getElementById('sell-form')?.scrollIntoView({ behavior: 'smooth' })}
               className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-4 px-12 rounded-lg text-xl transition-all duration-300 transform hover:scale-105 shadow-xl"
@@ -133,7 +132,7 @@ const SellYourHomePage = () => {
               </div>
               <div className="flex items-center space-x-4 p-4 bg-gray-50 rounded-lg">
                 <div className="text-green-500 text-2xl">📞</div>
-                <span className="text-lg font-semibold text-gray-900">Offer in Person or by Phone</span>
+                <span className="text-lg font-semibold text-gray-900">Offer in Person or by Email</span>
               </div>
               <div className="flex items-center space-x-4 p-4 bg-gray-50 rounded-lg">
                 <div className="text-green-500 text-2xl">🔍</div>
@@ -222,7 +221,7 @@ const SellYourHomePage = () => {
             <div className="text-center">
               <h4 className="font-bold mb-2">Get a No-Obligation Cash Offer Today</h4>
               <h4 className="font-bold mb-4">Talk to our Award-Winning Team Today</h4>
-              <p className="text-2xl font-bold text-orange-500">(317) 555-0199</p>
+              <p className="text-lg text-gray-600">Contact us through our website form</p>
             </div>
           </div>
         </div>
@@ -325,7 +324,7 @@ const SellYourHomePage = () => {
           subtitle="Fill out the form below and we'll contact you within 24 hours"
           fields={[
             { name: 'fullName', label: 'Full Name', type: 'text', placeholder: 'Enter your full name' },
-            { name: 'phone', label: 'Phone Number', type: 'tel', placeholder: '(317) 555-0000' },
+            { name: 'phone', label: 'Phone Number', type: 'tel', placeholder: 'Enter your phone number' },
             { name: 'email', label: 'Email Address', type: 'email', placeholder: 'your@email.com' },
             { name: 'address', label: 'Property Address', type: 'text', placeholder: 'Enter your property address', fullWidth: true },
             { name: 'condition', label: 'Property Condition', type: 'textarea', placeholder: 'Describe the condition of your property...', fullWidth: true }
@@ -601,7 +600,7 @@ const ForBuyersPage = () => {
         fields={[
           { name: 'fullName', label: 'Full Name', type: 'text', placeholder: 'Enter your full name' },
           { name: 'email', label: 'Email Address', type: 'email', placeholder: 'your@email.com' },
-          { name: 'phone', label: 'Phone Number', type: 'tel', placeholder: '(317) 555-0000' },
+          { name: 'phone', label: 'Phone Number', type: 'tel', placeholder: 'Enter your phone number' },
           { name: 'zipCodes', label: 'Target Zip Codes', type: 'text', placeholder: 'e.g. 46201, 46202, 46203' },
           { name: 'maxBudget', label: 'Maximum Budget', type: 'select', options: ['Under $50k', '$50k-$100k', '$100k-$200k', '$200k-$300k', '$300k+'] },
           { 
@@ -713,11 +712,12 @@ const AboutUsPage = () => {
                 <strong>Mobile Service:</strong> We come directly to you for property evaluations, consultations, and closings. No need to visit an office - we bring our expertise to your location for your convenience.
               </p>
             </div>
-            <div>
+            <div className="text-center">
               <img 
-                src="https://i.postimg.cc/rph3Dt20/IMG-CE9585-BB15-C1-1.jpg"
-                alt="WillowBrook Team"
-                className="w-full rounded-lg shadow-lg"
+                src="https://i.postimg.cc/SnKZ5X4Y/Adobe-Express-file.png"
+                alt="WillowBrook Real Estate Group Logo"
+                className="w-full max-w-md mx-auto"
+                style={{ objectFit: 'contain', aspectRatio: 'auto' }}
               />
             </div>
           </div>
@@ -758,7 +758,7 @@ const AboutUsPage = () => {
         </div>
       </div>
 
-      {/* Local Focus */}
+      {/* Local Focus - Updated to remove "10+ Years Experience" */}
       <div className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -768,14 +768,10 @@ const AboutUsPage = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="text-center p-4">
               <div className="text-3xl font-bold text-orange-500">500+</div>
               <div className="text-gray-600">Properties Evaluated</div>
-            </div>
-            <div className="text-center p-4">
-              <div className="text-3xl font-bold text-orange-500">10+</div>
-              <div className="text-gray-600">Years Experience</div>
             </div>
             <div className="text-center p-4">
               <div className="text-3xl font-bold text-orange-500">50+</div>
@@ -798,23 +794,20 @@ const ContactPage = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
 
-  const handleContactForm = async (e) => {
+  const handleContactFormSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus(null);
 
     try {
-      const formData = new FormData(e.target);
-      const data = Object.fromEntries(formData.entries());
-      
-      // Add contact form identifier
       const submissionData = {
-        ...data,
-        formType: 'contact-page',
+        ...contactForm,
+        formType: 'contact',
         submissionDate: new Date().toLocaleString(),
         website: 'WillowBrook Real Estate Group'
       };
 
+      // Use Formspree for form handling
       const response = await fetch('https://formspree.io/f/xldekwko', {
         method: 'POST',
         headers: {
@@ -825,16 +818,23 @@ const ContactPage = () => {
 
       if (response.ok) {
         setSubmitStatus('success');
-        e.target.reset();
+        setContactForm({});
       } else {
         setSubmitStatus('error');
       }
     } catch (error) {
-      console.error('Contact form submission error:', error);
+      console.error('Form submission error:', error);
       setSubmitStatus('error');
     }
 
     setIsSubmitting(false);
+  };
+
+  const handleContactFormChange = (e) => {
+    setContactForm({
+      ...contactForm,
+      [e.target.name]: e.target.value
+    });
   };
 
   return (
@@ -843,11 +843,10 @@ const ContactPage = () => {
       <div className="bg-slate-900 text-white py-20">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h1 className="text-5xl font-bold mb-6">Contact Us</h1>
-          <p className="text-xl text-gray-300">Get in touch with the WillowBrook team</p>
+          <p className="text-xl text-gray-300">Ready to sell your house or invest in Indianapolis real estate?</p>
         </div>
       </div>
 
-      {/* Contact Info & Form */}
       <div className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -856,130 +855,138 @@ const ContactPage = () => {
               <h2 className="text-3xl font-bold text-gray-900 mb-8">Get In Touch</h2>
               
               <div className="space-y-6">
-                <div className="flex items-center">
-                  <div className="text-2xl mr-4">📧</div>
+                <div className="flex items-start space-x-4">
+                  <div className="text-orange-500 text-2xl">📧</div>
                   <div>
-                    <h3 className="font-semibold text-gray-900">Email</h3>
-                    <p className="text-gray-600">contact@willowbrookgroup.com</p>
+                    <h3 className="text-lg font-semibold text-gray-900">Email</h3>
+                    <p className="text-gray-600">operations@willowbrook-realestate.com</p>
                   </div>
                 </div>
                 
-                <div className="flex items-center">
-                  <div className="text-2xl mr-4">📞</div>
+                <div className="flex items-start space-x-4">
+                  <div className="text-orange-500 text-2xl">📍</div>
                   <div>
-                    <h3 className="font-semibold text-gray-900">Phone</h3>
-                    <p className="text-gray-600">(317) 555-0199</p>
+                    <h3 className="text-lg font-semibold text-gray-900">Service Area</h3>
+                    <p className="text-gray-600">Greater Indianapolis Area</p>
+                    <p className="text-gray-600 text-sm">We provide mobile service - we come to you!</p>
                   </div>
                 </div>
-                
-                <div className="flex items-center">
-                  <div className="text-2xl mr-4">📍</div>
+
+                <div className="flex items-start space-x-4">
+                  <div className="text-orange-500 text-2xl">⏰</div>
                   <div>
-                    <h3 className="font-semibold text-gray-900">Service Area</h3>
-                    <p className="text-gray-600">Serving Greater Indianapolis & Surrounding Areas</p>
-                    <p className="text-sm text-gray-500">We come to you!</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-center">
-                  <div className="text-2xl mr-4">🕒</div>
-                  <div>
-                    <h3 className="font-semibold text-gray-900">Hours</h3>
-                    <p className="text-gray-600">Monday - Friday: 8AM - 6PM</p>
-                    <p className="text-gray-600">Saturday: 9AM - 4PM</p>
+                    <h3 className="text-lg font-semibold text-gray-900">Response Time</h3>
+                    <p className="text-gray-600">Within 24 hours</p>
                   </div>
                 </div>
               </div>
 
-              {/* Service Area Info */}
-              <div className="mt-8 bg-green-50 border border-green-200 rounded-lg p-6">
-                <div className="text-center">
-                  <div className="text-4xl mb-3">🚗</div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">Mobile Service</h3>
-                  <p className="text-gray-600 mb-2">We come directly to you for property evaluations</p>
-                  <p className="text-sm text-gray-500">
-                    Serving: Indianapolis, Carmel, Fishers, Westfield, Noblesville, 
-                    Greenwood, Avon, Plainfield, and surrounding areas
-                  </p>
-                </div>
+              <div className="mt-12 bg-orange-50 p-6 rounded-lg border border-orange-200">
+                <h3 className="text-lg font-bold text-orange-800 mb-2">🚀 Quick Response Guarantee</h3>
+                <p className="text-orange-700">
+                  We pride ourselves on fast communication. Expect to hear back from us within 24 hours of your inquiry.
+                </p>
               </div>
             </div>
 
             {/* Contact Form */}
             <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-8">Send Us a Message</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-8">Send us a Message</h2>
               
-              <div className="bg-gray-50 rounded-lg p-8">
-                <form onSubmit={handleContactForm} className="space-y-6">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Name</label>
-                    <input
-                      type="text"
-                      name="name"
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
-                      placeholder="Your full name"
-                      required
-                    />
-                  </div>
-                  
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Email</label>
-                    <input
-                      type="email"
-                      name="email"
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
-                      placeholder="your@email.com"
-                      required
-                    />
-                  </div>
-                  
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Phone (Optional)</label>
-                    <input
-                      type="tel"
-                      name="phone"
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
-                      placeholder="(317) 555-0000"
-                    />
-                  </div>
-                  
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Message</label>
-                    <textarea
-                      name="message"
-                      rows={5}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
-                      placeholder="How can we help you?"
-                      required
-                    />
-                  </div>
-                  
-                  <button
-                    type="submit"
-                    disabled={isSubmitting}
-                    className={`w-full font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 ${
-                      isSubmitting 
-                        ? 'bg-gray-400 cursor-not-allowed text-white' 
-                        : 'bg-orange-500 hover:bg-orange-600 text-white'
-                    }`}
-                  >
-                    {isSubmitting ? 'Sending...' : 'Send Message'}
-                  </button>
+              <form onSubmit={handleContactFormSubmit} className="space-y-6">
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
+                  <input
+                    type="text"
+                    name="fullName"
+                    value={contactForm.fullName || ''}
+                    onChange={handleContactFormChange}
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
+                    placeholder="Enter your full name"
+                    required
+                  />
+                </div>
 
-                  {/* Status Messages */}
-                  {submitStatus === 'success' && (
-                    <div className="mt-4 p-4 bg-green-100 border border-green-300 rounded-lg text-center">
-                      <p className="text-green-800 font-semibold">✅ Message sent! We'll get back to you soon.</p>
-                    </div>
-                  )}
-                  
-                  {submitStatus === 'error' && (
-                    <div className="mt-4 p-4 bg-red-100 border border-red-300 rounded-lg text-center">
-                      <p className="text-red-800 font-semibold">❌ Failed to send. Please call us at (317) 555-0199.</p>
-                    </div>
-                  )}
-                </form>
-              </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+                  <input
+                    type="email"
+                    name="email"
+                    value={contactForm.email || ''}
+                    onChange={handleContactFormChange}
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
+                    placeholder="your@email.com"
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
+                  <input
+                    type="tel"
+                    name="phone"
+                    value={contactForm.phone || ''}
+                    onChange={handleContactFormChange}
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
+                    placeholder="Enter your phone number"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Subject</label>
+                  <select
+                    name="subject"
+                    value={contactForm.subject || ''}
+                    onChange={handleContactFormChange}
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
+                    required
+                  >
+                    <option value="">Select a subject...</option>
+                    <option value="sell-house">I want to sell my house</option>
+                    <option value="buyer-list">Join the buyer list</option>
+                    <option value="general-inquiry">General inquiry</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                  <textarea
+                    name="message"
+                    rows={5}
+                    value={contactForm.message || ''}
+                    onChange={handleContactFormChange}
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
+                    placeholder="Tell us how we can help you..."
+                    required
+                  />
+                </div>
+
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className={`w-full font-bold py-3 px-6 rounded-lg text-lg transition-all duration-300 ${
+                    isSubmitting 
+                      ? 'bg-gray-400 cursor-not-allowed' 
+                      : 'bg-orange-500 hover:bg-orange-600 text-white transform hover:scale-105'
+                  }`}
+                >
+                  {isSubmitting ? 'Sending...' : 'Send Message'}
+                </button>
+
+                {/* Status Messages */}
+                {submitStatus === 'success' && (
+                  <div className="mt-4 p-4 bg-green-100 border border-green-300 rounded-lg text-center">
+                    <p className="text-green-800 font-semibold">✅ Thank you! We'll contact you within 24 hours.</p>
+                  </div>
+                )}
+                
+                {submitStatus === 'error' && (
+                  <div className="mt-4 p-4 bg-red-100 border border-red-300 rounded-lg text-center">
+                    <p className="text-red-800 font-semibold">❌ Something went wrong. Please try again or email us directly.</p>
+                  </div>
+                )}
+              </form>
             </div>
           </div>
         </div>
@@ -988,788 +995,361 @@ const ContactPage = () => {
   );
 };
 
-// Blog Page
-const BlogPage = () => {
-  const [newsletterEmail, setNewsletterEmail] = useState('');
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState(null);
-  const [selectedPost, setSelectedPost] = useState(null);
-
-  const handleNewsletterSubmit = async (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setSubmitStatus(null);
-
-    try {
-      const submissionData = {
-        email: newsletterEmail,
-        formType: 'newsletter-signup',
-        submissionDate: new Date().toLocaleString(),
-        website: 'WillowBrook Real Estate Group'
-      };
-
-      const response = await fetch('https://formspree.io/f/xldekwko', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(submissionData),
-      });
-
-      if (response.ok) {
-        setSubmitStatus('success');
-        setNewsletterEmail('');
-      } else {
-        setSubmitStatus('error');
-      }
-    } catch (error) {
-      console.error('Newsletter submission error:', error);
-      setSubmitStatus('error');
-    }
-
-    setIsSubmitting(false);
-  };
-  const blogPosts = [
-    {
-      id: 1,
-      title: "How to Sell My House Fast in Indianapolis, IN",
-      excerpt: "Selling a house in Indianapolis typically takes 65 to 70 days from listing to closing. But if you're facing foreclosure, relocating quickly, or dealing with a distressed property, you may not have that kind of time.",
-      content: `
-        <div class="blog-author">
-          <p><strong>By Matthew Chitel</strong> – Updated June 2025</p>
-        </div>
-        
-        <p>Selling a house in Indianapolis typically takes 65 to 70 days from listing to closing. But if you're facing foreclosure, relocating quickly, or dealing with a distressed property, you may not have that kind of time.</p>
-        
-        <p><strong>Fortunately, there are faster options.</strong></p>
-        
-        <h2>1. Sell to a Cash Home Buyer</h2>
-        
-        <p>Cash buyers can make offers within 24 to 48 hours and close in as little as 7 to 14 days. You skip repairs, showings, and the uncertainty of waiting for a buyer.</p>
-        
-        <div style="background: #f8f9fa; padding: 20px; border-left: 4px solid #ff5722; margin: 20px 0;">
-          <ul style="margin: 0;">
-            <li><strong>Median home value in Indianapolis:</strong> $239,000</li>
-            <li><strong>Typical cash offer (approximately 70% of market value):</strong> $167,000</li>
-            <li><strong>Estimated repair deductions (if selling as-is):</strong> $7,500–$12,000</li>
-            <li><strong>Estimated time to close:</strong> 7 to 14 days</li>
-          </ul>
-        </div>
-        
-        <p><strong>This is a strong option if you're dealing with:</strong></p>
-        <ul>
-          <li>Inherited or vacant property</li>
-          <li>Financial hardship or pre-foreclosure</li>
-          <li>Homes in need of significant repairs</li>
-        </ul>
-        
-        <h2>2. Sell with a Real Estate Agent</h2>
-        
-        <p>If you want to maximize your sale price and can afford to wait a bit longer, working with a top-performing Indianapolis agent is a solid path. A good agent can help price your home right, stage it effectively, and market it to serious buyers.</p>
-        
-        <ul>
-          <li><strong>Potential to get full market value</strong></li>
-          <li><strong>Typical time to close:</strong> 45 to 70 days</li>
-          <li><strong>Standard listing agent commission:</strong> 5–6% of the sale price</li>
-        </ul>
-        
-        <h2>3. Compare Instant Offers with a Hybrid Approach</h2>
-        
-        <p>New programs in Indianapolis let you compare multiple offers from vetted investors while still having the option to list on the open market. This hybrid model offers flexibility:</p>
-        
-        <ul>
-          <li>Review multiple cash offers with no obligation</li>
-          <li>Choose a 7-day market program if you want to test the market</li>
-          <li>Possibility of getting close to full market value</li>
-        </ul>
-        
-        <h2>Summary</h2>
-        
-        <p>If you're looking to sell your house fast in Indianapolis, here's what to consider:</p>
-        
-        <div style="background: #fff3e0; padding: 20px; border-radius: 8px; margin: 20px 0;">
-          <table style="width: 100%; border-collapse: collapse;">
-            <thead>
-              <tr style="background: #ff5722; color: white;">
-                <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Your Priority</th>
-                <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Best Option</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td style="padding: 12px; border: 1px solid #ddd;"><strong>Speed</strong></td>
-                <td style="padding: 12px; border: 1px solid #ddd;">Cash Buyer or iBuyer</td>
-              </tr>
-              <tr>
-                <td style="padding: 12px; border: 1px solid #ddd;"><strong>Highest Sale Price</strong></td>
-                <td style="padding: 12px; border: 1px solid #ddd;">Real Estate Agent</td>
-              </tr>
-              <tr>
-                <td style="padding: 12px; border: 1px solid #ddd;"><strong>Flexibility</strong></td>
-                <td style="padding: 12px; border: 1px solid #ddd;">Instant Offer Comparison Programs</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        
-        <p><strong>The right option depends on your timeline, financial goals, and the condition of your property.</strong></p>
-        
-        <p>Need help getting a cash offer or connecting with a trusted local agent? Reach out and we'll point you in the right direction.</p>
-      `,
-      date: "June 15, 2025",
-      tags: ["Sell Fast", "Local Market", "Cash Buyers"],
-      slug: "sell-house-fast-indianapolis-in"
-    },
-    {
-      id: 1,
-      title: "How to Sell Your House Fast in Indianapolis",
-      excerpt: "Learn the proven strategies Indianapolis homeowners are using to sell their properties quickly without the hassle of traditional real estate.",
-      content: `
-        <h2>Selling Your Indianapolis Home Quickly: A Complete Guide</h2>
-        
-        <p>If you're looking to sell your house fast in Indianapolis, you're not alone. Many homeowners in the Circle City need to sell quickly for various reasons – job relocation, financial difficulties, inherited property, or simply wanting to avoid the traditional real estate process.</p>
-        
-        <h3>Why Choose Cash Buyers?</h3>
-        <p>Traditional real estate sales in Indianapolis can take 30-60 days or longer, with many potential roadblocks:</p>
-        <ul>
-          <li>Buyer financing can fall through</li>
-          <li>Home inspections can reveal costly repairs</li>
-          <li>Real estate agent commissions (typically 6%)</li>
-          <li>Closing costs and fees</li>
-          <li>Time-consuming showings and open houses</li>
-        </ul>
-        
-        <h3>The Cash Buying Process</h3>
-        <p>At WillowBrook Real Estate Group, we've streamlined the process:</p>
-        <ol>
-          <li><strong>Submit Your Property Info:</strong> Fill out our simple form or give us a call</li>
-          <li><strong>Property Evaluation:</strong> We'll schedule a quick visit to assess your home</li>
-          <li><strong>Cash Offer:</strong> Receive a fair, no-obligation offer within 24 hours</li>
-          <li><strong>Quick Closing:</strong> Close on your timeline – as fast as 7 days</li>
-        </ol>
-        
-        <h3>Indianapolis Market Insights</h3>
-        <p>The Indianapolis housing market has remained strong, with median home prices continuing to appreciate. However, certain neighborhoods like Fountain Square, Mass Ave, and Broad Ripple see faster sales due to high demand.</p>
-        
-        <p>Areas experiencing growth include:</p>
-        <ul>
-          <li>Downtown Indianapolis</li>
-          <li>Carmel</li>
-          <li>Fishers</li>
-          <li>Westfield</li>
-          <li>Noblesville</li>
-        </ul>
-        
-        <h3>Ready to Sell?</h3>
-        <p>If you're ready to sell your Indianapolis home quickly, contact WillowBrook Real Estate Group today. We buy houses in any condition, in any Indianapolis neighborhood, and we can close in as little as 7 days.</p>
-      `,
-      date: "January 15, 2025",
-      tags: ["Sell Fast", "Local Market"],
-      slug: "sell-house-fast-indianapolis"
-    },
-    {
-      id: 2,
-      title: "Indianapolis Real Estate Market Trends 2025",
-      excerpt: "Stay updated on the latest market trends, property values, and investment opportunities in the Indianapolis metropolitan area.",
-      content: `
-        <h2>Indianapolis Real Estate Market Analysis: 2025 Outlook</h2>
-        
-        <p>The Indianapolis real estate market continues to show strength as we move through 2025. Despite national economic uncertainties, the Circle City maintains its position as an attractive market for both homeowners and investors.</p>
-        
-        <h3>Current Market Conditions</h3>
-        <p>Key statistics for the Indianapolis metro area:</p>
-        <ul>
-          <li>Median home price: $195,000 (up 4.2% year-over-year)</li>
-          <li>Average days on market: 28 days</li>
-          <li>Inventory levels: 2.1 months of supply</li>
-          <li>Price per square foot: $135 average</li>
-        </ul>
-        
-        <h3>Hottest Neighborhoods</h3>
-        <p><strong>Fountain Square:</strong> Young professionals flock to this trendy area with its art scene and dining options. Average home price: $220,000</p>
-        
-        <p><strong>Mass Ave:</strong> Cultural district with historic charm. Average home price: $285,000</p>
-        
-        <p><strong>Broad Ripple:</strong> Nightlife and entertainment hub popular with millennials. Average home price: $195,000</p>
-        
-        <p><strong>Carmel:</strong> Top-rated schools drive family demand. Average home price: $420,000</p>
-        
-        <h3>Investment Opportunities</h3>
-        <p>Indianapolis continues to attract real estate investors due to:</p>
-        <ul>
-          <li>Strong rental demand</li>
-          <li>Affordable property prices compared to coastal markets</li>
-          <li>Growing tech sector (Salesforce, Infosys)</li>
-          <li>Major sporting events (Indianapolis 500, Colts, Pacers)</li>
-        </ul>
-        
-        <h3>2025 Predictions</h3>
-        <p>We expect:</p>
-        <ul>
-          <li>Continued moderate price appreciation (3-5%)</li>
-          <li>Inventory to remain tight in desirable areas</li>
-          <li>New construction to focus on starter homes</li>
-          <li>Downtown condo market to strengthen</li>
-        </ul>
-      `,
-      date: "January 10, 2025",
-      tags: ["Local Market", "Market Analysis"],
-      slug: "indianapolis-market-trends-2025"
-    },
-    {
-      id: 3,
-      title: "5 Benefits of Selling to Cash Buyers",
-      excerpt: "Discover why more Indianapolis homeowners are choosing cash buyers over traditional real estate agents for their property sales.",
-      content: `
-        <h2>Why Cash Buyers Are the Smart Choice for Indianapolis Homeowners</h2>
-        
-        <p>More Indianapolis homeowners are discovering the advantages of selling directly to cash buyers. Here are the top 5 benefits that make this option increasingly popular:</p>
-        
-        <h3>1. Speed of Sale</h3>
-        <p>Traditional real estate transactions can drag on for months. With cash buyers like WillowBrook Real Estate Group:</p>
-        <ul>
-          <li>No waiting for buyer financing approval</li>
-          <li>No lengthy inspection periods</li>
-          <li>Close in as little as 7 days</li>
-          <li>Flexible closing timeline to meet your needs</li>
-        </ul>
-        
-        <h3>2. Sell As-Is Condition</h3>
-        <p>Forget about expensive repairs and renovations:</p>
-        <ul>
-          <li>No need to fix anything before selling</li>
-          <li>We buy houses with foundation issues, roof problems, outdated systems</li>
-          <li>Save thousands on repair costs</li>
-          <li>No staging or cosmetic improvements required</li>
-        </ul>
-        
-        <h3>3. No Commissions or Fees</h3>
-        <p>Keep more money in your pocket:</p>
-        <ul>
-          <li>No real estate agent commissions (typically 6%)</li>
-          <li>No closing costs on your end</li>
-          <li>No marketing fees</li>
-          <li>No surprise deductions at closing</li>
-        </ul>
-        
-        <h3>4. Certainty of Closing</h3>
-        <p>Cash offers provide security traditional sales can't match:</p>
-        <ul>
-          <li>No risk of buyer financing falling through</li>
-          <li>No appraisal contingencies</li>
-          <li>Guaranteed closing with proof of funds</li>
-          <li>Less chance of last-minute complications</li>
-        </ul>
-        
-        <h3>5. Privacy and Convenience</h3>
-        <p>Maintain your privacy throughout the process:</p>
-        <ul>
-          <li>No open houses or showings</li>
-          <li>No strangers walking through your home</li>
-          <li>One simple property evaluation</li>
-          <li>Discreet, professional service</li>
-        </ul>
-        
-        <h3>Is Cash Buying Right for You?</h3>
-        <p>Consider cash buyers if you:</p>
-        <ul>
-          <li>Need to sell quickly</li>
-          <li>Want to avoid repairs and improvements</li>
-          <li>Prefer a simple, straightforward process</li>
-          <li>Value certainty over potentially higher offers</li>
-          <li>Want to avoid the stress of traditional sales</li>
-        </ul>
-        
-        <p>Contact WillowBrook Real Estate Group today for your no-obligation cash offer!</p>
-      `,
-      date: "January 5, 2025",
-      tags: ["Cash Buyers", "Sell Fast"],
-      slug: "benefits-cash-buyers-indianapolis"
-    },
-    {
-      id: 4,
-      title: "Real Estate Investment Tips for Beginners",
-      excerpt: "New to real estate investing? Learn the fundamentals of property investment in the Indianapolis market.",
-      content: `
-        <h2>Getting Started with Real Estate Investing in Indianapolis</h2>
-        
-        <p>Indianapolis offers excellent opportunities for new real estate investors. With affordable property prices, strong rental demand, and a growing economy, the Circle City is perfect for building your investment portfolio.</p>
-        
-        <h3>Why Indianapolis for Investment?</h3>
-        <ul>
-          <li><strong>Affordability:</strong> Lower barrier to entry compared to coastal markets</li>
-          <li><strong>Job Growth:</strong> Strong employment in healthcare, tech, and logistics</li>
-          <li><strong>Population Growth:</strong> Steady influx of new residents</li>
-          <li><strong>Universities:</strong> IUPUI, Butler, and other colleges drive rental demand</li>
-        </ul>
-        
-        <h3>Investment Strategy #1: Buy and Hold Rentals</h3>
-        <p>Target neighborhoods with strong rental demand:</p>
-        <ul>
-          <li><strong>Near IUPUI:</strong> Student and staff housing demand</li>
-          <li><strong>Downtown:</strong> Young professionals</li>
-          <li><strong>Suburban areas:</strong> Families seeking good schools</li>
-        </ul>
-        <p>Expected returns: 8-12% cash-on-cash return</p>
-        
-        <h3>Investment Strategy #2: House Flipping</h3>
-        <p>Indianapolis offers good opportunities for fix-and-flip projects:</p>
-        <ul>
-          <li>Look for properties under $100,000 purchase price</li>
-          <li>Target homes needing $20,000-40,000 in renovations</li>
-          <li>Focus on popular neighborhoods like Fountain Square, Broad Ripple</li>
-          <li>Expected profit: $20,000-50,000 per flip</li>
-        </ul>
-        
-        <h3>Financing Your First Investment</h3>
-        <p>Options for new investors:</p>
-        <ul>
-          <li><strong>Conventional mortgages:</strong> 20-25% down payment</li>
-          <li><strong>Hard money loans:</strong> For flips and quick purchases</li>
-          <li><strong>Private lenders:</strong> Alternative financing sources</li>
-          <li><strong>Partnerships:</strong> Team up with experienced investors</li>
-        </ul>
-        
-        <h3>Key Metrics to Track</h3>
-        <ul>
-          <li><strong>Cap Rate:</strong> Net Operating Income ÷ Purchase Price</li>
-          <li><strong>Cash-on-Cash Return:</strong> Annual Cash Flow ÷ Cash Invested</li>
-          <li><strong>1% Rule:</strong> Monthly rent should equal 1% of purchase price</li>
-          <li><strong>50% Rule:</strong> Expect expenses to equal 50% of rental income</li>
-        </ul>
-        
-        <h3>Common Beginner Mistakes</h3>
-        <ul>
-          <li>Not accounting for vacancy rates</li>
-          <li>Underestimating repair costs</li>
-          <li>Buying in declining neighborhoods</li>
-          <li>Not having cash reserves</li>
-          <li>Emotional decision-making</li>
-        </ul>
-        
-        <h3>Getting Started Checklist</h3>
-        <ol>
-          <li>Set your investment budget</li>
-          <li>Get pre-approved for financing</li>
-          <li>Choose your target neighborhoods</li>
-          <li>Build your team (realtor, contractor, property manager)</li>
-          <li>Start analyzing deals</li>
-          <li>Make offers on suitable properties</li>
-        </ol>
-        
-        <p>Ready to start investing? Contact WillowBrook Real Estate Group to access our exclusive off-market properties perfect for investors!</p>
-      `,
-      date: "December 28, 2024",
-      tags: ["Investor Tips", "Beginner Guide"],
-      slug: "real-estate-investment-tips-beginners"
-    },
-    {
-      id: 5,
-      title: "What to Expect When Selling As-Is",
-      excerpt: "Understanding the as-is selling process and what Indianapolis homeowners need to know before choosing this option.",
-      content: `
-        <h2>Selling Your Indianapolis Home As-Is: Complete Guide</h2>
-        
-        <p>Selling your home "as-is" means you're offering it in its current condition without making any repairs or improvements. This option is becoming increasingly popular among Indianapolis homeowners who want a quick, hassle-free sale.</p>
-        
-        <h3>What Does "As-Is" Really Mean?</h3>
-        <p>When you sell as-is, you're telling buyers:</p>
-        <ul>
-          <li>The property is being sold in its current condition</li>
-          <li>You won't make any repairs before closing</li>
-          <li>Buyers should conduct their own inspections</li>
-          <li>Any issues discovered are the buyer's responsibility</li>
-        </ul>
-        
-        <h3>Who Should Consider As-Is Sales?</h3>
-        <p>As-is sales work well for:</p>
-        <ul>
-          <li><strong>Inherited properties:</strong> When you don't want to invest in a property you didn't choose</li>
-          <li><strong>Distressed homeowners:</strong> Facing foreclosure or financial hardship</li>
-          <li><strong>Relocating families:</strong> Need to move quickly for work</li>
-          <li><strong>Landlords:</strong> Tired of dealing with problem properties</li>
-          <li><strong>Divorce situations:</strong> Want to divide assets quickly</li>
-        </ul>
-        
-        <h3>Pros of Selling As-Is</h3>
-        <ul>
-          <li><strong>Save Money:</strong> No repair costs or improvement expenses</li>
-          <li><strong>Save Time:</strong> No waiting for contractors or permits</li>
-          <li><strong>Reduce Stress:</strong> Avoid managing renovation projects</li>
-          <li><strong>Quick Sale:</strong> Appeal to investors and cash buyers</li>
-          <li><strong>Certainty:</strong> No surprises during the selling process</li>
-        </ul>
-        
-        <h3>Cons to Consider</h3>
-        <ul>
-          <li><strong>Lower Sale Price:</strong> Buyers discount for needed repairs</li>
-          <li><strong>Smaller Buyer Pool:</strong> Most traditional buyers want move-in ready homes</li>
-          <li><strong>Cash Offers Only:</strong> Banks rarely finance heavily distressed properties</li>
-          <li><strong>Legal Disclosures:</strong> Still required to disclose known issues</li>
-        </ul>
-        
-        <h3>The As-Is Process with Cash Buyers</h3>
-        <p>When working with professional cash buyers like WillowBrook:</p>
-        <ol>
-          <li><strong>Initial Contact:</strong> Share basic property information</li>
-          <li><strong>Property Visit:</strong> We evaluate condition and needed repairs</li>
-          <li><strong>Market Analysis:</strong> Research comparable sales in your area</li>
-          <li><strong>Cash Offer:</strong> Receive fair offer accounting for repairs needed</li>
-          <li><strong>Quick Closing:</strong> Close on your timeline, often within 7 days</li>
-        </ol>
-        
-        <h3>Legal Considerations</h3>
-        <p>Even in as-is sales, you must:</p>
-        <ul>
-          <li>Complete seller's disclosure forms honestly</li>
-          <li>Disclose known material defects</li>
-          <li>Provide any available property records</li>
-          <li>Allow buyer inspections (though you won't make repairs)</li>
-        </ul>
-        
-        <h3>Pricing Your As-Is Property</h3>
-        <p>Professional buyers consider:</p>
-        <ul>
-          <li>After-repair value (ARV) of the property</li>
-          <li>Cost of needed repairs and improvements</li>
-          <li>Current market conditions</li>
-          <li>Time and effort required for renovations</li>
-          <li>Profit margin for the investment risk</li>
-        </ul>
-        
-        <h3>Red Flags to Avoid</h3>
-        <p>Be cautious of buyers who:</p>
-        <ul>
-          <li>Make offers without seeing the property</li>
-          <li>Can't provide proof of funds</li>
-          <li>Request earnest money or upfront fees</li>
-          <li>Change terms after agreement</li>
-          <li>Lack local references or reviews</li>
-        </ul>
-        
-        <h3>Is As-Is Right for You?</h3>
-        <p>Consider this option if you:</p>
-        <ul>
-          <li>Need to sell quickly</li>
-          <li>Don't want to invest in repairs</li>
-          <li>Have a property requiring extensive work</li>
-          <li>Value convenience over maximum price</li>
-          <li>Want certainty of closing</li>
-        </ul>
-        
-        <p>Ready to sell your Indianapolis property as-is? Contact WillowBrook Real Estate Group for your free, no-obligation evaluation!</p>
-      `,
-      date: "December 20, 2024",
-      tags: ["Sell Fast", "As-Is Sales"],
-      slug: "selling-as-is-indianapolis"
-    },
-    {
-      id: 6,
-      title: "Indianapolis Neighborhood Investment Guide",
-      excerpt: "A comprehensive look at the best Indianapolis neighborhoods for real estate investment in 2025.",
-      content: `
-        <h2>Indianapolis Neighborhood Investment Guide: Where to Buy in 2025</h2>
-        
-        <p>Choosing the right neighborhood is crucial for real estate investment success. This comprehensive guide breaks down the best Indianapolis areas for different investment strategies.</p>
-        
-        <h3>Downtown Indianapolis</h3>
-        <p><strong>Investment Type:</strong> Condos, lofts, rental properties</p>
-        <p><strong>Average Price:</strong> $180,000 - $350,000</p>
-        <p><strong>Rental Demand:</strong> High - young professionals, students</p>
-        <p><strong>Pros:</strong></p>
-        <ul>
-          <li>Close to employment centers</li>
-          <li>Cultural attractions and nightlife</li>
-          <li>Public transportation access</li>
-          <li>Strong rental demand</li>
-        </ul>
-        <p><strong>Cons:</strong> Higher property taxes, limited parking</p>
-        
-        <h3>Fountain Square</h3>
-        <p><strong>Investment Type:</strong> Single-family homes, small multifamily</p>
-        <p><strong>Average Price:</strong> $150,000 - $280,000</p>
-        <p><strong>Rental Demand:</strong> High - artists, young professionals</p>
-        <p><strong>Pros:</strong></p>
-        <ul>
-          <li>Hip, artistic community</li>
-          <li>Growing restaurant and bar scene</li>
-          <li>Good appreciation potential</li>
-          <li>Walkable neighborhood</li>
-        </ul>
-        <p><strong>Cons:</strong> Some areas still transitioning</p>
-        
-        <h3>Broad Ripple</h3>
-        <p><strong>Investment Type:</strong> Single-family, condos</p>
-        <p><strong>Average Price:</strong> $180,000 - $320,000</p>
-        <p><strong>Rental Demand:</strong> Very High - college students, young adults</p>
-        <p><strong>Pros:</strong></p>
-        <ul>
-          <li>Established entertainment district</li>
-          <li>Close to Butler University</li>
-          <li>Strong rental income potential</li>
-          <li>Good public transportation</li>
-        </ul>
-        <p><strong>Cons:</strong> Noise concerns, party atmosphere</p>
-        
-        <h3>Mass Ave (Massachusetts Avenue)</h3>
-        <p><strong>Investment Type:</strong> Historic homes, lofts</p>
-        <p><strong>Average Price:</strong> $200,000 - $400,000</p>
-        <p><strong>Rental Demand:</strong> High - professionals, cultural enthusiasts</p>
-        <p><strong>Pros:</strong></p>
-        <ul>
-          <li>Cultural district with theaters and galleries</li>
-          <li>Historic charm and character</li>
-          <li>Strong appreciation potential</li>
-          <li>Walkable to downtown</li>
-        </ul>
-        <p><strong>Cons:</strong> Higher entry costs</p>
-        
-        <h3>Irvington</h3>
-        <p><strong>Investment Type:</strong> Historic homes, fix-and-flip</p>
-        <p><strong>Average Price:</strong> $120,000 - $250,000</p>
-        <p><strong>Rental Demand:</strong> Moderate to High</p>
-        <p><strong>Pros:</strong></p>
-        <ul>
-          <li>Historic neighborhood with character</li>
-          <li>Lower entry costs</li>
-          <li>Good bones in older homes</li>
-          <li>Community revitalization efforts</li>
-        </ul>
-        <p><strong>Cons:</strong> Some areas need significant work</p>
-        
-        <h3>Near Southside</h3>
-        <p><strong>Investment Type:</strong> Affordable rentals, first-time buyer homes</p>
-        <p><strong>Average Price:</strong> $80,000 - $180,000</p>
-        <p><strong>Rental Demand:</strong> Moderate</p>
-        <p><strong>Pros:</strong></p>
-        <ul>
-          <li>Very affordable entry point</li>
-          <li>Close to downtown employment</li>
-          <li>Gentrification potential</li>
-          <li>Good cash flow properties</li>
-        </ul>
-        <p><strong>Cons:</strong> Higher management requirements</p>
-        
-        <h3>Carmel (Northern Suburb)</h3>
-        <p><strong>Investment Type:</strong> Single-family homes, luxury properties</p>
-        <p><strong>Average Price:</strong> $300,000 - $600,000</p>
-        <p><strong>Rental Demand:</strong> High - executives, families</p>
-        <p><strong>Pros:</strong></p>
-        <ul>
-          <li>Top-rated school district</li>
-          <li>Affluent community</li>
-          <li>Low crime rates</li>
-          <li>Strong appreciation history</li>
-        </ul>
-        <p><strong>Cons:</strong> Higher entry costs, property taxes</p>
-        
-        <h3>Fishers (Northern Suburb)</h3>
-        <p><strong>Investment Type:</strong> Single-family homes, new construction</p>
-        <p><strong>Average Price:</strong> $250,000 - $450,000</p>
-        <p><strong>Rental Demand:</strong> High - tech workers, families</p>
-        <p><strong>Pros:</strong></p>
-        <ul>
-          <li>Growing tech hub</li>
-          <li>Excellent schools</li>
-          <li>New development opportunities</li>
-          <li>Family-friendly amenities</li>
-        </ul>
-        <p><strong>Cons:</strong> Competition from new construction</p>
-        
-        <h3>Investment Strategy by Neighborhood</h3>
-        
-        <p><strong>For Cash Flow:</strong> Near Southside, Irvington</p>
-        <p><strong>For Appreciation:</strong> Fountain Square, Mass Ave, Carmel</p>
-        <p><strong>For Beginners:</strong> Broad Ripple, Downtown</p>
-        <p><strong>For Luxury:</strong> Carmel, select Downtown areas</p>
-        <p><strong>For Fix-and-Flip:</strong> Irvington, Fountain Square</p>
-        
-        <h3>Due Diligence Checklist</h3>
-        <p>Before investing in any neighborhood:</p>
-        <ul>
-          <li>Research crime statistics</li>
-          <li>Check school ratings (affects rental demand)</li>
-          <li>Analyze rental comps</li>
-          <li>Review development plans</li>
-          <li>Visit at different times of day</li>
-          <li>Talk to local residents</li>
-          <li>Check flood zone maps</li>
-          <li>Review property tax trends</li>
-        </ul>
-        
-        <h3>Emerging Areas to Watch</h3>
-        <ul>
-          <li><strong>Holy Cross:</strong> Up-and-coming near Fountain Square</li>
-          <li><strong>Garfield Park:</strong> Southside revitalization</li>
-          <li><strong>Riverside:</strong> Historic area seeing new interest</li>
-          <li><strong>Herron-Morton:</strong> Near downtown, growing appeal</li>
-        </ul>
-        
-        <p>Ready to invest in Indianapolis real estate? Contact WillowBrook Real Estate Group to access exclusive off-market properties in these prime neighborhoods!</p>
-      `,
-      date: "December 15, 2024",
-      tags: ["Local Market", "Investor Tips"],
-      slug: "indianapolis-neighborhood-investment-guide"
-    }
-  ];
-
-  // If a post is selected, show the individual post
-  if (selectedPost) {
-    const post = blogPosts.find(p => p.id === selectedPost);
-    return (
-      <div className="pt-16">
-        {/* Header */}
-        <div className="bg-slate-900 text-white py-20">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <button 
-              onClick={() => setSelectedPost(null)}
-              className="text-orange-400 hover:text-orange-300 mb-4 flex items-center"
-            >
-              ← Back to Blog
-            </button>
-            <h1 className="text-4xl font-bold mb-4">{post.title}</h1>
-            <div className="flex items-center text-gray-300">
-              <span>{post.date}</span>
-              <span className="mx-2">•</span>
-              <div className="flex gap-2">
-                {post.tags.map((tag) => (
-                  <span 
-                    key={tag}
-                    className="px-2 py-1 bg-orange-100 text-orange-600 text-xs font-medium rounded-full"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Article Content */}
-        <div className="py-20 bg-white">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div 
-              className="prose prose-lg max-w-none blog-content"
-              dangerouslySetInnerHTML={{ __html: post.content }}
-            />
-            
-            {/* CTA Section */}
-            <div className="mt-12 bg-orange-50 border border-orange-200 rounded-lg p-8 text-center">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Take Action?</h3>
-              <p className="text-gray-600 mb-6">
-                Get your free cash offer or join our investor list today
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button 
-                  onClick={() => document.getElementById('sell-form')?.scrollIntoView({ behavior: 'smooth' })}
-                  className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg font-medium"
-                >
-                  Get Cash Offer
-                </button>
-                <button className="border border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white px-6 py-3 rounded-lg font-medium">
-                  Join Buyer List
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    );
+// Blog data
+const blogPosts = [
+  {
+    id: 0,
+    title: "We Buy Houses Fast in Indianapolis IN",
+    excerpt: "Get a fair cash offer for your Indianapolis home in just 24 hours. No repairs needed, no agent fees, close in 7 days.",
+    content: `
+      <h2>Sell Your Indianapolis House Fast for Cash</h2>
+      
+      <p>Need to sell your house quickly in Indianapolis? WillowBrook Real Estate Group buys houses in any condition throughout the greater Indianapolis area. We provide fair cash offers and can close in as little as 7 days.</p>
+      
+      <h3>Why Choose Cash Buyers in Indianapolis?</h3>
+      <p>Traditional real estate sales can take months and come with many uncertainties. When you sell to WillowBrook Real Estate Group:</p>
+      <ul>
+        <li>Get a cash offer within 24 hours</li>
+        <li>No repairs or renovations needed</li>
+        <li>No real estate agent commissions</li>
+        <li>No closing costs on your end</li>
+        <li>Choose your closing date</li>
+        <li>No showings or open houses</li>
+      </ul>
+      
+      <h3>We Buy Houses in Any Condition</h3>
+      <p>It doesn't matter if your house needs major repairs, has foundation issues, or requires extensive updates. We buy houses as-is, saving you thousands in repair costs and months of preparation time.</p>
+      
+      <h3>Indianapolis Neighborhoods We Serve</h3>
+      <p>We buy houses throughout Indianapolis and surrounding areas including:</p>
+      <ul>
+        <li>Downtown Indianapolis</li>
+        <li>Broad Ripple</li>
+        <li>Fountain Square</li>
+        <li>Mass Ave</li>
+        <li>Carmel</li>
+        <li>Fishers</li>
+        <li>Westfield</li>
+        <li>Noblesville</li>
+        <li>And many more!</li>
+      </ul>
+      
+      <h3>Get Your Cash Offer Today</h3>
+      <p>Ready to sell your Indianapolis house fast? Contact WillowBrook Real Estate Group today for your no-obligation cash offer. We're here to help you move forward quickly and with confidence.</p>
+    `,
+    date: "January 20, 2025",
+    tags: ["Sell Fast", "Local Market", "Cash Buyers"],
+    slug: "sell-house-fast-indianapolis-in"
+  },
+  {
+    id: 1,
+    title: "How to Sell Your House Fast in Indianapolis",
+    excerpt: "Learn the proven strategies Indianapolis homeowners are using to sell their properties quickly without the hassle of traditional real estate.",
+    content: `
+      <h2>Selling Your Indianapolis Home Quickly: A Complete Guide</h2>
+      
+      <p>If you're looking to sell your house fast in Indianapolis, you're not alone. Many homeowners in the Circle City need to sell quickly for various reasons – job relocation, financial difficulties, inherited property, or simply wanting to avoid the traditional real estate process.</p>
+      
+      <h3>Why Choose Cash Buyers?</h3>
+      <p>Traditional real estate sales in Indianapolis can take 30-60 days or longer, with many potential roadblocks:</p>
+      <ul>
+        <li>Buyer financing can fall through</li>
+        <li>Home inspections can reveal costly repairs</li>
+        <li>Real estate agent commissions (typically 6%)</li>
+        <li>Closing costs and fees</li>
+        <li>Time-consuming showings and open houses</li>
+      </ul>
+      
+      <h3>The Cash Buying Process</h3>
+      <p>At WillowBrook Real Estate Group, we've streamlined the process:</p>
+      <ol>
+        <li><strong>Submit Your Property Info:</strong> Fill out our simple form or give us a call</li>
+        <li><strong>Property Evaluation:</strong> We'll schedule a quick visit to assess your home</li>
+        <li><strong>Cash Offer:</strong> Receive a fair, no-obligation offer within 24 hours</li>
+        <li><strong>Quick Closing:</strong> Close on your timeline – as fast as 7 days</li>
+      </ol>
+      
+      <h3>Indianapolis Market Insights</h3>
+      <p>The Indianapolis housing market has remained strong, with median home prices continuing to appreciate. However, certain neighborhoods like Fountain Square, Mass Ave, and Broad Ripple see faster sales due to high demand.</p>
+      
+      <p>Areas experiencing growth include:</p>
+      <ul>
+        <li>Downtown Indianapolis</li>
+        <li>Carmel</li>
+        <li>Fishers</li>
+        <li>Westfield</li>
+        <li>Noblesville</li>
+      </ul>
+      
+      <h3>Ready to Sell?</h3>
+      <p>If you're ready to sell your Indianapolis home quickly, contact WillowBrook Real Estate Group today. We buy houses in any condition, in any Indianapolis neighborhood, and we can close in as little as 7 days.</p>
+    `,
+    date: "January 15, 2025",
+    tags: ["Sell Fast", "Local Market"],
+    slug: "sell-house-fast-indianapolis"
+  },
+  {
+    id: 2,
+    title: "Indianapolis Real Estate Market Trends 2025",
+    excerpt: "Stay updated on the latest market trends, property values, and investment opportunities in the Indianapolis metropolitan area.",
+    content: `
+      <h2>Indianapolis Real Estate Market Analysis: 2025 Outlook</h2>
+      
+      <p>The Indianapolis real estate market continues to show strength as we move through 2025. Despite national economic uncertainties, the Circle City maintains its position as an attractive market for both homeowners and investors.</p>
+      
+      <h3>Current Market Conditions</h3>
+      <p>Key statistics for the Indianapolis metro area:</p>
+      <ul>
+        <li>Median home price: $195,000 (up 4.2% year-over-year)</li>
+        <li>Average days on market: 28 days</li>
+        <li>Inventory levels: 2.1 months of supply</li>
+        <li>Price per square foot: $135 average</li>
+      </ul>
+      
+      <h3>Hottest Neighborhoods</h3>
+      <p><strong>Fountain Square:</strong> Young professionals flock to this trendy area with its art scene and dining options. Average home price: $220,000</p>
+      
+      <p><strong>Mass Ave:</strong> Cultural district with historic charm. Average home price: $285,000</p>
+      
+      <p><strong>Broad Ripple:</strong> Nightlife and entertainment hub popular with millennials. Average home price: $195,000</p>
+      
+      <p><strong>Carmel:</strong> Top-rated schools drive family demand. Average home price: $420,000</p>
+      
+      <h3>Investment Opportunities</h3>
+      <p>Indianapolis continues to attract real estate investors due to:</p>
+      <ul>
+        <li>Strong rental demand</li>
+        <li>Affordable property prices compared to coastal markets</li>
+        <li>Growing tech sector (Salesforce, Infosys)</li>
+        <li>Major sporting events (Indianapolis 500, Colts, Pacers)</li>
+      </ul>
+      
+      <h3>2025 Predictions</h3>
+      <p>We expect:</p>
+      <ul>
+        <li>Continued moderate price appreciation (3-5%)</li>
+        <li>Inventory to remain tight in desirable areas</li>
+        <li>New construction to focus on starter homes</li>
+        <li>Downtown condo market to strengthen</li>
+      </ul>
+    `,
+    date: "January 10, 2025",
+    tags: ["Local Market", "Market Analysis"],
+    slug: "indianapolis-market-trends-2025"
+  },
+  {
+    id: 3,
+    title: "5 Benefits of Selling to Cash Buyers",
+    excerpt: "Discover why more Indianapolis homeowners are choosing cash buyers over traditional real estate agents for their property sales.",
+    content: `
+      <h2>Why Cash Buyers Are the Smart Choice for Indianapolis Homeowners</h2>
+      
+      <p>More Indianapolis homeowners are discovering the advantages of selling directly to cash buyers. Here are the top 5 benefits that make this option increasingly popular:</p>
+      
+      <h3>1. Speed of Sale</h3>
+      <p>Traditional real estate transactions can drag on for months. With cash buyers like WillowBrook Real Estate Group:</p>
+      <ul>
+        <li>No waiting for buyer financing approval</li>
+        <li>No lengthy inspection periods</li>
+        <li>Close in as little as 7 days</li>
+        <li>Flexible closing timeline to meet your needs</li>
+      </ul>
+      
+      <h3>2. Sell As-Is Condition</h3>
+      <p>Forget about expensive repairs and renovations:</p>
+      <ul>
+        <li>No need to fix anything before selling</li>
+        <li>We buy houses with foundation issues, roof problems, outdated systems</li>
+        <li>Save thousands on repair costs</li>
+        <li>No staging or cosmetic improvements required</li>
+      </ul>
+      
+      <h3>3. No Commissions or Fees</h3>
+      <p>Keep more money in your pocket:</p>
+      <ul>
+        <li>No real estate agent commissions (typically 6%)</li>
+        <li>No closing costs on your end</li>
+        <li>No marketing fees</li>
+        <li>No surprise deductions at closing</li>
+      </ul>
+      
+      <h3>4. Certainty of Closing</h3>
+      <p>Cash offers provide security traditional sales can't match:</p>
+      <ul>
+        <li>No risk of buyer financing falling through</li>
+        <li>No appraisal contingencies</li>
+        <li>Guaranteed closing with proof of funds</li>
+        <li>Less chance of last-minute complications</li>
+      </ul>
+      
+      <h3>5. Privacy and Convenience</h3>
+      <p>Maintain your privacy throughout the process:</p>
+      <ul>
+        <li>No open houses or showings</li>
+        <li>No strangers walking through your home</li>
+        <li>One simple property evaluation</li>
+        <li>Discreet, professional service</li>
+      </ul>
+      
+      <h3>Is Cash Buying Right for You?</h3>
+      <p>Consider cash buyers if you:</p>
+      <ul>
+        <li>Need to sell quickly</li>
+        <li>Want to avoid repairs and improvements</li>
+        <li>Prefer a simple, straightforward process</li>
+        <li>Value certainty over potentially higher offers</li>
+        <li>Want to avoid the stress of traditional sales</li>
+      </ul>
+      
+      <p>Contact WillowBrook Real Estate Group today for your no-obligation cash offer!</p>
+    `,
+    date: "January 5, 2025",
+    tags: ["Cash Buyers", "Sell Fast"],
+    slug: "benefits-cash-buyers-indianapolis"
+  },
+  {
+    id: 4,
+    title: "Real Estate Investment Tips for Beginners",
+    excerpt: "New to real estate investing? Learn the fundamentals of property investment in the Indianapolis market.",
+    content: `
+      <h2>Getting Started with Real Estate Investing in Indianapolis</h2>
+      
+      <p>Indianapolis offers excellent opportunities for new real estate investors. With affordable property prices, strong rental demand, and a growing economy, the Circle City is perfect for building your investment portfolio.</p>
+      
+      <h3>Why Indianapolis for Investment?</h3>
+      <ul>
+        <li><strong>Affordability:</strong> Lower barrier to entry compared to coastal markets</li>
+        <li><strong>Job Growth:</strong> Strong employment in healthcare, tech, and logistics</li>
+        <li><strong>Population Growth:</strong> Steady influx of new residents</li>
+        <li><strong>Universities:</strong> IUPUI, Butler, and other colleges drive rental demand</li>
+      </ul>
+      
+      <h3>Investment Strategy #1: Buy and Hold Rentals</h3>
+      <p>Target neighborhoods with strong rental demand:</p>
+      <ul>
+        <li><strong>Near IUPUI:</strong> Student and staff housing demand</li>
+        <li><strong>Downtown:</strong> Young professionals</li>
+        <li><strong>Suburban areas:</strong> Families seeking good schools</li>
+      </ul>
+      <p>Expected returns: 8-12% cash-on-cash return</p>
+      
+      <h3>Investment Strategy #2: House Flipping</h3>
+      <p>Indianapolis offers good opportunities for fix-and-flip projects:</p>
+      <ul>
+        <li>Look for properties under $100,000 purchase price</li>
+        <li>Target homes needing $20,000-40,000 in renovations</li>
+        <li>Focus on popular neighborhoods like Fountain Square, Broad Ripple</li>
+        <li>Expected profit: $20,000-50,000 per flip</li>
+      </ul>
+      
+      <h3>Financing Your First Investment</h3>
+      <p>Options for new investors:</p>
+      <ul>
+        <li><strong>Conventional mortgages:</strong> 20-25% down payment</li>
+        <li><strong>Hard money loans:</strong> For flips and quick purchases</li>
+        <li><strong>Private lenders:</strong> Alternative financing sources</li>
+        <li><strong>Partnerships:</strong> Team up with experienced investors</li>
+      </ul>
+      
+      <h3>Key Metrics to Track</h3>
+      <ul>
+        <li><strong>Cap Rate:</strong> Net Operating Income ÷ Purchase Price</li>
+        <li><strong>Cash-on-Cash Return:</strong> Annual Cash Flow ÷ Cash Invested</li>
+        <li><strong>1% Rule:</strong> Monthly rent should equal 1% of purchase price</li>
+        <li><strong>50% Rule:</strong> Expect expenses to equal 50% of rental income</li>
+      </ul>
+      
+      <h3>Getting Started</h3>
+      <p>Ready to start investing in Indianapolis real estate? Join our buyer list to get access to off-market investment opportunities, or contact us to learn more about our investment properties.</p>
+    `,
+    date: "December 28, 2024",
+    tags: ["Investment", "Buyers"],
+    slug: "real-estate-investment-tips-beginners"
   }
+];
 
-  // Default blog list view
+// Blog listing page
+const BlogPage = () => {
+  const [selectedTag, setSelectedTag] = useState('All');
+  
+  // Get unique tags
+  const allTags = ['All', ...new Set(blogPosts.flatMap(post => post.tags))];
+  
+  // Filter posts by selected tag
+  const filteredPosts = selectedTag === 'All' 
+    ? blogPosts 
+    : blogPosts.filter(post => post.tags.includes(selectedTag));
+
   return (
     <div className="pt-16">
       {/* Header */}
       <div className="bg-slate-900 text-white py-20">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h1 className="text-5xl font-bold mb-6">Real Estate Blog</h1>
-          <p className="text-xl text-gray-300">
-            Expert insights on Indianapolis real estate, investing, and home selling
-          </p>
+          <h1 className="text-5xl font-bold mb-6">Indianapolis Real Estate Blog</h1>
+          <p className="text-xl text-gray-300">Expert insights on selling houses and real estate investing in Indianapolis</p>
         </div>
       </div>
 
-      {/* Blog Posts */}
       <div className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {blogPosts.map((post) => (
-              <article key={post.id} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+          
+          {/* Tag Filter */}
+          <div className="mb-12">
+            <h3 className="text-lg font-semibold text-gray-900 mb-4">Filter by Topic:</h3>
+            <div className="flex flex-wrap gap-2">
+              {allTags.map(tag => (
+                <button
+                  key={tag}
+                  onClick={() => setSelectedTag(tag)}
+                  className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+                    selectedTag === tag
+                      ? 'bg-orange-500 text-white'
+                      : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                  }`}
+                >
+                  {tag}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* Blog Posts Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {filteredPosts.map(post => (
+              <article key={post.id} className="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200">
                 <div className="p-6">
-                  <div className="flex flex-wrap gap-2 mb-3">
-                    {post.tags.map((tag) => (
-                      <span 
-                        key={tag}
-                        className="px-3 py-1 bg-orange-100 text-orange-600 text-xs font-medium rounded-full"
-                      >
-                        {tag}
-                      </span>
-                    ))}
+                  <div className="flex items-center text-sm text-gray-500 mb-2">
+                    <span>{post.date}</span>
+                    <span className="mx-2">•</span>
+                    <div className="flex space-x-2">
+                      {post.tags.map(tag => (
+                        <span key={tag} className="bg-orange-100 text-orange-800 px-2 py-1 rounded text-xs">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                   
-                  <h2 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
+                  <h2 className="text-xl font-bold text-gray-900 mb-3 hover:text-orange-600 transition-colors">
                     {post.title}
                   </h2>
                   
-                  <p className="text-gray-600 mb-4 line-clamp-3">
-                    {post.excerpt}
-                  </p>
+                  <p className="text-gray-600 mb-4">{post.excerpt}</p>
                   
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm text-gray-500">{post.date}</span>
-                    <button 
-                      onClick={() => setSelectedPost(post.id)}
-                      className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors duration-300"
-                    >
-                      Read More
-                    </button>
-                  </div>
+                  <button className="text-orange-500 font-semibold hover:text-orange-600 transition-colors">
+                    Read More →
+                  </button>
                 </div>
               </article>
             ))}
           </div>
 
-          {/* Newsletter Signup */}
-          <div className="mt-16 bg-slate-900 rounded-lg p-8 text-center text-white">
-            <h3 className="text-2xl font-bold mb-4">Stay Updated</h3>
-            <p className="text-gray-300 mb-6">
-              Get the latest Indianapolis real estate insights delivered to your inbox
-            </p>
-            <form onSubmit={handleNewsletterSubmit} className="max-w-md mx-auto flex gap-4">
-              <input
-                type="email"
-                value={newsletterEmail}
-                onChange={(e) => setNewsletterEmail(e.target.value)}
-                placeholder="Enter your email"
-                className="flex-1 px-4 py-2 rounded-md text-gray-900"
-                required
-              />
-              <button 
-                type="submit"
-                disabled={isSubmitting}
-                className={`px-6 py-2 rounded-md font-medium transition-colors duration-300 ${
-                  isSubmitting 
-                    ? 'bg-gray-400 cursor-not-allowed' 
-                    : 'bg-orange-500 hover:bg-orange-600'
-                }`}
-              >
-                {isSubmitting ? 'Subscribing...' : 'Subscribe'}
-              </button>
-            </form>
-            
-            {submitStatus === 'success' && (
-              <div className="mt-4 p-3 bg-green-100 text-green-800 rounded-md">
-                ✅ Successfully subscribed! Check your email.
-              </div>
-            )}
-            
-            {submitStatus === 'error' && (
-              <div className="mt-4 p-3 bg-red-100 text-red-800 rounded-md">
-                ❌ Failed to subscribe. Please try again.
-              </div>
-            )}
-          </div>
+          {/* No posts message */}
+          {filteredPosts.length === 0 && (
+            <div className="text-center py-12">
+              <p className="text-gray-500 text-lg">No posts found for the selected topic.</p>
+            </div>
+          )}
         </div>
       </div>
     </div>
@@ -1781,7 +1361,7 @@ function App() {
   const [currentPage, setCurrentPage] = useState('home');
 
   const renderPage = () => {
-    switch (currentPage) {
+    switch(currentPage) {
       case 'home':
         return <Homepage setCurrentPage={setCurrentPage} />;
       case 'sell':
@@ -1790,12 +1370,12 @@ function App() {
         return <ForBuyersPage />;
       case 'properties':
         return <CurrentPropertiesPage />;
+      case 'blog':
+        return <BlogPage />;
       case 'about':
         return <AboutUsPage />;
       case 'contact':
         return <ContactPage />;
-      case 'blog':
-        return <BlogPage />;
       default:
         return <Homepage setCurrentPage={setCurrentPage} />;
     }
@@ -1804,9 +1384,7 @@ function App() {
   return (
     <div className="App">
       <Navigation currentPage={currentPage} setCurrentPage={setCurrentPage} />
-      <main>
-        {renderPage()}
-      </main>
+      {renderPage()}
       <Footer />
     </div>
   );
