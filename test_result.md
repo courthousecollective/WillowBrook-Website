@@ -102,7 +102,7 @@
 # Testing Data - Main Agent and testing sub agent both should log testing data below this section
 #====================================================================================================
 
-user_problem_statement: "Remove all the text saying that we have bought homes on the first page" + Additional changes: "remove 500+ happy customers, change sarah johnson to matthew chitel and remove the arrows from step 1,2,3"
+user_problem_statement: "Remove all the text saying that we have bought homes on the first page" + Additional changes: "remove 500+ happy customers, change sarah johnson to matthew chitel and remove the arrows from step 1,2,3" + Latest request: "switch the home page to the original that it was before the major switch and then out the now existing home page and replace it in the sell your home page"
 
 frontend:
   - task: "Remove 'Homes Bought in 2024' statistic from homepage"
@@ -152,6 +152,18 @@ frontend:
       - working: true
         agent: "main"
         comment: "Removed the arrow symbols (⇒) from all three step headings in the Simple Process section. Steps now read 'Step 1: Get In Touch', 'Step 2: Cash Offer', 'Step 3: Closing Day'."
+
+  - task: "Restore original homepage and move detailed content to Sell Your Home page"
+    implemented: true
+    working: true
+    file: "/app/frontend/src/App.js"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: true
+    status_history:
+      - working: true
+        agent: "main"
+        comment: "Successfully restored the original simple homepage using components from components.js (HeroSection, ServicesSection, TrustBadges, LeadForm). Moved the previous detailed homepage content to replace the Sell Your Home page. Homepage is now cleaner and simpler, while the detailed selling page content is preserved on the dedicated Sell Your Home page."
 
 metadata:
   created_by: "main_agent"
