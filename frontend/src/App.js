@@ -288,7 +288,7 @@ const SellYourHomePage = () => {
                   onClick={() => document.getElementById('sell-form')?.scrollIntoView({ behavior: 'smooth' })}
                   className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-lg text-lg transition-all duration-300"
                 >
-                  Request Your Offer
+                  Yes, Offer please!
                 </button>
                 <p className="text-sm text-gray-500 mt-2">Completely Free • No Obligation</p>
               </div>
