@@ -185,7 +185,10 @@ metadata:
 
 test_plan:
   current_focus:
-    - "Update homepage headline and add urgent CTA button"
+    - "Replace large image on about page with logo"
+    - "Remove '10+ years of experience' from website" 
+    - "Remove phone number (317) 555-0199 from entire website"
+    - "Change email throughout website"
   stuck_tasks: []
   test_all: false
   test_priority: "high_first"
