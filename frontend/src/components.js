@@ -271,7 +271,7 @@ export const TrustBadges = () => {
   );
 };
 
-// Lead Form Component - Updated with functional email
+// Lead Form Component - Updated to use backend API
 export const LeadForm = ({ title, subtitle, fields, buttonText, onSubmit, formType = "general" }) => {
   const [formData, setFormData] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -293,13 +293,12 @@ export const LeadForm = ({ title, subtitle, fields, buttonText, onSubmit, formTy
       // Add form type to the data
       const submissionData = {
         ...formData,
-        formType: formType,
-        submissionDate: new Date().toLocaleString(),
-        website: 'WillowBrook Real Estate Group'
+        formType: formType
       };
 
-      // Use Formspree for form handling
-      const response = await fetch('https://formspree.io/f/xldekwko', {
+      // Use our backend API for form handling
+      const backendUrl = process.env.REACT_APP_BACKEND_URL || import.meta.env.REACT_APP_BACKEND_URL;
+      const response = await fetch(`${backendUrl}/api/contact`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -308,6 +307,7 @@ export const LeadForm = ({ title, subtitle, fields, buttonText, onSubmit, formTy
       });
 
       if (response.ok) {
+        const result = await response.json();
         setSubmitStatus('success');
         setFormData({});
         if (onSubmit) onSubmit(submissionData);
@@ -399,7 +399,7 @@ export const LeadForm = ({ title, subtitle, fields, buttonText, onSubmit, formTy
             
             {submitStatus === 'error' && (
               <div className="mt-4 p-4 bg-red-100 border border-red-300 rounded-lg text-center">
-                <p className="text-red-800 font-semibold">❌ Something went wrong. Please try again or email us directly.</p>
+                <p className="text-red-800 font-semibold">❌ Something went wrong. Please try again or email us directly at operations@willowbrook-realestate.com.</p>
               </div>
             )}
           </form>
