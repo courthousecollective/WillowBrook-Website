@@ -134,7 +134,8 @@ export const HeroSection = ({ setCurrentPage }) => {
           className="hero-cta-button bg-[#1A73E8] hover:bg-[#1557B0] text-white font-bold text-xl sm:text-2xl py-5 px-8 sm:px-14 rounded-lg transition-all duration-300 transform hover:scale-[1.03] shadow-xl hover:shadow-2xl mb-4 w-full sm:w-auto max-w-md mx-auto block"
           style={{ 
             fontSize: '22px',
-            padding: '20px 36px'
+            padding: '20px 32px',
+            borderRadius: '8px'
           }}
         >
           Get My Cash Offer
