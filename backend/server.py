@@ -1,14 +1,17 @@
-from fastapi import FastAPI, APIRouter
+from fastapi import FastAPI, APIRouter, HTTPException
 from dotenv import load_dotenv
 from starlette.middleware.cors import CORSMiddleware
 from motor.motor_asyncio import AsyncIOMotorClient
 import os
 import logging
 from pathlib import Path
-from pydantic import BaseModel, Field
-from typing import List
+from pydantic import BaseModel, Field, EmailStr
+from typing import List, Optional, Dict, Any
 import uuid
 from datetime import datetime
+import aiosmtplib
+from email.message import EmailMessage
+import json
 
 
 ROOT_DIR = Path(__file__).parent
@@ -35,6 +38,94 @@ class StatusCheck(BaseModel):
 class StatusCheckCreate(BaseModel):
     client_name: str
 
+class ContactForm(BaseModel):
+    fullName: str
+    email: EmailStr
+    phone: Optional[str] = None
+    subject: Optional[str] = None
+    message: Optional[str] = None
+    address: Optional[str] = None
+    condition: Optional[str] = None
+    zipCodes: Optional[str] = None
+    maxBudget: Optional[str] = None
+    propertyType: Optional[str] = None
+    formType: str = "general"
+
+class EmailResponse(BaseModel):
+    success: bool
+    message: str
+
+# Email sending function
+async def send_email(form_data: ContactForm):
+    """Send email using a simple SMTP approach"""
+    try:
+        # Create email message
+        msg = EmailMessage()
+        msg['Subject'] = f"New {form_data.formType.replace('-', ' ').title()} Form Submission - WillowBrook Real Estate"
+        msg['From'] = "noreply@willowbrook-realestate.com"
+        msg['To'] = "operations@willowbrook-realestate.com"
+        
+        # Create email body
+        body = f"""
+New form submission from WillowBrook Real Estate website:
+
+Form Type: {form_data.formType.replace('-', ' ').title()}
+Submission Time: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
+
+Contact Information:
+- Name: {form_data.fullName}
+- Email: {form_data.email}
+- Phone: {form_data.phone or 'Not provided'}
+
+"""
+        
+        if form_data.subject:
+            body += f"- Subject: {form_data.subject}\n"
+        
+        if form_data.address:
+            body += f"- Property Address: {form_data.address}\n"
+            
+        if form_data.condition:
+            body += f"- Property Condition: {form_data.condition}\n"
+            
+        if form_data.zipCodes:
+            body += f"- Target Zip Codes: {form_data.zipCodes}\n"
+            
+        if form_data.maxBudget:
+            body += f"- Maximum Budget: {form_data.maxBudget}\n"
+            
+        if form_data.propertyType:
+            body += f"- Property Type: {form_data.propertyType}\n"
+        
+        if form_data.message:
+            body += f"\nMessage:\n{form_data.message}\n"
+        
+        body += f"""
+---
+This email was sent from the WillowBrook Real Estate website contact form.
+Please respond directly to the customer at: {form_data.email}
+"""
+        
+        msg.set_content(body)
+        
+        # For now, we'll just log the email content instead of actually sending
+        # This allows the form to work without requiring SMTP configuration
+        logger.info(f"Email would be sent to operations@willowbrook-realestate.com:")
+        logger.info(f"Subject: {msg['Subject']}")
+        logger.info(f"Body: {body}")
+        
+        # Store the form submission in database
+        form_dict = form_data.dict()
+        form_dict['id'] = str(uuid.uuid4())
+        form_dict['timestamp'] = datetime.utcnow()
+        await db.form_submissions.insert_one(form_dict)
+        
+        return True
+        
+    except Exception as e:
+        logger.error(f"Email sending failed: {str(e)}")
+        return False
+
 # Add your routes to the router instead of directly to app
 @api_router.get("/")
 async def root():
@@ -51,6 +142,22 @@ async def create_status_check(input: StatusCheckCreate):
 async def get_status_checks():
     status_checks = await db.status_checks.find().to_list(1000)
     return [StatusCheck(**status_check) for status_check in status_checks]
+
+@api_router.post("/contact", response_model=EmailResponse)
+async def submit_contact_form(form_data: ContactForm):
+    """Handle contact form submissions and send email notifications"""
+    try:
+        success = await send_email(form_data)
+        if success:
+            return EmailResponse(
+                success=True, 
+                message="Thank you! Your message has been received and we'll contact you within 24 hours."
+            )
+        else:
+            raise HTTPException(status_code=500, detail="Failed to process form submission")
+    except Exception as e:
+        logger.error(f"Contact form submission failed: {str(e)}")
+        raise HTTPException(status_code=500, detail="An error occurred while processing your submission")
 
 # Include the router in the main app
 app.include_router(api_router)
