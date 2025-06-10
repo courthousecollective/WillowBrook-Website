@@ -329,7 +329,7 @@ const SellYourHomePage = () => {
             { name: 'address', label: 'Property Address', type: 'text', placeholder: 'Enter your property address', fullWidth: true },
             { name: 'condition', label: 'Property Condition', type: 'textarea', placeholder: 'Describe the condition of your property...', fullWidth: true }
           ]}
-          buttonText="Get My Cash Offer"
+          buttonText="Request Your Offer"
           onSubmit={handleSellForm}
           formType="sell-page"
         />
