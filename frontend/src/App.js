@@ -715,7 +715,7 @@ const AboutUsPage = () => {
             </div>
             <div>
               <img 
-                src="https://images.pexels.com/photos/8292850/pexels-photo-8292850.jpeg"
+                src="https://i.postimg.cc/rph3Dt20/IMG-CE9585-BB15-C1-1.jpg"
                 alt="WillowBrook Team"
                 className="w-full rounded-lg shadow-lg"
               />
