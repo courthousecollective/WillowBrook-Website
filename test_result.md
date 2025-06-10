@@ -185,8 +185,8 @@ metadata:
 
 test_plan:
   current_focus:
-    - "Remove image from about page completely"
-    - "Fix all forms to work and send to operations@willowbrook-realestate.com"
+    - "Update sell page button text to 'Request Your Offer'"
+    - "Style homepage hero button with exact specifications"
   stuck_tasks: []
   test_all: false
   test_priority: "high_first"
