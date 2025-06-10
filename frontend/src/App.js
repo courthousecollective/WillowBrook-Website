@@ -792,13 +792,12 @@ const ContactPage = () => {
     try {
       const submissionData = {
         ...contactForm,
-        formType: 'contact',
-        submissionDate: new Date().toLocaleString(),
-        website: 'WillowBrook Real Estate Group'
+        formType: 'contact'
       };
 
-      // Use Formspree for form handling
-      const response = await fetch('https://formspree.io/f/xldekwko', {
+      // Use our backend API for form handling
+      const backendUrl = process.env.REACT_APP_BACKEND_URL || import.meta.env.REACT_APP_BACKEND_URL;
+      const response = await fetch(`${backendUrl}/api/contact`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
