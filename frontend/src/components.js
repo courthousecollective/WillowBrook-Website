@@ -97,7 +97,7 @@ export const Navigation = ({ currentPage, setCurrentPage }) => {
 };
 
 // Hero Section Component
-export const HeroSection = () => {
+export const HeroSection = ({ setCurrentPage }) => {
   return (
     <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Animated Background Image */}
@@ -118,17 +118,25 @@ export const HeroSection = () => {
       {/* Content */}
       <div className="relative z-10 text-center text-white px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight" style={{ fontFamily: 'var(--font-heading)' }}>
-          We Buy Houses Fast for Cash in Indianapolis
+          We Help Indianapolis Homeowners Sell Fast and Stress-Free
         </h1>
-        <p className="text-premium-subtitle mb-4 text-gray-200">
+        <p className="text-premium-subtitle mb-8 text-gray-200">
           No Repairs. No Fees. Close in 7 Days.
         </p>
+        
+        {/* Large CTA Button */}
         <button 
-          onClick={() => document.getElementById('sell-form')?.scrollIntoView({ behavior: 'smooth' })}
-          className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-xl"
+          onClick={() => setCurrentPage && setCurrentPage('sell')}
+          className="hero-cta-button bg-[#1A73E8] hover:bg-[#1557B0] text-white font-bold text-lg sm:text-xl py-4 px-7 sm:px-12 rounded-lg transition-all duration-300 transform hover:scale-[1.03] shadow-xl hover:shadow-2xl mb-4 w-full sm:w-auto max-w-sm mx-auto block"
+          style={{ 
+            fontSize: '20px',
+            padding: '16px 28px'
+          }}
         >
-          Get a Cash Offer
+          Get My Cash Offer →
         </button>
+        
+        <p className="text-sm text-gray-300 mb-12">Completely Free • No Obligation • Fast Response</p>
 
         {/* Stats Section */}
         <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
