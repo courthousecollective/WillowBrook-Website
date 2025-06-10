@@ -190,7 +190,7 @@ export const ServicesSection = () => {
             </div>
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Submit Your Property</h3>
             <p className="text-gray-600">
-              Tell us about your property through our simple online form or give us a call.
+              Tell us about your property through our simple online form or email us.
             </p>
           </div>
 
@@ -399,7 +399,7 @@ export const LeadForm = ({ title, subtitle, fields, buttonText, onSubmit, formTy
             
             {submitStatus === 'error' && (
               <div className="mt-4 p-4 bg-red-100 border border-red-300 rounded-lg text-center">
-                <p className="text-red-800 font-semibold">❌ Something went wrong. Please try again or call us at (317) 555-0199.</p>
+                <p className="text-red-800 font-semibold">❌ Something went wrong. Please try again or email us at operations@willowbrook-realestate.com</p>
               </div>
             )}
           </form>
@@ -436,8 +436,7 @@ export const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Contact Info</h4>
             <div className="space-y-2 text-gray-300">
-              <p>📧 contact@willowbrookgroup.com</p>
-              <p>📞 (317) 555-0199</p>
+              <p>📧 operations@willowbrook-realestate.com</p>
               <p>📍 Serving Greater Indianapolis</p>
               <p className="text-sm text-gray-400">Mobile service - We come to you!</p>
             </div>
