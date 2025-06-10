@@ -297,8 +297,9 @@ export const LeadForm = ({ title, subtitle, fields, buttonText, onSubmit, formTy
         formType: formType
       };
 
-      // Use PHP form handler directly
-      const response = await fetch('/form-handler.php', {
+      // Use our backend API for form handling
+      const backendUrl = process.env.REACT_APP_BACKEND_URL || import.meta.env.REACT_APP_BACKEND_URL;
+      const response = await fetch(`${backendUrl}/api/contact`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
