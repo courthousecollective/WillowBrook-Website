@@ -185,10 +185,8 @@ metadata:
 
 test_plan:
   current_focus:
-    - "Replace large image on about page with logo"
-    - "Remove '10+ years of experience' from website" 
-    - "Remove phone number (317) 555-0199 from entire website"
-    - "Change email throughout website"
+    - "Remove image from about page completely"
+    - "Fix all forms to work and send to operations@willowbrook-realestate.com"
   stuck_tasks: []
   test_all: false
   test_priority: "high_first"
