@@ -972,7 +972,7 @@ const ContactPage = () => {
                 
                 {submitStatus === 'error' && (
                   <div className="mt-4 p-4 bg-red-100 border border-red-300 rounded-lg text-center">
-                    <p className="text-red-800 font-semibold">❌ Something went wrong. Please try again or email us directly.</p>
+                    <p className="text-red-800 font-semibold">❌ Something went wrong. Please try again or email us directly at operations@willowbrook-realestate.com.</p>
                   </div>
                 )}
               </form>
