@@ -60,11 +60,11 @@ async def send_email(form_data: ContactForm):
     """Send email using Python's built-in email functionality"""
     try:
         import smtplib
-        from email.mime.text import MimeText
-        from email.mime.multipart import MimeMultipart
+        from email.mime.text import MIMEText
+        from email.mime.multipart import MIMEMultipart
         
         # Create email message
-        msg = MimeMultipart()
+        msg = MIMEMultipart()
         msg['Subject'] = f"New {form_data.formType.replace('-', ' ').title()} Form Submission - WillowBrook Real Estate"
         msg['From'] = "noreply@willowbrook-realestate.com"
         msg['To'] = "operations@willowbrook-realestate.com"
@@ -110,7 +110,7 @@ This email was sent from the WillowBrook Real Estate website contact form.
 Please respond directly to the customer at: {form_data.email}
 """
         
-        msg.attach(MimeText(body, 'plain'))
+        msg.attach(MIMEText(body, 'plain'))
         
         # Try to send email using local sendmail
         try:
