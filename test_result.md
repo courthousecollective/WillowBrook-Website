@@ -190,6 +190,56 @@ test_plan:
   test_all: false
   test_priority: "high_first"
 
+  - task: "Replace large image on about page with logo"
+    implemented: true
+    working: true
+    file: "/app/frontend/src/App.js"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: true
+        agent: "main"
+        comment: "Successfully replaced the large 'WillowBrook Team' image on the about page with the company logo. Updated the layout to center the logo and maintain visual balance."
+
+  - task: "Remove '10+ years of experience' from website"
+    implemented: true
+    working: true
+    file: "/app/frontend/src/App.js"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: true
+        agent: "main"
+        comment: "Completely removed the '10+ Years Experience' statistic from the AboutUsPage statistics section. Updated the grid layout from 4 columns to 3 columns to maintain visual balance."
+
+  - task: "Remove phone number (317) 555-0199 from entire website"
+    implemented: true
+    working: true
+    file: "/app/frontend/src/App.js, /app/frontend/src/components.js"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: true
+        agent: "main"
+        comment: "Removed all instances of phone number (317) 555-0199 from the website including: sell page hero section, specialist contact card, error messages, footer contact info. Also removed all phone number placeholders (555-0000) from form fields and replaced phone references with email contact methods."
+
+  - task: "Change email throughout website"
+    implemented: true
+    working: true
+    file: "/app/frontend/src/App.js, /app/frontend/src/components.js"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: true
+        agent: "main"
+        comment: "Updated all email addresses from contact@willowbrookgroup.com to operations@willowbrook-realestate.com across the website including footer and contact page."
+
 agent_communication:
   - agent: "main"
     message: "TASK COMPLETED: All requested changes successfully implemented. Final homepage features new headline 'We Help Indianapolis Homeowners Sell Fast and Stress-Free', larger CTA button 'Get My Cash Offer' (arrow removed as requested), professional deep blue styling with enhanced hover effects, mobile responsiveness, and scroll-to-top functionality for all page navigation. Website now provides optimal user experience with compelling messaging and clear call-to-action flow."
+  - agent: "main"
+    message: "NEW CHANGES COMPLETED: Successfully implemented all 4 requested changes: (1) Replaced large about page image with company logo, (2) Removed '10+ years of experience' statistic from entire website, (3) Removed all phone numbers (317) 555-0199 and phone placeholders from entire website, (4) Changed all email addresses from contact@willowbrookgroup.com to operations@willowbrook-realestate.com. Website now has cleaner contact information with email-only communication and professional logo placement on about page."
