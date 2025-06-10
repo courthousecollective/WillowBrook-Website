@@ -4,6 +4,13 @@ import React, { useState } from 'react';
 export const Navigation = ({ currentPage, setCurrentPage }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const handlePageChange = (pageId) => {
+    setCurrentPage(pageId);
+    // Scroll to top when changing pages
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    setIsMenuOpen(false);
+  };
+
   const navItems = [
     { id: 'home', label: 'Home' },
     { id: 'sell', label: 'Sell Your Home' },
@@ -33,7 +40,7 @@ export const Navigation = ({ currentPage, setCurrentPage }) => {
               {navItems.map((item) => (
                 <button
                   key={item.id}
-                  onClick={() => setCurrentPage(item.id)}
+                  onClick={() => handlePageChange(item.id)}
                   className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                     currentPage === item.id
                       ? 'bg-orange-500 text-white'
@@ -75,10 +82,7 @@ export const Navigation = ({ currentPage, setCurrentPage }) => {
               {navItems.map((item) => (
                 <button
                   key={item.id}
-                  onClick={() => {
-                    setCurrentPage(item.id);
-                    setIsMenuOpen(false);
-                  }}
+                  onClick={() => handlePageChange(item.id)}
                   className={`block px-3 py-2 rounded-md text-base font-medium w-full text-left transition-colors ${
                     currentPage === item.id
                       ? 'bg-orange-500 text-white'
