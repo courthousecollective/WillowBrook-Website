@@ -180,4 +180,4 @@ test_plan:
 
 agent_communication:
   - agent: "main"
-    message: "Completed all requested changes: 1) Removed 'Homes Bought in 2024' statistic, 2) Removed '500+ Happy Customers' statistic - now shows only one centered stat, 3) Changed 'Sarah Johnson' to 'Matthew Chitel', 4) Removed arrow symbols from Step 1, 2, 3 headings. All changes applied and frontend restarted."
+    message: "Completed major page restructuring: 1) Restored original simple homepage using HeroSection, ServicesSection, TrustBadges, and LeadForm components from components.js, 2) Moved the previous detailed homepage content to replace the Sell Your Home page, 3) All previous changes maintained (removed 'Homes Bought' and 'Happy Customers' stats, changed name to Matthew Chitel, removed arrows from steps). The homepage is now cleaner and simpler, while detailed selling content is preserved on the dedicated Sell Your Home page."
