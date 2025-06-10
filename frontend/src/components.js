@@ -297,36 +297,23 @@ export const LeadForm = ({ title, subtitle, fields, buttonText, onSubmit, formTy
         formType: formType
       };
 
-      // Use our backend API for form handling with fallback to PHP
-      const backendUrl = process.env.REACT_APP_BACKEND_URL || import.meta.env.REACT_APP_BACKEND_URL;
-      
-      // Try Python backend first, then fallback to PHP
-      let response;
-      try {
-        response = await fetch(`${backendUrl}/api/contact`, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(submissionData),
-        });
-      } catch (error) {
-        // Fallback to PHP handler
-        response = await fetch('/form-handler.php', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(submissionData),
-        });
-      }
+      // Use PHP form handler directly
+      const response = await fetch('/form-handler.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(submissionData),
+      });
 
-      if (response.ok) {
-        const result = await response.json();
+      const result = await response.json();
+      
+      if (response.ok && result.success) {
         setSubmitStatus('success');
         setFormData({});
         if (onSubmit) onSubmit(submissionData);
       } else {
+        console.error('Form submission error:', result.message);
         setSubmitStatus('error');
       }
     } catch (error) {
