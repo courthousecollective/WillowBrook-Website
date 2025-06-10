@@ -1783,7 +1783,7 @@ function App() {
   const renderPage = () => {
     switch (currentPage) {
       case 'home':
-        return <Homepage />;
+        return <Homepage setCurrentPage={setCurrentPage} />;
       case 'sell':
         return <SellYourHomePage />;
       case 'buyers':
@@ -1797,7 +1797,7 @@ function App() {
       case 'blog':
         return <BlogPage />;
       default:
-        return <Homepage />;
+        return <Homepage setCurrentPage={setCurrentPage} />;
     }
   };
 
