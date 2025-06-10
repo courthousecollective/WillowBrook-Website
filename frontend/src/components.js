@@ -127,13 +127,13 @@ export const HeroSection = ({ setCurrentPage }) => {
         {/* Large CTA Button */}
         <button 
           onClick={() => setCurrentPage && setCurrentPage('sell')}
-          className="hero-cta-button bg-[#1A73E8] hover:bg-[#1557B0] text-white font-bold text-lg sm:text-xl py-4 px-7 sm:px-12 rounded-lg transition-all duration-300 transform hover:scale-[1.03] shadow-xl hover:shadow-2xl mb-4 w-full sm:w-auto max-w-sm mx-auto block"
+          className="hero-cta-button bg-[#1A73E8] hover:bg-[#1557B0] text-white font-bold text-xl sm:text-2xl py-5 px-8 sm:px-14 rounded-lg transition-all duration-300 transform hover:scale-[1.03] shadow-xl hover:shadow-2xl mb-4 w-full sm:w-auto max-w-md mx-auto block"
           style={{ 
-            fontSize: '20px',
-            padding: '16px 28px'
+            fontSize: '22px',
+            padding: '20px 36px'
           }}
         >
-          Get My Cash Offer →
+          Get My Cash Offer
         </button>
         
         <p className="text-sm text-gray-300 mb-12">Completely Free • No Obligation • Fast Response</p>
