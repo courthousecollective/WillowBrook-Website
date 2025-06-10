@@ -10,7 +10,7 @@ import {
 } from './components';
 
 // Homepage Component - Original Simple Style
-const Homepage = () => {
+const Homepage = ({ setCurrentPage }) => {
   const handleHeroForm = (formData) => {
     console.log('Hero form submitted:', formData);
     // Form now handled by Formspree
@@ -18,7 +18,7 @@ const Homepage = () => {
 
   return (
     <div className="pt-16">
-      <HeroSection />
+      <HeroSection setCurrentPage={setCurrentPage} />
       <ServicesSection />
       <TrustBadges />
       <LeadForm
