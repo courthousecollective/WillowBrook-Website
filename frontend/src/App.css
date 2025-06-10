@@ -114,9 +114,9 @@
 @media (max-width: 640px) {
   .hero-cta-button {
     width: 100%;
-    max-width: 280px;
-    font-size: 18px !important;
-    padding: 14px 24px !important;
+    max-width: 320px;
+    font-size: 20px !important;
+    padding: 18px 28px !important;
   }
 }
 
