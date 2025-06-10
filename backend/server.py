@@ -157,21 +157,34 @@ async def get_status_checks():
     status_checks = await db.status_checks.find().to_list(1000)
     return [StatusCheck(**status_check) for status_check in status_checks]
 
-@api_router.post("/contact", response_model=EmailResponse)
-async def submit_contact_form(form_data: ContactForm):
-    """Handle contact form submissions and send email notifications"""
+@api_router.get("/submissions", response_model=List[Dict])
+async def get_form_submissions():
+    """Get all form submissions for admin review"""
     try:
-        success = await send_email(form_data)
-        if success:
-            return EmailResponse(
-                success=True, 
-                message="Thank you! Your message has been received and we'll contact you within 24 hours."
-            )
-        else:
-            raise HTTPException(status_code=500, detail="Failed to process form submission")
+        submissions = await db.form_submissions.find().sort("timestamp", -1).to_list(1000)
+        # Convert ObjectId to string for JSON serialization
+        for submission in submissions:
+            if '_id' in submission:
+                submission['_id'] = str(submission['_id'])
+        return submissions
     except Exception as e:
-        logger.error(f"Contact form submission failed: {str(e)}")
-        raise HTTPException(status_code=500, detail="An error occurred while processing your submission")
+        logger.error(f"Failed to get submissions: {str(e)}")
+        raise HTTPException(status_code=500, detail="Failed to retrieve submissions")
+
+@api_router.get("/submissions/count")
+async def get_submissions_count():
+    """Get count of submissions by form type"""
+    try:
+        pipeline = [
+            {"$group": {"_id": "$formType", "count": {"$sum": 1}}},
+            {"$sort": {"count": -1}}
+        ]
+        counts = await db.form_submissions.aggregate(pipeline).to_list(1000)
+        total = await db.form_submissions.count_documents({})
+        return {"total": total, "by_type": counts}
+    except Exception as e:
+        logger.error(f"Failed to get submission counts: {str(e)}")
+        raise HTTPException(status_code=500, detail="Failed to retrieve counts")
 
 # Include the router in the main app
 app.include_router(api_router)
