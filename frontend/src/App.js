@@ -39,7 +39,7 @@ const Homepage = () => {
   );
 };
 
-// Sell Your Home Page
+// Sell Your Home Page - Detailed Version
 const SellYourHomePage = () => {
   const handleSellForm = (formData) => {
     console.log('Sell form submitted:', formData);
@@ -48,95 +48,293 @@ const SellYourHomePage = () => {
 
   return (
     <div className="pt-16">
-      {/* Header Section */}
-      <div className="bg-slate-900 text-white py-20">
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h1 className="text-5xl font-bold mb-6">Sell Your Indianapolis Home the Easy Way</h1>
-          <p className="text-xl text-gray-300 mb-8">Skip the repairs, agents, and commissions.</p>
+      {/* Hero Section */}
+      <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <div 
+            className="hero-background animate-slow-float"
+            style={{
+              backgroundImage: `linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.8)), url('https://images.unsplash.com/photo-1584385971010-71c147ba5dbd')`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat'
+            }}
+          ></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-900/20 via-transparent to-orange-900/20"></div>
+        </div>
+
+        {/* Content */}
+        <div className="relative z-10 text-center text-white px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+          <div className="mb-6">
+            <p className="text-xl sm:text-2xl text-orange-400 font-semibold mb-4">Get a Fair Offer You Can Trust in 15 Minutes</p>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight" style={{ fontFamily: 'var(--font-heading)' }}>
+              Sell My House Fast Indianapolis IN!
+            </h1>
+            <p className="text-2xl sm:text-3xl text-gray-200 mb-8">
+              Any Condition. Any Situation.
+            </p>
+          </div>
+
+          {/* CTA Section */}
+          <div className="text-center">
+            <p className="text-2xl font-bold mb-4">We're Ready to Talk!</p>
+            <p className="text-3xl font-bold text-orange-400 mb-6">(317) 555-0199</p>
+            <button 
+              onClick={() => document.getElementById('sell-form')?.scrollIntoView({ behavior: 'smooth' })}
+              className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-4 px-12 rounded-lg text-xl transition-all duration-300 transform hover:scale-105 shadow-xl"
+            >
+              Get My Cash Offer!
+            </button>
+            <p className="text-sm text-gray-300 mt-4">Completely Free • No Obligation</p>
+          </div>
+        </div>
+      </div>
+
+      {/* Why Choose Us Section */}
+      <div className="py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            <div>
+              <h2 className="text-4xl font-bold text-gray-900 mb-6">Why Choose Us?</h2>
+              <p className="text-lg text-gray-600 mb-6">
+                <strong>We buy houses in Indianapolis IN</strong> and all over Indiana with YOU – the seller – in mind (our <em>first priority</em>).
+              </p>
+              <p className="text-lg text-gray-600 mb-8">
+                We give you the <strong>best all-cash offer</strong> (<em>fast!</em>) for your home, and provide a <strong>super easy close</strong> for you, your family, and your unique situation.
+              </p>
+              <p className="text-lg text-gray-600 mb-8">
+                Above all, we are <strong>real estate problem solvers</strong>, and we make sure <strong>every transaction is a win-win</strong>.
+              </p>
+              <img 
+                src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914"
+                alt="We Buy Houses Indianapolis"
+                className="w-full rounded-lg shadow-lg"
+              />
+            </div>
+            
+            {/* All 9 Benefits with Icons */}
+            <div className="space-y-4">
+              <div className="flex items-center space-x-4 p-4 bg-gray-50 rounded-lg">
+                <div className="text-green-500 text-2xl">💰</div>
+                <span className="text-lg font-semibold text-gray-900">NO Closing Costs</span>
+              </div>
+              <div className="flex items-center space-x-4 p-4 bg-gray-50 rounded-lg">
+                <div className="text-green-500 text-2xl">🏠</div>
+                <span className="text-lg font-semibold text-gray-900">NO Agent Fees</span>
+              </div>
+              <div className="flex items-center space-x-4 p-4 bg-gray-50 rounded-lg">
+                <div className="text-green-500 text-2xl">📅</div>
+                <span className="text-lg font-semibold text-gray-900">Close on Your Schedule</span>
+              </div>
+              <div className="flex items-center space-x-4 p-4 bg-gray-50 rounded-lg">
+                <div className="text-green-500 text-2xl">📦</div>
+                <span className="text-lg font-semibold text-gray-900">Choose Your Move Out Day</span>
+              </div>
+              <div className="flex items-center space-x-4 p-4 bg-gray-50 rounded-lg">
+                <div className="text-green-500 text-2xl">📞</div>
+                <span className="text-lg font-semibold text-gray-900">Offer in Person or by Phone</span>
+              </div>
+              <div className="flex items-center space-x-4 p-4 bg-gray-50 rounded-lg">
+                <div className="text-green-500 text-2xl">🔍</div>
+                <span className="text-lg font-semibold text-gray-900">No Inspections, No Appraisals</span>
+              </div>
+              <div className="flex items-center space-x-4 p-4 bg-gray-50 rounded-lg">
+                <div className="text-green-500 text-2xl">👥</div>
+                <span className="text-lg font-semibold text-gray-900">No Showings or Open Houses</span>
+              </div>
+              <div className="flex items-center space-x-4 p-4 bg-gray-50 rounded-lg">
+                <div className="text-green-500 text-2xl">🔧</div>
+                <span className="text-lg font-semibold text-gray-900">No Repairs or Fixes (As-Is)</span>
+              </div>
+              <div className="flex items-center space-x-4 p-4 bg-gray-50 rounded-lg">
+                <div className="text-green-500 text-2xl">✅</div>
+                <span className="text-lg font-semibold text-gray-900">No Hassles (Our Guarantee!)</span>
+              </div>
+            </div>
+          </div>
           
-          {/* Process Steps */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
+          <div className="text-center mt-12">
+            <button 
+              onClick={() => document.getElementById('sell-form')?.scrollIntoView({ behavior: 'smooth' })}
+              className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300"
+            >
+              Get My Cash Offer!
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Simple Process Section */}
+      <div className="py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Simple Process</h2>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="bg-orange-500 text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mx-auto mb-4">1</div>
-              <h3 className="text-xl font-semibold mb-2">Submit Your Property Info</h3>
-              <p className="text-gray-300">Tell us about your house through our simple form</p>
+              <div className="bg-orange-500 text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mx-auto mb-6">1</div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Step 1: Get In Touch</h3>
+              <p className="text-gray-600">Our specialist will give you a <strong>free, no-obligation property evaluation</strong> at your convenience.</p>
             </div>
             <div className="text-center">
-              <div className="bg-orange-500 text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mx-auto mb-4">2</div>
-              <h3 className="text-xl font-semibold mb-2">Receive a Cash Offer Within 24 Hours</h3>
-              <p className="text-gray-300">Get a fair, no-obligation offer quickly</p>
+              <div className="bg-orange-500 text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mx-auto mb-6">2</div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Step 2: Cash Offer</h3>
+              <p className="text-gray-600">Within <strong>just 1 hour</strong>, we'll have a <strong>guaranteed all-cash offer</strong> ready for your home.</p>
             </div>
             <div className="text-center">
-              <div className="bg-orange-500 text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mx-auto mb-4">3</div>
-              <h3 className="text-xl font-semibold mb-2">Close on Your Timeline</h3>
-              <p className="text-gray-300">Pick your closing date, as fast as 7 days</p>
+              <div className="bg-orange-500 text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mx-auto mb-6">3</div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Step 3: Closing Day</h3>
+              <p className="text-gray-600"><strong>You choose the closing date</strong> (as fast as <strong>7 days</strong>), and the easiest moving day for you.</p>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Benefits Section */}
+      {/* Talk to Us Section */}
+      <div className="py-20 bg-slate-900 text-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-4xl font-bold mb-6">"I Need To Sell My House Fast In Indianapolis!"</h2>
+          <p className="text-xl text-gray-300 mb-8">
+            <strong>We buy houses everywhere in Indianapolis IN</strong> – in <em>any condition</em> – for <em>any reason</em>.
+          </p>
+          <p className="text-lg text-gray-300 mb-12">
+            Need to sell your Indianapolis house for <strong>any reason at all</strong>? WillowBrook Real Estate Group is ready to work with you and provide an extremely fair, all-cash offer.
+          </p>
+          
+          {/* Stats */}
+          <div className="grid grid-cols-1 gap-8 mb-12 max-w-sm mx-auto">
+            <div className="text-center">
+              <div className="text-4xl font-bold text-orange-400 mb-2">5</div>
+              <div className="text-lg text-gray-300">Licensed Professionals Ready to Help</div>
+            </div>
+          </div>
+
+          <div className="bg-white rounded-lg p-8 text-gray-900 max-w-md mx-auto">
+            <img 
+              src="https://images.pexels.com/photos/8292850/pexels-photo-8292850.jpeg"
+              alt="Local Market Specialist"
+              className="w-24 h-24 rounded-full mx-auto mb-4 object-cover"
+            />
+            <h3 className="text-xl font-bold mb-2">Matthew Chitel</h3>
+            <p className="text-gray-600 mb-4">Local Market Specialist</p>
+            <div className="text-center">
+              <h4 className="font-bold mb-2">Get a No-Obligation Cash Offer Today</h4>
+              <h4 className="font-bold mb-4">Talk to our Award-Winning Team Today</h4>
+              <p className="text-2xl font-bold text-orange-500">(317) 555-0199</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Solution for Every Homeowner */}
       <div className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Choose Us?</h2>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div>
+              <h2 className="text-4xl font-bold text-gray-900 mb-8">Do You Need To Sell Your House in Indianapolis Indiana?</h2>
+              
+              <div className="space-y-6 mb-8">
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">Hassle-Saving</h3>
+                  <p className="text-gray-600 mb-2">When you sell to us…</p>
+                  <ul className="space-y-1 text-gray-600">
+                    <li>• <strong>No cleaning, repairs, or junk removal necessary</strong>. Hands free.</li>
+                    <li>• <strong>No interviewing agents</strong> for one that promises to "sell your home fast," but has you sitting in a binding contract.</li>
+                    <li>• <strong>No endless paperwork</strong>, no headaches, and no waiting game.</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">Time-Saving</h3>
+                  <p className="text-gray-600">Between <strong>showings, inspections, appraisals</strong> and <strong>loan approvals</strong>, it can take <strong>several months or more</strong> for your property to sell. We'd rather be onto the next chapter of our life by then.</p>
+                </div>
+
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">Stress-Saving</h3>
+                  <p className="text-gray-600">Let us calculate a fair market value for your IN home and present you with an easy cash offer.</p>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-8">A Solution for Every Homeowner</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {[
+                  "Junk piling up in your house?",
+                  "Looking to Avoid Foreclosure?", 
+                  "Upside Down on the Mortgage?",
+                  "Facing Liens on Your Property?",
+                  "Inherited an Unwanted Property?",
+                  "Vacant House sitting Idle?",
+                  "In need of Excessive Repairs?",
+                  "Problems with Bad Tenants?",
+                  "Fire Damage or Disaster?",
+                  "In the middle of a Divorce?",
+                  "Ready to Move ASAP?",
+                  "Looking into Downsizing?",
+                  "Generally Behind on Payments?",
+                  "Just want a Fresh Start?"
+                ].map((situation, index) => (
+                  <div key={index} className="flex items-center space-x-2">
+                    <div className="text-orange-500">•</div>
+                    <span className="text-gray-700">{situation}</span>
+                  </div>
+                ))}
+              </div>
+              
+              <div className="mt-8 text-center">
+                <button 
+                  onClick={() => document.getElementById('sell-form')?.scrollIntoView({ behavior: 'smooth' })}
+                  className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-lg text-lg transition-all duration-300"
+                >
+                  Yes, Offer please!
+                </button>
+                <p className="text-sm text-gray-500 mt-2">Completely Free • No Obligation</p>
+              </div>
+            </div>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="text-center p-6">
-              <div className="text-4xl mb-4">🏠</div>
-              <h3 className="text-xl font-bold mb-2">We Buy Homes in Any Condition</h3>
-              <p className="text-gray-600">No repairs needed. We buy as-is.</p>
+        </div>
+      </div>
+
+      {/* Market Stats Section */}
+      <div className="py-20 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Sell My House Fast in Indianapolis Indiana</h3>
+              <p className="text-gray-600">Reduce the <strong>average 65 Days to Sale</strong> in Indianapolis, IN to <strong>just 7 days</strong> or less, with an instant cash offer and an <strong>expedited closing</strong>.</p>
             </div>
-            <div className="text-center p-6">
-              <div className="text-4xl mb-4">💰</div>
-              <h3 className="text-xl font-bold mb-2">You Don't Pay Closing Costs</h3>
-              <p className="text-gray-600">We cover all closing costs and fees.</p>
+            <div className="text-center">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">We Buy Homes in Indianapolis Indiana</h3>
+              <p className="text-gray-600">On the market, buyers pay <strong>an average of $239,000</strong> for homes in Indianapolis. Let us buy your house for cash, and <strong>skip the hassle and extended waiting period</strong> of listing.</p>
             </div>
-            <div className="text-center p-6">
-              <div className="text-4xl mb-4">⚡</div>
-              <h3 className="text-xl font-bold mb-2">Fast Process</h3>
-              <p className="text-gray-600">Close in as little as 7 days.</p>
-            </div>
-            <div className="text-center p-6">
-              <div className="text-4xl mb-4">📍</div>
-              <h3 className="text-xl font-bold mb-2">Local Indianapolis Focus</h3>
-              <p className="text-gray-600">We specialize in the Indianapolis metro area.</p>
-            </div>
-            <div className="text-center p-6">
-              <div className="text-4xl mb-4">🤝</div>
-              <h3 className="text-xl font-bold mb-2">No Real Estate Agents</h3>
-              <p className="text-gray-600">Deal directly with us. No commissions.</p>
-            </div>
-            <div className="text-center p-6">
-              <div className="text-4xl mb-4">✅</div>
-              <h3 className="text-xl font-bold mb-2">Guaranteed Offer</h3>
-              <p className="text-gray-600">Fair, honest cash offers every time.</p>
+            <div className="text-center">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Cash Home Buyers in Indianapolis Indiana</h3>
+              <p className="text-gray-600">A considerable <strong>42% of homes in 2024 sold under list price</strong> in this area. Make the most of your home sale and your time by working with a <strong>trusted cash home buyer</strong>.</p>
             </div>
           </div>
         </div>
       </div>
 
       {/* Lead Form */}
-      <LeadForm
-        title="Ready to Sell Your House?"
-        subtitle="Get your no-obligation cash offer today"
-        fields={[
-          { name: 'fullName', label: 'Full Name', type: 'text', placeholder: 'Enter your full name' },
-          { name: 'phone', label: 'Phone Number', type: 'tel', placeholder: '(317) 555-0000' },
-          { name: 'email', label: 'Email Address', type: 'email', placeholder: 'your@email.com' },
-          { name: 'address', label: 'Property Address', type: 'text', placeholder: 'Enter your property address', fullWidth: true },
-          { 
-            name: 'condition', 
-            label: 'Property Condition', 
-            type: 'select',
-            options: ['Excellent', 'Good', 'Fair', 'Needs Work', 'Major Repairs Needed']
-          }
-        ]}
-        buttonText="Get My Cash Offer Now"
-        onSubmit={handleSellForm}
-        formType="sell-page"
-      />
+      <div id="sell-form">
+        <LeadForm
+          title="Get Your Cash Offer Today"
+          subtitle="Fill out the form below and we'll contact you within 24 hours"
+          fields={[
+            { name: 'fullName', label: 'Full Name', type: 'text', placeholder: 'Enter your full name' },
+            { name: 'phone', label: 'Phone Number', type: 'tel', placeholder: '(317) 555-0000' },
+            { name: 'email', label: 'Email Address', type: 'email', placeholder: 'your@email.com' },
+            { name: 'address', label: 'Property Address', type: 'text', placeholder: 'Enter your property address', fullWidth: true },
+            { name: 'condition', label: 'Property Condition', type: 'textarea', placeholder: 'Describe the condition of your property...', fullWidth: true }
+          ]}
+          buttonText="Get My Cash Offer"
+          onSubmit={handleSellForm}
+          formType="sell-page"
+        />
+      </div>
     </div>
   );
 };
