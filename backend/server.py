@@ -57,10 +57,14 @@ class EmailResponse(BaseModel):
 
 # Email sending function
 async def send_email(form_data: ContactForm):
-    """Send email using a simple SMTP approach"""
+    """Send email using Python's built-in email functionality"""
     try:
+        import smtplib
+        from email.mime.text import MimeText
+        from email.mime.multipart import MimeMultipart
+        
         # Create email message
-        msg = EmailMessage()
+        msg = MimeMultipart()
         msg['Subject'] = f"New {form_data.formType.replace('-', ' ').title()} Form Submission - WillowBrook Real Estate"
         msg['From'] = "noreply@willowbrook-realestate.com"
         msg['To'] = "operations@willowbrook-realestate.com"
@@ -106,15 +110,25 @@ This email was sent from the WillowBrook Real Estate website contact form.
 Please respond directly to the customer at: {form_data.email}
 """
         
-        msg.set_content(body)
+        msg.attach(MimeText(body, 'plain'))
         
-        # For now, we'll just log the email content instead of actually sending
-        # This allows the form to work without requiring SMTP configuration
-        logger.info(f"Email would be sent to operations@willowbrook-realestate.com:")
-        logger.info(f"Subject: {msg['Subject']}")
-        logger.info(f"Body: {body}")
+        # Try to send email using local sendmail
+        try:
+            # Use local sendmail (most common on web servers)
+            server = smtplib.SMTP('localhost')
+            server.send_message(msg)
+            server.quit()
+            logger.info(f"Email sent successfully to operations@willowbrook-realestate.com")
+            
+        except Exception as smtp_error:
+            logger.error(f"SMTP sending failed: {str(smtp_error)}")
+            # Log the email content for manual review
+            logger.info(f"Email content for manual delivery:")
+            logger.info(f"To: operations@willowbrook-realestate.com")
+            logger.info(f"Subject: {msg['Subject']}")
+            logger.info(f"Body: {body}")
         
-        # Store the form submission in database
+        # Store the form submission in database regardless of email status
         form_dict = form_data.dict()
         form_dict['id'] = str(uuid.uuid4())
         form_dict['timestamp'] = datetime.utcnow()
@@ -123,7 +137,7 @@ Please respond directly to the customer at: {form_data.email}
         return True
         
     except Exception as e:
-        logger.error(f"Email sending failed: {str(e)}")
+        logger.error(f"Email processing failed: {str(e)}")
         return False
 
 # Add your routes to the router instead of directly to app
