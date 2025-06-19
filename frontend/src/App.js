@@ -68,7 +68,7 @@ const SellYourHomePage = () => {
           <div className="mb-6">
             <p className="text-xl sm:text-2xl text-orange-400 font-semibold mb-4">Get a Fair Offer You Can Trust in 15 Minutes</p>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight" style={{ fontFamily: 'var(--font-heading)' }}>
-              Sell My House Fast Indianapolis IN!
+              Sell My House Fast Greensboro NC!
             </h1>
             <p className="text-2xl sm:text-3xl text-gray-200 mb-8">
               Any Condition. Any Situation.
@@ -97,7 +97,7 @@ const SellYourHomePage = () => {
             <div>
               <h2 className="text-4xl font-bold text-gray-900 mb-6">Why Choose Us?</h2>
               <p className="text-lg text-gray-600 mb-6">
-                <strong>We buy houses in Indianapolis IN</strong> and all over Indiana with YOU – the seller – in mind (our <em>first priority</em>).
+                <strong>We buy houses in Greensboro NC</strong> and all over North Carolina with YOU – the seller – in mind (our <em>first priority</em>).
               </p>
               <p className="text-lg text-gray-600 mb-8">
                 We give you the <strong>best all-cash offer</strong> (<em>fast!</em>) for your home, and provide a <strong>super easy close</strong> for you, your family, and your unique situation.
@@ -107,7 +107,7 @@ const SellYourHomePage = () => {
               </p>
               <img 
                 src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914"
-                alt="We Buy Houses Indianapolis"
+                alt="We Buy Houses Greensboro"
                 className="w-full rounded-lg shadow-lg"
               />
             </div>
@@ -194,12 +194,12 @@ const SellYourHomePage = () => {
       {/* Talk to Us Section */}
       <div className="py-20 bg-slate-900 text-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold mb-6">"I Need To Sell My House Fast In Indianapolis!"</h2>
+          <h2 className="text-4xl font-bold mb-6">"I Need To Sell My House Fast In Greensboro!"</h2>
           <p className="text-xl text-gray-300 mb-8">
-            <strong>We buy houses everywhere in Indianapolis IN</strong> – in <em>any condition</em> – for <em>any reason</em>.
+            <strong>We buy houses everywhere in Greensboro NC</strong> – in <em>any condition</em> – for <em>any reason</em>.
           </p>
           <p className="text-lg text-gray-300 mb-12">
-            Need to sell your Indianapolis house for <strong>any reason at all</strong>? WillowBrook Real Estate Group is ready to work with you and provide an extremely fair, all-cash offer.
+            Need to sell your Greensboro house for <strong>any reason at all</strong>? WillowBrook Real Estate Group is ready to work with you and provide an extremely fair, all-cash offer.
           </p>
           
           {/* Stats */}
@@ -232,7 +232,7 @@ const SellYourHomePage = () => {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div>
-              <h2 className="text-4xl font-bold text-gray-900 mb-8">Do You Need To Sell Your House in Indianapolis Indiana?</h2>
+              <h2 className="text-4xl font-bold text-gray-900 mb-8">Do You Need To Sell Your House in Greensboro North Carolina?</h2>
               
               <div className="space-y-6 mb-8">
                 <div>
@@ -252,7 +252,7 @@ const SellYourHomePage = () => {
 
                 <div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">Stress-Saving</h3>
-                  <p className="text-gray-600">Let us calculate a fair market value for your IN home and present you with an easy cash offer.</p>
+                  <p className="text-gray-600">Let us calculate a fair market value for your NC home and present you with an easy cash offer.</p>
                 </div>
               </div>
             </div>
@@ -302,16 +302,16 @@ const SellYourHomePage = () => {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Sell My House Fast in Indianapolis Indiana</h3>
-              <p className="text-gray-600">Reduce the <strong>average 65 Days to Sale</strong> in Indianapolis, IN to <strong>just 7 days</strong> or less, with an instant cash offer and an <strong>expedited closing</strong>.</p>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Sell My House Fast in Greensboro North Carolina</h3>
+              <p className="text-gray-600">Reduce the <strong>average 58 Days to Sale</strong> in Greensboro, NC to <strong>just 7 days</strong> or less, with an instant cash offer and an <strong>expedited closing</strong>.</p>
             </div>
             <div className="text-center">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">We Buy Homes in Indianapolis Indiana</h3>
-              <p className="text-gray-600">On the market, buyers pay <strong>an average of $239,000</strong> for homes in Indianapolis. Let us buy your house for cash, and <strong>skip the hassle and extended waiting period</strong> of listing.</p>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">We Buy Homes in Greensboro North Carolina</h3>
+              <p className="text-gray-600">On the market, buyers pay <strong>an average of $185,000</strong> for homes in Greensboro. Let us buy your house for cash, and <strong>skip the hassle and extended waiting period</strong> of listing.</p>
             </div>
             <div className="text-center">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Cash Home Buyers in Indianapolis Indiana</h3>
-              <p className="text-gray-600">A considerable <strong>42% of homes in 2024 sold under list price</strong> in this area. Make the most of your home sale and your time by working with a <strong>trusted cash home buyer</strong>.</p>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Cash Home Buyers in Greensboro North Carolina</h3>
+              <p className="text-gray-600">A considerable <strong>38% of homes in 2024 sold under list price</strong> in this area. Make the most of your home sale and your time by working with a <strong>trusted cash home buyer</strong>.</p>
             </div>
           </div>
         </div>
@@ -398,7 +398,7 @@ const ForBuyersPage = () => {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">How Our Buyer Program Works</h2>
-            <p className="text-xl text-gray-600">Get first access to discounted investment properties in Indianapolis</p>
+            <p className="text-xl text-gray-600">Get first access to discounted investment properties in Greensboro</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -476,7 +476,7 @@ const ForBuyersPage = () => {
                     value={arvData.compsPrice}
                     onChange={(e) => setArvData({ ...arvData, compsPrice: e.target.value })}
                     className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
-                    placeholder="e.g., 150"
+                    placeholder="e.g., 125"
                   />
                 </div>
                 
@@ -489,7 +489,7 @@ const ForBuyersPage = () => {
                     value={arvData.propertySize}
                     onChange={(e) => setArvData({ ...arvData, propertySize: e.target.value })}
                     className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
-                    placeholder="e.g., 1500"
+                    placeholder="e.g., 1400"
                   />
                 </div>
                 
@@ -528,7 +528,7 @@ const ForBuyersPage = () => {
                     value={roiData.purchasePrice}
                     onChange={(e) => setRoiData({ ...roiData, purchasePrice: e.target.value })}
                     className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
-                    placeholder="e.g., 120000"
+                    placeholder="e.g., 95000"
                   />
                 </div>
                 
@@ -541,7 +541,7 @@ const ForBuyersPage = () => {
                     value={roiData.repairCosts}
                     onChange={(e) => setRoiData({ ...roiData, repairCosts: e.target.value })}
                     className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
-                    placeholder="e.g., 30000"
+                    placeholder="e.g., 25000"
                   />
                 </div>
                 
@@ -554,7 +554,7 @@ const ForBuyersPage = () => {
                     value={roiData.salePrice}
                     onChange={(e) => setRoiData({ ...roiData, salePrice: e.target.value })}
                     className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
-                    placeholder="e.g., 180000"
+                    placeholder="e.g., 155000"
                   />
                 </div>
                 
@@ -595,11 +595,11 @@ const ForBuyersPage = () => {
       <div id="buyer-signup-form">
         <LeadForm
         title="Join the Buyer List Today"
-        subtitle="Start receiving exclusive Indianapolis investment opportunities"
+        subtitle="Start receiving exclusive Greensboro investment opportunities"
         fields={[
           { name: 'fullName', label: 'Full Name', type: 'text', placeholder: 'Enter your full name' },
           { name: 'email', label: 'Email Address', type: 'email', placeholder: 'your@email.com' },
-          { name: 'zipCodes', label: 'Target Zip Codes', type: 'text', placeholder: 'e.g. 46201, 46202, 46203' },
+          { name: 'zipCodes', label: 'Target Zip Codes', type: 'text', placeholder: 'e.g. 27401, 27403, 27405' },
           { name: 'maxBudget', label: 'Maximum Budget', type: 'select', options: ['Under $50k', '$50k-$100k', '$100k-$200k', '$200k-$300k', '$300k+'] },
           { 
             name: 'propertyType', 
@@ -630,7 +630,7 @@ const CurrentPropertiesPage = () => {
       <div className="bg-slate-900 text-white py-20">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h1 className="text-5xl font-bold mb-6">Investment Properties</h1>
-          <p className="text-xl text-gray-300">Exclusive off-market properties in Indianapolis</p>
+          <p className="text-xl text-gray-300">Exclusive off-market properties in Greensboro</p>
         </div>
       </div>
 
@@ -640,7 +640,7 @@ const CurrentPropertiesPage = () => {
           <div className="bg-gray-100 rounded-lg p-12 mb-12">
             <h2 className="text-4xl font-bold text-gray-900 mb-6">Coming Soon</h2>
             <p className="text-xl text-gray-600 mb-8">
-              Exclusive off-market properties in Indianapolis will be available here soon.
+              Exclusive off-market properties in Greensboro will be available here soon.
             </p>
             
             {/* Preview Card */}
@@ -659,7 +659,7 @@ const CurrentPropertiesPage = () => {
                 </div>
               </div>
               <div className="p-6">
-                <h3 className="text-lg font-bold text-gray-900 mb-2">Indianapolis Investment Property</h3>
+                <h3 className="text-lg font-bold text-gray-900 mb-2">Greensboro Investment Property</h3>
                 <p className="text-gray-600">Join our buyer list to access exclusive deals like this one.</p>
               </div>
             </div>
@@ -690,7 +690,7 @@ const AboutUsPage = () => {
       <div className="bg-slate-900 text-white py-20">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h1 className="text-5xl font-bold mb-6">About WillowBrook Real Estate Group</h1>
-          <p className="text-xl text-gray-300">Your trusted Indianapolis real estate professionals</p>
+          <p className="text-xl text-gray-300">Your trusted Greensboro real estate professionals</p>
         </div>
       </div>
 
@@ -701,10 +701,10 @@ const AboutUsPage = () => {
             <div>
               <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Mission</h2>
               <p className="text-lg text-gray-600 mb-6">
-                WillowBrook Real Estate Group is a local team of real estate professionals helping Indianapolis homeowners sell quickly and investors find discounted properties.
+                WillowBrook Real Estate Group is a local team of real estate professionals helping Greensboro homeowners sell quickly and investors find discounted properties.
               </p>
               <p className="text-lg text-gray-600 mb-6">
-                Based in the heart of Indianapolis, we pride ourselves on transparent, fast, and fair transactions. We understand the local market and are committed to providing exceptional service to both homeowners and investors throughout the greater Indianapolis area.
+                Based in the heart of Greensboro, we pride ourselves on transparent, fast, and fair transactions. We understand the local market and are committed to providing exceptional service to both homeowners and investors throughout the greater Greensboro area.
               </p>
               <p className="text-lg text-gray-600 mb-6">
                 <strong>Mobile Service:</strong> We come directly to you for property evaluations, consultations, and closings. No need to visit an office - we bring our expertise to your location for your convenience.
@@ -759,23 +759,23 @@ const AboutUsPage = () => {
       <div className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Indianapolis Focused</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Greensboro Focused</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We are Indianapolis natives who understand the local market, neighborhoods, and what makes each area unique. Our local expertise gives us an advantage in providing accurate valuations and finding the right investment opportunities.
+              We are Greensboro natives who understand the local market, neighborhoods, and what makes each area unique. Our local expertise gives us an advantage in providing accurate valuations and finding the right investment opportunities.
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="text-center p-4">
-              <div className="text-3xl font-bold text-orange-500">500+</div>
+              <div className="text-3xl font-bold text-orange-500">400+</div>
               <div className="text-gray-600">Properties Evaluated</div>
             </div>
             <div className="text-center p-4">
-              <div className="text-3xl font-bold text-orange-500">10+</div>
+              <div className="text-3xl font-bold text-orange-500">8+</div>
               <div className="text-gray-600">Years Experience</div>
             </div>
             <div className="text-center p-4">
-              <div className="text-3xl font-bold text-orange-500">50+</div>
+              <div className="text-3xl font-bold text-orange-500">35+</div>
               <div className="text-gray-600">Neighborhoods Served</div>
             </div>
             <div className="text-center p-4">
@@ -865,7 +865,7 @@ const ContactPage = () => {
                   <div className="text-2xl mr-4">📍</div>
                   <div>
                     <h3 className="font-semibold text-gray-900">Service Area</h3>
-                    <p className="text-gray-600">Serving Greater Indianapolis & Surrounding Areas</p>
+                    <p className="text-gray-600">Serving Greater Greensboro & Surrounding Areas</p>
                     <p className="text-sm text-gray-500">We come to you!</p>
                   </div>
                 </div>
@@ -887,8 +887,8 @@ const ContactPage = () => {
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">Mobile Service</h3>
                   <p className="text-gray-600 mb-2">We come directly to you for property evaluations</p>
                   <p className="text-sm text-gray-500">
-                    Serving: Indianapolis, Carmel, Fishers, Westfield, Noblesville, 
-                    Greenwood, Avon, Plainfield, and surrounding areas
+                    Serving: Greensboro, High Point, Winston-Salem, Burlington, 
+                    Kernersville, Oak Ridge, Summerfield, and surrounding areas
                   </p>
                 </div>
               </div>
@@ -1011,14 +1011,14 @@ const BlogPage = () => {
   const blogPosts = [
     {
       id: 1,
-      title: "How to Sell My House Fast in Indianapolis, IN",
-      excerpt: "Selling a house in Indianapolis typically takes 65 to 70 days from listing to closing. But if you're facing foreclosure, relocating quickly, or dealing with a distressed property, you may not have that kind of time.",
+      title: "How to Sell My House Fast in Greensboro, NC",
+      excerpt: "Selling a house in Greensboro typically takes 58 to 65 days from listing to closing. But if you're facing foreclosure, relocating quickly, or dealing with a distressed property, you may not have that kind of time.",
       content: `
         <div class="blog-author">
           <p><strong>By Matthew Chitel</strong> – Updated June 2025</p>
         </div>
         
-        <p>Selling a house in Indianapolis typically takes 65 to 70 days from listing to closing. But if you're facing foreclosure, relocating quickly, or dealing with a distressed property, you may not have that kind of time.</p>
+        <p>Selling a house in Greensboro typically takes 58 to 65 days from listing to closing. But if you're facing foreclosure, relocating quickly, or dealing with a distressed property, you may not have that kind of time.</p>
         
         <p><strong>Fortunately, there are faster options.</strong></p>
         
@@ -1028,9 +1028,9 @@ const BlogPage = () => {
         
         <div style="background: #f8f9fa; padding: 20px; border-left: 4px solid #ff5722; margin: 20px 0;">
           <ul style="margin: 0;">
-            <li><strong>Median home value in Indianapolis:</strong> $239,000</li>
-            <li><strong>Typical cash offer (approximately 70% of market value):</strong> $167,000</li>
-            <li><strong>Estimated repair deductions (if selling as-is):</strong> $7,500–$12,000</li>
+            <li><strong>Median home value in Greensboro:</strong> $185,000</li>
+            <li><strong>Typical cash offer (approximately 70% of market value):</strong> $129,500</li>
+            <li><strong>Estimated repair deductions (if selling as-is):</strong> $5,500–$9,000</li>
             <li><strong>Estimated time to close:</strong> 7 to 14 days</li>
           </ul>
         </div>
@@ -1044,17 +1044,17 @@ const BlogPage = () => {
         
         <h2>2. Sell with a Real Estate Agent</h2>
         
-        <p>If you want to maximize your sale price and can afford to wait a bit longer, working with a top-performing Indianapolis agent is a solid path. A good agent can help price your home right, stage it effectively, and market it to serious buyers.</p>
+        <p>If you want to maximize your sale price and can afford to wait a bit longer, working with a top-performing Greensboro agent is a solid path. A good agent can help price your home right, stage it effectively, and market it to serious buyers.</p>
         
         <ul>
           <li><strong>Potential to get full market value</strong></li>
-          <li><strong>Typical time to close:</strong> 45 to 70 days</li>
+          <li><strong>Typical time to close:</strong> 45 to 65 days</li>
           <li><strong>Standard listing agent commission:</strong> 5–6% of the sale price</li>
         </ul>
         
         <h2>3. Compare Instant Offers with a Hybrid Approach</h2>
         
-        <p>New programs in Indianapolis let you compare multiple offers from vetted investors while still having the option to list on the open market. This hybrid model offers flexibility:</p>
+        <p>New programs in Greensboro let you compare multiple offers from vetted investors while still having the option to list on the open market. This hybrid model offers flexibility:</p>
         
         <ul>
           <li>Review multiple cash offers with no obligation</li>
@@ -1064,7 +1064,7 @@ const BlogPage = () => {
         
         <h2>Summary</h2>
         
-        <p>If you're looking to sell your house fast in Indianapolis, here's what to consider:</p>
+        <p>If you're looking to sell your house fast in Greensboro, here's what to consider:</p>
         
         <div style="background: #fff3e0; padding: 20px; border-radius: 8px; margin: 20px 0;">
           <table style="width: 100%; border-collapse: collapse;">
@@ -1097,112 +1097,65 @@ const BlogPage = () => {
       `,
       date: "June 15, 2025",
       tags: ["Sell Fast", "Local Market", "Cash Buyers"],
-      slug: "sell-house-fast-indianapolis-in"
-    },
-    {
-      id: 1,
-      title: "How to Sell Your House Fast in Indianapolis",
-      excerpt: "Learn the proven strategies Indianapolis homeowners are using to sell their properties quickly without the hassle of traditional real estate.",
-      content: `
-        <h2>Selling Your Indianapolis Home Quickly: A Complete Guide</h2>
-        
-        <p>If you're looking to sell your house fast in Indianapolis, you're not alone. Many homeowners in the Circle City need to sell quickly for various reasons – job relocation, financial difficulties, inherited property, or simply wanting to avoid the traditional real estate process.</p>
-        
-        <h3>Why Choose Cash Buyers?</h3>
-        <p>Traditional real estate sales in Indianapolis can take 30-60 days or longer, with many potential roadblocks:</p>
-        <ul>
-          <li>Buyer financing can fall through</li>
-          <li>Home inspections can reveal costly repairs</li>
-          <li>Real estate agent commissions (typically 6%)</li>
-          <li>Closing costs and fees</li>
-          <li>Time-consuming showings and open houses</li>
-        </ul>
-        
-        <h3>The Cash Buying Process</h3>
-        <p>At WillowBrook Real Estate Group, we've streamlined the process:</p>
-        <ol>
-          <li><strong>Submit Your Property Info:</strong> Fill out our simple form or contact us via email</li>
-          <li><strong>Property Evaluation:</strong> We'll schedule a quick visit to assess your home</li>
-          <li><strong>Cash Offer:</strong> Receive a fair, no-obligation offer within 24 hours</li>
-          <li><strong>Quick Closing:</strong> Close on your timeline – as fast as 7 days</li>
-        </ol>
-        
-        <h3>Indianapolis Market Insights</h3>
-        <p>The Indianapolis housing market has remained strong, with median home prices continuing to appreciate. However, certain neighborhoods like Fountain Square, Mass Ave, and Broad Ripple see faster sales due to high demand.</p>
-        
-        <p>Areas experiencing growth include:</p>
-        <ul>
-          <li>Downtown Indianapolis</li>
-          <li>Carmel</li>
-          <li>Fishers</li>
-          <li>Westfield</li>
-          <li>Noblesville</li>
-        </ul>
-        
-        <h3>Ready to Sell?</h3>
-        <p>If you're ready to sell your Indianapolis home quickly, contact WillowBrook Real Estate Group today. We buy houses in any condition, in any Indianapolis neighborhood, and we can close in as little as 7 days.</p>
-      `,
-      date: "January 15, 2025",
-      tags: ["Sell Fast", "Local Market"],
-      slug: "sell-house-fast-indianapolis"
+      slug: "sell-house-fast-greensboro-nc"
     },
     {
       id: 2,
-      title: "Indianapolis Real Estate Market Trends 2025",
-      excerpt: "Stay updated on the latest market trends, property values, and investment opportunities in the Indianapolis metropolitan area.",
+      title: "Greensboro Real Estate Market Trends 2025",
+      excerpt: "Stay updated on the latest market trends, property values, and investment opportunities in the Greensboro metropolitan area.",
       content: `
-        <h2>Indianapolis Real Estate Market Analysis: 2025 Outlook</h2>
+        <h2>Greensboro Real Estate Market Analysis: 2025 Outlook</h2>
         
-        <p>The Indianapolis real estate market continues to show strength as we move through 2025. Despite national economic uncertainties, the Circle City maintains its position as an attractive market for both homeowners and investors.</p>
+        <p>The Greensboro real estate market continues to show resilience as we move through 2025. Despite national economic uncertainties, the Gate City maintains its position as an attractive market for both homeowners and investors.</p>
         
         <h3>Current Market Conditions</h3>
-        <p>Key statistics for the Indianapolis metro area:</p>
+        <p>Key statistics for the Greensboro metro area:</p>
         <ul>
-          <li>Median home price: $195,000 (up 4.2% year-over-year)</li>
-          <li>Average days on market: 28 days</li>
-          <li>Inventory levels: 2.1 months of supply</li>
-          <li>Price per square foot: $135 average</li>
+          <li>Median home price: $185,000 (up 3.8% year-over-year)</li>
+          <li>Average days on market: 32 days</li>
+          <li>Inventory levels: 2.4 months of supply</li>
+          <li>Price per square foot: $125 average</li>
         </ul>
         
         <h3>Hottest Neighborhoods</h3>
-        <p><strong>Fountain Square:</strong> Young professionals flock to this trendy area with its art scene and dining options. Average home price: $220,000</p>
+        <p><strong>Downtown Greensboro:</strong> Young professionals attracted to urban lifestyle. Average home price: $195,000</p>
         
-        <p><strong>Mass Ave:</strong> Cultural district with historic charm. Average home price: $285,000</p>
+        <p><strong>Irving Park:</strong> Historic district with tree-lined streets. Average home price: $225,000</p>
         
-        <p><strong>Broad Ripple:</strong> Nightlife and entertainment hub popular with millennials. Average home price: $195,000</p>
+        <p><strong>Friendly Avenue Corridor:</strong> Shopping and dining hub. Average home price: $175,000</p>
         
-        <p><strong>Carmel:</strong> Top-rated schools drive family demand. Average home price: $420,000</p>
+        <p><strong>Sedgefield:</strong> Family-friendly neighborhood with good schools. Average home price: $165,000</p>
         
         <h3>Investment Opportunities</h3>
-        <p>Indianapolis continues to attract real estate investors due to:</p>
+        <p>Greensboro continues to attract real estate investors due to:</p>
         <ul>
-          <li>Strong rental demand</li>
-          <li>Affordable property prices compared to coastal markets</li>
-          <li>Growing tech sector (Salesforce, Infosys)</li>
-          <li>Major sporting events (Indianapolis 500, Colts, Pacers)</li>
+          <li>Strong rental demand from UNCG and NC A&T students</li>
+          <li>Affordable property prices compared to Charlotte/Raleigh</li>
+          <li>Growing healthcare and education sectors</li>
+          <li>Strategic location in the Piedmont Triad</li>
         </ul>
         
         <h3>2025 Predictions</h3>
         <p>We expect:</p>
         <ul>
-          <li>Continued moderate price appreciation (3-5%)</li>
-          <li>Inventory to remain tight in desirable areas</li>
-          <li>New construction to focus on starter homes</li>
-          <li>Downtown condo market to strengthen</li>
+          <li>Continued moderate price appreciation (3-4%)</li>
+          <li>Inventory to remain balanced in most areas</li>
+          <li>New construction to focus on affordable housing</li>
+          <li>Downtown condo market to expand</li>
         </ul>
       `,
       date: "January 10, 2025",
       tags: ["Local Market", "Market Analysis"],
-      slug: "indianapolis-market-trends-2025"
+      slug: "greensboro-market-trends-2025"
     },
     {
       id: 3,
-      title: "5 Benefits of Selling to Cash Buyers",
-      excerpt: "Discover why more Indianapolis homeowners are choosing cash buyers over traditional real estate agents for their property sales.",
+      title: "5 Benefits of Selling to Cash Buyers in Greensboro",
+      excerpt: "Discover why more Greensboro homeowners are choosing cash buyers over traditional real estate agents for their property sales.",
       content: `
-        <h2>Why Cash Buyers Are the Smart Choice for Indianapolis Homeowners</h2>
+        <h2>Why Cash Buyers Are the Smart Choice for Greensboro Homeowners</h2>
         
-        <p>More Indianapolis homeowners are discovering the advantages of selling directly to cash buyers. Here are the top 5 benefits that make this option increasingly popular:</p>
+        <p>More Greensboro homeowners are discovering the advantages of selling directly to cash buyers. Here are the top 5 benefits that make this option increasingly popular:</p>
         
         <h3>1. Speed of Sale</h3>
         <p>Traditional real estate transactions can drag on for months. With cash buyers like WillowBrook Real Estate Group:</p>
@@ -1259,11 +1212,11 @@ const BlogPage = () => {
           <li>Prefer convenience and speed</li>
         </ul>
         
-        <p>Ready to explore your options? Contact WillowBrook Real Estate Group for a free, no-obligation consultation about selling your Indianapolis home for cash.</p>
+        <p>Ready to explore your options? Contact WillowBrook Real Estate Group for a free, no-obligation consultation about selling your Greensboro home for cash.</p>
       `,
       date: "January 5, 2025",
       tags: ["Cash Buyers", "Benefits"],
-      slug: "benefits-selling-cash-buyers"
+      slug: "benefits-selling-cash-buyers-greensboro"
     }
   ];
 
@@ -1309,8 +1262,8 @@ const BlogPage = () => {
       {/* Header */}
       <div className="bg-slate-900 text-white py-20">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h1 className="text-5xl font-bold mb-6">Indianapolis Real Estate Blog</h1>
-          <p className="text-xl text-gray-300">Expert insights, market trends, and tips for Indianapolis homeowners</p>
+          <h1 className="text-5xl font-bold mb-6">Greensboro Real Estate Blog</h1>
+          <p className="text-xl text-gray-300">Expert insights, market trends, and tips for Greensboro homeowners</p>
         </div>
       </div>
 
@@ -1354,7 +1307,7 @@ const BlogPage = () => {
             <div className="lg:col-span-1">
               <div className="bg-gray-50 rounded-lg p-6 mb-8">
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Subscribe to Our Newsletter</h3>
-                <p className="text-gray-600 mb-4">Get the latest Indianapolis real estate insights delivered to your inbox.</p>
+                <p className="text-gray-600 mb-4">Get the latest Greensboro real estate insights delivered to your inbox.</p>
                 
                 <form onSubmit={handleNewsletterSubmit} className="space-y-4">
                   <input
@@ -1384,7 +1337,7 @@ const BlogPage = () => {
 
               <div className="bg-orange-50 border border-orange-200 rounded-lg p-6">
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Need to Sell Your House?</h3>
-                <p className="text-gray-600 mb-4">Get a fair cash offer for your Indianapolis home in 24 hours.</p>
+                <p className="text-gray-600 mb-4">Get a fair cash offer for your Greensboro home in 24 hours.</p>
                 <button 
                   onClick={() => document.getElementById('sell-form')?.scrollIntoView({ behavior: 'smooth' })}
                   className="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded transition-colors"

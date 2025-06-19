@@ -122,7 +122,7 @@ export const HeroSection = ({ setCurrentPage }) => {
       {/* Content */}
       <div className="relative z-10 text-center text-white px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight" style={{ fontFamily: 'var(--font-heading)' }}>
-          We Help Indianapolis Homeowners Sell Fast and Stress-Free
+          We Help Greensboro Homeowners Sell Fast and Stress-Free
         </h1>
         <p className="text-premium-subtitle mb-8 text-gray-200">
           No Repairs. No Fees. Close in 7 Days.
@@ -169,7 +169,7 @@ export const ServicesSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Our Indianapolis Home Buying Process
+            Our Greensboro Home Buying Process
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             We make selling your house simple, fast, and stress-free
@@ -244,9 +244,9 @@ export const TrustBadges = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="bg-white p-8 rounded-lg shadow-md">
                 <div className="text-4xl mb-4">🏠</div>
-                <h4 className="text-lg font-bold text-gray-900 mb-3">Local Indianapolis Focus</h4>
+                <h4 className="text-lg font-bold text-gray-900 mb-3">Local Greensboro Focus</h4>
                 <p className="text-gray-600">
-                  WillowBrook Real Estate Group is proudly based in Indianapolis. We're committed to building strong relationships here — one homeowner at a time.
+                  WillowBrook Real Estate Group is proudly based in Greensboro. We're committed to building strong relationships here — one homeowner at a time.
                 </p>
               </div>
               <div className="bg-white p-8 rounded-lg shadow-md">
@@ -260,7 +260,7 @@ export const TrustBadges = () => {
                 <div className="text-4xl mb-4">📊</div>
                 <h4 className="text-lg font-bold text-gray-900 mb-3">Proven Strategies</h4>
                 <p className="text-gray-600">
-                  We use proven real estate investment strategies tailored for the Indianapolis market — and we're here to guide you every step of the way.
+                  We use proven real estate investment strategies tailored for the Greensboro market — and we're here to guide you every step of the way.
                 </p>
               </div>
             </div>
@@ -426,7 +426,7 @@ export const Footer = () => {
               <h3 className="text-2xl font-bold">WillowBrook Real Estate Group</h3>
             </div>
             <p className="text-gray-300 mb-4">
-              Professional home buyers and investors helping Indianapolis homeowners sell quickly and investors find discounted properties.
+              Professional home buyers and investors helping Greensboro homeowners sell quickly and investors find discounted properties.
             </p>
             <p className="text-gray-400 text-sm">
               We are not licensed real estate agents. We are professional home buyers and investors. All transactions are handled legally and with full transparency.
@@ -437,7 +437,7 @@ export const Footer = () => {
             <h4 className="text-lg font-semibold mb-4">Contact Info</h4>
             <div className="space-y-2 text-gray-300">
               <p>📧 operations@willowbrook-realestate.com</p>
-              <p>📍 Serving Greater Indianapolis</p>
+              <p>📍 Serving Greater Greensboro</p>
               <p className="text-sm text-gray-400">Mobile service - We come to you!</p>
             </div>
           </div>
