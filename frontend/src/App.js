@@ -697,26 +697,17 @@ const AboutUsPage = () => {
       {/* Company Overview */}
       <div className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Mission</h2>
-              <p className="text-lg text-gray-600 mb-6">
-                WillowBrook Real Estate Group is a local team of real estate professionals helping Greensboro homeowners sell quickly and investors find discounted properties.
-              </p>
-              <p className="text-lg text-gray-600 mb-6">
-                Based in the heart of Greensboro, we pride ourselves on transparent, fast, and fair transactions. We understand the local market and are committed to providing exceptional service to both homeowners and investors throughout the greater Greensboro area.
-              </p>
-              <p className="text-lg text-gray-600 mb-6">
-                <strong>Mobile Service:</strong> We come directly to you for property evaluations, consultations, and closings. No need to visit an office - we bring our expertise to your location for your convenience.
-              </p>
-            </div>
-            <div>
-              <img 
-                src="https://i.postimg.cc/rph3Dt20/IMG-CE9585-BB15-C1-1.jpg"
-                alt="WillowBrook Team"
-                className="w-full rounded-lg shadow-lg"
-              />
-            </div>
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Mission</h2>
+            <p className="text-lg text-gray-600 mb-6">
+              WillowBrook Real Estate Group is a local team of real estate professionals helping Greensboro homeowners sell quickly and investors find discounted properties.
+            </p>
+            <p className="text-lg text-gray-600 mb-6">
+              Based in the heart of Greensboro, we pride ourselves on transparent, fast, and fair transactions. We understand the local market and are committed to providing exceptional service to both homeowners and investors throughout the greater Greensboro area.
+            </p>
+            <p className="text-lg text-gray-600 mb-6">
+              <strong>Mobile Service:</strong> We come directly to you for property evaluations, consultations, and closings. No need to visit an office - we bring our expertise to your location for your convenience.
+            </p>
           </div>
         </div>
       </div>
