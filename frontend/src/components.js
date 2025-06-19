@@ -122,7 +122,7 @@ export const HeroSection = ({ setCurrentPage }) => {
       {/* Content */}
       <div className="relative z-10 text-center text-white px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight" style={{ fontFamily: 'var(--font-heading)' }}>
-          We Help Greensboro Homeowners Sell Fast and Stress-Free
+          We Help <span className="greensboro-highlight-hero">Greensboro</span> Homeowners Sell Fast and Stress-Free
         </h1>
         <p className="text-premium-subtitle mb-8 text-gray-200">
           No Repairs. No Fees. Close in 7 Days.
