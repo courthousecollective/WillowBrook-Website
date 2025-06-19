@@ -68,7 +68,7 @@ const SellYourHomePage = () => {
           <div className="mb-6">
             <p className="text-xl sm:text-2xl text-orange-400 font-semibold mb-4">Get a Fair Offer You Can Trust in 15 Minutes</p>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight" style={{ fontFamily: 'var(--font-heading)' }}>
-              Sell My House Fast Greensboro NC!
+              Sell My House Fast <span className="greensboro-highlight-hero">Greensboro</span> NC!
             </h1>
             <p className="text-2xl sm:text-3xl text-gray-200 mb-8">
               Any Condition. Any Situation.
